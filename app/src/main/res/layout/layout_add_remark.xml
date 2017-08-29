@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:padding="@dimen/dimen_48"
+        android:id="@+id/remarkEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_474"
+        android:hint="添加备注"
+        style="@style/FontBlack16"
+        android:gravity="top"
+        android:background="@color/color_white"/>
+
+
+</LinearLayout>

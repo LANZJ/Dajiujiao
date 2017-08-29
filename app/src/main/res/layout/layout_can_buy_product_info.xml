@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/color_white">
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/default_img"/>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack16"
+                tools:text = "点名"/>
+            <TextView
+                android:id="@+id/priceTv"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                tools:text = "库存"/>
+            <TextView
+                android:id="@+id/desTv"
+                android:layout_above="@id/priceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                tools:text = "库存"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack16"
+                    android:text = "请输入单价"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/border_shape">
+                <EditText
+                    android:id="@+id/pingEt"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"/>
+                <TextView
+                    android:id="@+id/unitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack16"
+                    android:text="瓶"
+                    android:layout_marginRight="30dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack16"
+                    android:text = "请输入返还市场支持费用"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/border_shape">
+                <EditText
+                    android:id="@+id/marketEt"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"/>
+                <TextView
+                    android:id="@+id/marketUnitTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack16"
+                    android:text="瓶"
+                    android:layout_marginRight="30dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/sureBtn"
+            android:layout_width="match_parent"
+            android:background="@drawable/btn_click"
+            android:text="@string/sure"
+            style="@style/FontWhite16"
+            android:layout_height="@dimen/dimen_150" />
+
+    </RelativeLayout>
+</LinearLayout>

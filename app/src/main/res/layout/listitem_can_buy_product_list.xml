@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_225"
+        android:background="@drawable/item_selector">
+
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="@dimen/dimen_180"
+            android:layout_height="@dimen/dimen_180"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_45"
+            android:src="@drawable/ic_default" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            android:text="王朝大酒窖" />
+
+        <TextView
+            android:id="@+id/marketTv"
+            android:layout_above="@+id/typeTv"
+            style="@style/FontGray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            android:text="返还市场支持费用:¥5.00" />
+
+        <TextView
+            android:id="@+id/typeTv"
+            style="@style/FontGray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/avatarIv"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            android:text="700ml/瓶 6瓶/箱" />
+
+        <TextView
+            android:id="@+id/priceTv"
+            style="@style/FontRed16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/avatarIv"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:text="69" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider" />
+    </RelativeLayout>
+</LinearLayout>

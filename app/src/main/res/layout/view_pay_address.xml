@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_bg">
+        <LinearLayout
+            android:id="@+id/selectAddLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_309"
+            android:background="@color/color_pay_bg"
+            android:paddingLeft="@dimen/dimen_48"
+            android:paddingTop="@dimen/dimen_48"
+            android:paddingRight="@dimen/dimen_48">
+            <TextView
+                android:id="@+id/personInfoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack16"
+                android:text="收货人：阿童木   12345678900"/>
+            <TextView
+                android:layout_marginTop="@dimen/dimen_57"
+                android:id="@+id/addressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack16"
+                android:text="浙江省杭州市西湖区文三路益乐路蓝海时代大厦15B07"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pay_bg_divider"/>
+        <View
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+    </LinearLayout>
+</LinearLayout>

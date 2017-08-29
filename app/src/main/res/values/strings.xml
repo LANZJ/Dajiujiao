@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- 四个主界面下面tab的文字 -->
+    <string name="dg_tabframe_mcall_btn_text1">首页</string>
+    <string name="dg_tabframe_mcall_btn_text2">消息</string>
+    <string name="dg_tabframe_mcall_btn_text3">酒友</string>
+    <string name="dg_tabframe_mcall_btn_text4">我的</string>
+
+    <!--登录-->
+    <string name="register">快速注册</string>
+    <string name="now_register">立即注册</string>
+    <string name="login">登录</string>
+    <string name="phone_before">+86</string>
+    <string name="phone_num">手机号</string>
+    <string name="input_check_code">请输入短信验证码</string>
+    <string name="get_check_code">获取验证码</string>
+    <string name="set_password">设置登录密码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="input_new_pwd">输入新密码</string>
+    <string name="input_new_pwd_again">重新输入新密码</string>
+    <string name="sure_to_find">确认找回</string>
+    <string name="f1_des">身边店铺买酒，立刻送货上门</string>
+
+    <!--我的-->
+    <string name="login_register">登录/注册</string>
+    <string name="login_only">登录</string>
+    <string name="service_phone">客服热线</string>
+    <string name="my_order">我的订单</string>
+    <string name="buy_order">采购订单</string>
+    <string name="sell_order">销售订单</string>
+    <string name="my_jiujuan">我的酒卷</string>
+    <string name="my_good_car">购物车</string>
+    <string name="my_jifen">积分商城</string>
+    <string name="my_ma">我的店铺码</string>
+    <string name="my_input_ma">输入店铺码</string>
+    <string name="my_work">工作台</string>
+    <string name="my_yijian">意见反馈</string>
+    <string name="my_setting">设置</string>
+    <string name="my_share_ma">分享优惠</string>
+    <string name="my_jiuyou_ma">输入优惠</string>
+    <string name="add_address">新增地址</string>
+
+    <string name="ping_jia">评价</string>
+
+    <!--个人信息-->
+    <string name="photo">头像</string>
+    <string name="name">名字</string>
+    <string name="gender">性别</string>
+    <string name="birthday">生日</string>
+    <string name="phone">手机号码</string>
+    <string name="my_address">我的地址</string>
+
+    <string name="set_birthday">设置生日</string>
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+
+    <string name="please_input_ma">请输入酒友码</string>
+    <string name="sure">确定</string>
+
+    <string name="go_back">返回</string>
+
+    <!--<string name="share_ma">分享您的酒友码</string>-->
+    <!--<string name="share_ma_des1">快快分享你的酒友码,这样可以</string>-->
+    <!--<string name="share_ma_des2">让你的酒友更快的找到你</string>-->
+    <!--<string name="you_ma">您的酒友码</string>-->
+    <string name="share_ma">我的店铺码</string>
+    <string name="share_ma_des1">快快输入我的店铺码,这样可以</string>
+    <string name="share_ma_des2">直接进入我的店铺买酒</string>
+    <string name="you_ma">我的店铺码</string>
+
+    <string name="yijian">请输入产品意见，我们不断优化体验</string>
+    <string name="word_num">0/140</string>
+    <string name="send">发送</string>
+    <string name="jifen">我的积分</string>
+    <string name="jifen2">积分可以直接抵现金</string>
+    <string name="jifen_market">积分商城</string>
+    <string name="change_recode">兑换记录</string>
+
+    <string name="change">兑换</string>
+    <string name="already_change">已兑换</string>
+    <!--商家信息-->
+    <string name="message">短信</string>
+    <string name="chat">聊天</string>
+    <string name="call">电话</string>
+    <string name="close_account">去结算</string>
+    <string name="go_buy_car">去购物车</string>
+    <!--结算-->
+    <string name="choose_way_to_pay">选择支付方式</string>
+    <string name="weixin_pay">微信支付</string>
+    <string name="wexin_pay_des">简单快捷，推荐使用</string>
+    <string name="zhifu_pay">支付宝快捷支付</string>
+    <string name="zhifu_pay_des">推荐已安装支付宝APP者使用</string>
+    <string name="yinlian_pay">银联手机支付</string>
+    <string name="yinlian_pay_des">银行最多，无需开通网银也能使用</string>
+    <string name="xianxia_pay">线下支付</string>
+    <string name="xianxia_pay_des">也可直接线下支付</string>
+    <string name="commit_order">提交订单</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="go_to_pay">去支付</string>
+
+    <string name="version">版本号</string>
+    <string name="clean">清除缓存</string>
+    <string name="push">推送消息</string>
+    <string name="comment">评价一下</string>
+    <string name="about">关于我们</string>
+    <string name="problem">常见问题</string>
+    <string name="logout">退出登录</string>
+
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="dao_hang">导航</string>
+
+    <!--购物车-->
+    <string name="zero">0</string>
+    <string name="all_selected">全选</string>
+    <string name="count">合计</string>
+    <string name="finish">完成</string>
+    <string name="del">删除</string>
+    <string name="choose_type">选择规格：</string>
+    <string name="num">数量</string>
+    <string name="type">规格</string>
+    <string name="ping">瓶</string>
+    <string name="xiang">箱</string>
+    <string name="des">描述</string>
+    <string name="yuan">元</string>
+
+    <!--我的订单-->
+    <string name="all">全部</string>
+    <string name="wait_to_pay">待付款</string>
+    <string name="wait_to_sure">待确认</string>
+    <string name="wait_to_send">待发货</string>
+    <string name="wait_to_receive">待收货</string>
+    <string name="wait_to_comment">待评价</string>
+    <string name="already_get">已收货</string>
+    <string name="refuse">已拒绝</string>
+    <string name="back">待退货</string>
+    <string name="close">已关闭</string>
+
+    <string name="order_comment">评价一下这件商品吧</string>
+
+    <!--关于我们-->
+    <string name="about_us">王朝大酒窖</string>
+    <string name="this_ver">1.0.0</string>
+    <string name="copy_right">copyright  2012-2015</string>
+    <string name="ver_owner">王朝大酒窖版权所有</string>
+
+    <!--我的地址-->
+    <string name="receiver">收货人</string>
+    <string name="phone_number">手机号码</string>
+    <string name="select_area">选择地区</string>
+    <string name="detail_address">详细地址</string>
+    <string name="zip_code">邮政编码</string>
+
+    <string name="set_name">名字</string>
+    <string name="phone_num_11">11位手机号</string>
+    <string name="area_info">地区信息</string>
+    <string name="detail_info">街道门牌信息</string>
+
+    <string name="zhi">至</string>
+    <!--seller-->
+    <string name="shang_ping_gl">酒库</string>
+    <string name="ding_dan_gl">出货</string>
+    <string name="shang_ping_cg">进货</string>
+    <string name="wo_de_sr">钱包</string>
+    <string name="ye_wu_y">我的客户</string>
+
+    <string name="set_time">设置营业时间</string>
+    <string name="active_time">营业时间</string>
+
+    <string name="shang_jia_gl">商家管理</string>
+    <string name="ji_feng_sc">积分商城</string>
+    <string name="wo_de_fx">我的分享</string>
+    <string name="yi_jian_fk">意见反馈</string>
+    <string name="xin_yu_dj">信誉等级</string>
+    <string name="she_zhi">设置</string>
+
+    <string name="shang_ping_mc">商品名称</string>
+    <string name="jia_ge">价格</string>
+    <string name="shui_bian_xdsmb">随便写点什么吧</string>
+
+    <string name="mei_xiang">/箱</string>
+    <string name="mei_ping">/瓶</string>
+    <string name="ku_cun">库存</string>
+    <string name="wan_cheng">完成</string>
+    <string name="sjgl">商家管理</string>
+    <string name="wdfx">我的分享</string>
+    <string name="xydj">信誉等级</string>
+    <string name="dpmc">店铺名称</string>
+    <string name="wz">位置</string>
+    <string name="yysj">营业时间</string>
+    <string name="sfyy">是否营业</string>
+    <string name="gong_gao">公告</string>
+    <string name="shou_ru">收入</string>
+    <string name="zhi_chu">支出</string>
+    <!--酒友圈-->
+    <string name="zan">赞</string>
+    <string name="ping_lun">评论</string>
+    <string name="fa_song">发送</string>
+    <!--工作台-->
+    <string name="work_check">考勤</string>
+    <string name="work_kh_manager">客户管理</string>
+    <string name="work_sp">审批</string>
+    <string name="work_hb">工作日报</string>
+    <string name="work_contacts">联系</string>
+    <string name="work_card">打卡</string>
+    <string name="work_leave">请假</string>
+    <string name="work_date">日期</string>
+    <string name="work_up_time">上班时间</string>
+    <string name="work_up_area">上班地点</string>
+    <string name="work_down_time">下班时间</string>
+    <string name="work_down_area">下班地点</string>
+    <string name="work_bz">备注</string>
+    <string name="work_search">搜索</string>
+    <string name="work_leave_type">请假类型</string>
+    <string name="work_leave_open_time">开始时间</string>
+    <string name="work_leave_end_time">结束时间</string>
+    <string name="work_leave_total_time">请假天数</string>
+    <string name="work_sp_person">审批人</string>
+    <string name="work_sp_state">审批状态</string>
+    <string name="work_submit">提交</string>
+    <string name="work_hmc">花名册</string>
+    <string name="work_order_manager">订单管理</string>
+    <string name="work_kc_manager">库存管理</string>
+
+
+
+
+    <!--主页-->
+    <string name="main_name">融云</string>
+    <string name="main_conversation">会话</string>
+    <string name="main_group">广场</string>
+    <string name="main_chatroom">通讯录</string>
+    <string name="main_customer">意见反馈</string>
+    <string name="main_customer_xn">小能客服</string>
+    <string name="private_chat">发起聊天</string>
+    <string name="group_chat">创建群组</string>
+    <string name="add_contacts">添加好友</string>
+    <string name="add_select_group">创建群组</string>
+    <string name="set_personal_information">我的账号</string>
+    <string name="set_news_reminded">新消息提醒</string>
+    <string name="set_privacy">隐私</string>
+    <string name="set_set">设置</string>
+    <string name="set_rongcloud">关于 SealTalk</string>
+    <string name="set_logout">注销</string>
+    <string name="de_save">"保存"</string>
+
+    <string name="no_read_message">"···"</string>
+
+    <!--register activity -->
+    <string name="login_success">"登录成功"</string>
+
+    <!--设置-->
+    <string name="new_message_notice">开启消息免打扰</string>
+    <string name="new_message_show">新消息通知</string>
+    <string name="new_message_voice">声音</string>
+    <string name="new_message_vibration">震动</string>
+    <string name="new_message_prompt_voice">新消息提示音</string>
+    <string name="new_message_follow_system">跟随系统</string>
+    <string name="friend_confirmation">加我好友时需要验证</string>
+    <string name="the_blacklist">黑名单</string>
+    <string name="join_the_blacklist">加入黑名单</string>
+    <string name="blacklist_empty">黑名单为空</string>
+    <string name="portrait">头像</string>
+    <string name="my_username">昵称</string>
+    <string name="update_log">更新日志</string>
+    <string name="function_introduce">功能介绍</string>
+    <string name="version_number">V2.1.0</string>
+    <string name="dv_document">开发者文档</string>
+    <string name="rongcloud_web">官方网站</string>
+    <string name="new_version_update">当前版本</string>
+    <string name="de_notification_start">开始时间</string>
+    <string name="de_notification_end">结束时间</string>
+
+
+    <!-- friend list -->
+    <string name="de_item_delete_friend">"删除"</string>
+
+
+    <!--actionbar title -->
+    <string name="de_actionbar_myacc">"个人账号"</string>
+    <string name="de_actionbar_sub_group">"群组"</string>
+    <string name="de_actionbar_sub_private">"我的私人会话"</string>
+    <string name="de_actionbar_sub_discussion">"我的讨论组"</string>
+    <string name="de_actionbar_sub_system">"系统消息"</string>
+    <string name="de_actionbar_sub_defult">"聊天"</string>
+    <string name="de_actionbar_set_public">"公众号"</string>
+    <string name="de_actionbar_system">"系统消息"</string>
+
+    <string name="de_dialog_item_message_delete">删除消息</string>
+    <string name="de_notification_information">开启后，在设定时间段内收到新消息时不会响铃或振动。</string>
+
+    <string name="de_group_list_default_discussion_name">讨论组</string>
+    <string name="de_message_content_draft">[草稿]</string>
+    <string name="de_message_at_me">[有人@我]</string>
+
+    <!-- Aming 10月重构版 -->
+    <string name="start_chat">发起会话</string>
+    <string name="network_not_available">网络不可用</string>
+    <string name="login_api_fail">登录请求接口失败</string>
+    <string name="sync_userinfo_api_fail">同步用户信息接口请求失败</string>
+    <string name="get_token_api_fail">获取token请求接口失败</string>
+    <string name="sync_group_api_fail">同步群组信息请求接口失败</string>
+    <string name="phone_or_psw_error">手机或者密码错误</string>
+    <string name="phone_number_is_null">手机号不能为空</string>
+    <string name="Illegal_phone_number">非法手机号</string>
+    <string name="password_is_null">密码不能为空</string>
+    <string name="password_cannot_contain_spaces">密码不能包含空格</string>
+    <string name="phone_number_available">手机号可用</string>
+    <string name="phone_number_has_been_registered">手机号已被注册</string>
+    <string name="messge_send">短信已发出,请注意查收</string>
+    <string name="message_frequency">短信发送频率超限</string>
+    <string name="captcha_overdue">验证码过期,请重新请求</string>
+    <string name="verification_code_error">验证码错误</string>
+    <string name="register_success">注册成功</string>
+    <string name="forgot_password">找回密码</string>
+    <string name="new_user">新用户</string>
+    <string name="Login">登录</string>
+    <!--<string name="phone_number">手机号</string>-->
+    <string name="password">密码</string>
+    <string name="nickname">昵称</string>
+    <string name="code">短信验证码</string>
+    <string name="send_code">发送验证码</string>
+    <!--<string name="register">注册</string>-->
+    <string name="confirm_password">确认密码</string>
+    <string name="confirm">确认</string>
+    <!--<string name="forget_password">忘记密码</string>-->
+    <string name="cancel">取消</string>
+    <string name="Done">完成</string>
+    <string name="exit_app">确定退出应用?</string>
+    <string name="No_friends">暂无好友</string>
+    <string name="Search">搜索</string>
+    <string name="new_friends">新的朋友</string>
+    <string name="group">群组</string>
+    <string name="public_service">公众号</string>
+    <string name="chatroom">聊天室</string>
+    <string name="groups">群聊</string>
+    <string name="chatroom1">聊天室 I</string>
+    <string name="add_success">加入成功</string>
+    <string name="not_group_members">非群组成员不能查看群组详情</string>
+    <string name="check_network">请检查网络</string>
+    <string name="chatroom2">聊天室 II</string>
+    <string name="chatroom3">聊天室 III</string>
+    <string name="chatroom4">聊天室 IV</string>
+    <string name="agreed_friend">已同意好友关系</string>
+    <string name="agree">接&#160;&#160;&#160;受</string>
+    <string name="request">已请求</string>
+    <string name="ignore">已忽略</string>
+    <string name="added">已添加</string>
+    <string name="deleted">已删除</string>
+    <string name="mobile_phone">手机号</string>
+    <string name="change_password">密码修改</string>
+    <string name="select_group_member">选择群组成员</string>
+    <string name="remove_group_member">移除群组成员</string>
+    <string name="add_group_member">添加群组成员</string>
+    <string name="edit_group_name">填写群名称(2-10字)</string>
+    <string name="create_group">创建群组</string>
+    <string name="created_group">创建了群组</string>
+    <string name="you">你</string>
+    <string name="request_friends">请求添加你为好友</string>
+    <string name="edit_phone">请输入 11 位手机号</string>
+    <string name="original_password">原密码不能为空</string>
+    <string name="new_password_not_null">新密码不能为空</string>
+    <string name="confirm_password_not_null">确认密码不能为空</string>
+    <string name="original_password_mistake">原密码填写错误</string>
+    <string name="passwords_invalid">密码必须为6-16位字符，区分大小写</string>
+    <string name="passwords_do_not_match">填写的确认密码与新密码不一致</string>
+    <string name="original_password_text">初始密码</string>
+    <string name="new_password">新密码</string>
+    <string name="confirm_new_password">确认新密码</string>
+    <string name="group_info">群组信息</string>
+    <string name="group_member_size">全部群成员</string>
+    <string name="group_name">群名称</string>
+    <string name="confirm_quit_group">确认退出群组?</string>
+    <string name="confirm_dismiss_group">确认解散群组?</string>
+    <string name="clean_history">是否清除会话聊天记录?</string>
+    <string name="set_top">会话置顶</string>
+    <string name="message_notice">消息免打扰</string>
+    <string name="search_message">查找聊天记录</string>
+    <string name="clean_message">清除聊天记录</string>
+    <string name="send_message">发起聊天</string>
+    <string name="quit_group">删除并退出</string>
+    <string name="dismiss_group">解散并退出</string>
+    <string name="user_details">用户详情</string>
+    <string name="black_state">黑名单状态</string>
+    <string name="divided_string">、</string>
+    <string name="change_group_name">修改群名称为</string>
+    <string name="quit_groups">退出了群组</string>
+    <string name="dismiss_groups">解散了群组</string>
+    <string name="join_group">加入了群组</string>
+    <string name="to_join_group">加入了群组</string>
+    <string name="invitation">邀请</string>
+    <string name="remove_group_before_str">将</string>
+    <string name="remove_group_after_str">移出了群组</string>
+    <string name="my_groups">群组</string>
+    <string name="code_is_null">验证码为空</string>
+    <string name="name_is_null">昵称不能为空</string>
+    <string name="name_contain_spaces">昵称不能包含空格</string>
+    <string name="remove_group_members">确认移除以下群成员?</string>
+    <string name="add_successful">添加成功</string>
+    <string name="remove_successful">移除成功</string>
+    <string name="least_one_friend">至少选择一位好友</string>
+    <string name="not_send_code">未向服务端获取验证码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="clear_success">清除成功</string>
+    <string name="clear_failure">清除失败</string>
+    <string name="change_group_info">更改群组信息</string>
+    <string name="new_group_name">新的群名称</string>
+    <string name="update_success">更改成功</string>
+    <string name="quit_success">退出成功</string>
+    <string name="dismiss_success">解散成功</string>
+    <string name="group_name_not_is_null">群组昵称不能为空</string>
+    <string name="group_name_size_is_one">群名称不少于2个字</string>
+    <string name="create_group_success">群组创建成功</string>
+    <string name="group_header_api_fail">群组头像接口请求失败</string>
+    <string name="group_create_api_fail">群组创建接口请求失败</string>
+    <string name="upload_portrait_failed">上传头像失败</string>
+    <string name="phone_unregister">此号码未被注册</string>
+    <string name="group_portrait">群头像</string>
+    <string name="add_friend">加为好友</string>
+    <string name="add_text">加好友信息...</string>
+    <string name="request_success">请求成功</string>
+    <string name="can_not_add_yourself">自己不能添加自己为好友</string>
+    <string name="new_name">新昵称</string>
+    <string name="portrait_update_success">头像更新成功</string>
+    <!--<string name="chat">会话</string>-->
+    <string name="contacts">通讯录</string>
+    <string name="discover">发现</string>
+    <string name="me">我</string>
+    <string name="mine_about">关于 SealTalk</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="mine_service">意见反馈</string>
+    <string name="mine_setting">账号设置</string>
+    <string name="account_setting">账号设置</string>
+    <string name="exit_login">退出登录</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="privacy">隐私</string>
+    <string name="new_message">接收新消息通知</string>
+    <string name="message_show_details">通知显示消息详情</string>
+
+    <string name="launched_location_sharing">发起了位置共享</string>
+    <string name="location_sharing_ended">位置共享已结束</string>
+    <string name="location">位置</string>
+    <string name="send_location">发送位置</string>
+    <string name="real_time_location_sharing">实时位置共享</string>
+    <string name="fetching">获取中……</string>
+    <string name="geographical_position">地理位置</string>
+    <string name="you_are_sharing_location">你正在共享位置</string>
+    <string name="person_is_sharing_loaction">人正在共享位置</string>
+    <string name="persons_are_sharing_loaction">人正在共享位置</string>
+    <string name="location_sharing_exit_promt">退出当前页面将会终止实时位置共享,确定退出？</string>
+    <string name="prompt">提示</string>
+    <string name="launched_a_location_sharing">我发起了位置共享</string>
+    <string name="sdk_version_update">SDK版本</string>
+    <string name="sealtalk_version_update">SealTalk版本</string>
+    <string name="all_group_member">全部群成员</string>
+    <string name="group_announcement">群公告</string>
+    <string name="group_code">群二维码</string>
+    <string name="total_member">群成员</string>
+    <string name="select_contact">选择联系人</string>
+    <string name="current_password">原密码</string>
+    <string name="password_hint">6-16个字符,区分大小写</string>
+    <string name="start_voice">语音通话</string>
+    <string name="start_video">视频聊天</string>
+    <string name="browser_download">浏览器打开</string>
+    <string name="loacation_download">本地下载</string>
+    <string name="update_app_model_prepare">准备下载</string>
+    <string name="update_app_model_progress">正在下载 %1$d%2$s</string>
+    <string name="update_app_model_success">下载成功(点击安装)</string>
+    <string name="update_app_model_error">下载失败(点击浏览器下载)</string>
+    <string name="downloading_apk">正在后台下载...</string>
+    <string name="empty_group_notice">请编辑群公告</string>
+    <string name="group_notice_exist_confirm">退出本次编辑</string>
+    <string name="group_notice_post_confirm">该公告会通知全部群成员，是否发布？</string>
+    <string name="group_notice_prefix">\@所有人\n</string>
+    <string name="search_friend">添加好友</string>
+    <string name="setdisplayname">设置备注</string>
+    <string name="new_and_old_password">新旧密码一致</string>
+    <string name="nickname_show">昵称:</string>
+    <string name="ac_item_friend_nick_name">昵称:%1$s</string>
+    <string name="ac_search_no_result">没有搜索到%1$s相关的会话</string>
+    <string name="other_devices_login">账号在其它设备登录</string>
+    <string name="new_message_notice_title">消息免打扰</string>
+    <string name="other_devices_text">您的账号在别的设备上登录，您被迫下线!</string>
+    <string name="i_know">知道了</string>
+    <string name="update_name">昵称更改</string>
+    <string name="ac_search_no_result_pre">没有搜到</string>
+    <string name="ac_search_no_result_suffix">相关的信息</string>
+    <string name="ac_search_chat_title">聊天记录</string>
+    <string name="ac_search_chat_detail">共%1$d条与</string>
+    <string name="ac_search_chat_detail_one">共</string>
+    <string name="ac_search_chat_detail_two">条与</string>
+    <string name="ac_search_chat_detail_three">相关的聊天记录</string>
+    <string name="ac_search_nick_name">昵称： </string>
+    <string name="ac_contact_nick_name">昵称:</string>
+
+    <string name="ac_search_friend">联系人</string>
+    <string name="ac_search_group">群组</string>
+    <string name="ac_search_chatting_records">聊天记录</string>
+    <string name="ac_search_more_friend">查看更多联系人</string>
+    <string name="ac_search_more_group">查看更多群组</string>
+    <string name="ac_search_more_chatting_records">查看更多聊天记录</string>
+
+    <string name="search_item_chat_records">%d条相关记录</string>
+    <string name="offline">离线</string>
+    <string name="web_online">网页在线</string>
+    <string name="pc_online">电脑在线</string>
+    <string name="phone_online">手机在线</string>
+    <string name="read_receipt_detail">回执详情</string>
+    <string name="read_receipt_unread_persons">%1$d人未读</string>
+    <string name="read_receipt_read_persons">%1$d人已读</string>
+    <string name="read_receipt_no_person_read">全部未读</string>
+    <string name="read_receipt_no_person_unread">全部已读</string>
+    <string name="des_add_friend_to_black_list">你将不再收到对方的消息</string>
+
+    <string name="clean_private_chat_history">确定删除聊天记录吗</string>
+    <string name="clean_group_chat_history">确定删除群聊天记录吗</string>
+    <string name="clean_discussion_chat_history">确定删除讨论组聊天记录吗</string>
+    <string name="join_chat_room_error_toast">聊天室ID为空,请稍后重试</string>
+
+    <string name="activity_detail_discussion_to_top">置顶</string>
+    <string name="activity_detail_discussion_not_disturb">消息免打扰</string>
+    <string name="ac_about_seal_talk_version">SealTalk 版本</string>
+    <string name="ac_about_sdk_version">SDK 版本</string>
+    <string name="ac_about_shut_down_debug_mode">关闭debug模式</string>
+    <string name="ac_detail_discussion_member_size">讨论组成员()</string>
+    <string name="ac_detail_discussion_clear_messages">清空聊天信息</string>
+    <string name="ac_detail_discussion_start_group_conversation">开启群组会话</string>
+    <string name="ac_detail_discussion_group_display_name">群组昵称</string>
+    <string name="ac_detail_discussion_start_chat">发起聊天</string>
+    <string name="ac_detail_discussion_delete_and_quit_discussion">删除并退出讨论组</string>
+    <string name="ac_detail_discussion_dismiss_group">解散群组</string>
+    <string name="ac_detail_discussion_no">无</string>
+
+    <string name="fr_chat_room">聊天室</string>
+    <string name="fr_chat_room_one">聊天室 I</string>
+    <string name="fr_chat_room_two">聊天室 II</string>
+    <string name="fr_chat_room_three">聊天室 III</string>
+    <string name="fr_chat_room_four">聊天室 IV</string>
+    <string name="fr_chat_room_join_failure">加入聊天室失败</string>
+
+    <string name="ac_new_friend_list_no_data">暂无数据</string>
+    <string name="share_dialog_share">分享</string>
+    <string name="share_dialog_cancel">取消</string>
+    <string name="share_dialog_hint">说些什么</string>
+    <string name="share_dialog_from">来自：UC浏览器</string>
+
+    <string name="dialog_bottom_picture">拍照</string>
+    <string name="dialog_bottom_import_from_local">从本地导入</string>
+    <string name="fr_group_list_not_join_the_group">暂未加入群组</string>
+    <string name="ac_select_friend">选择联系人</string>
+    <string name="ac_select_friend_sure">确定</string>
+
+    <string name="ac_note_info_name">备注名</string>
+    <string name="ac_note_info">备注信息</string>
+    <string name="ac_note_info_save">保存</string>
+
+    <string name="contact_notification_someone_agree_your_request">%1$s已同意你的好友请求</string>
+    <string name="contact_notification_agree_your_request">对方已同意你的好友请求</string>
+    <string name="ac_group_list_group_number">%1$d个群组</string>
+    <string name="ac_share_receiver_from">来自：%1$s</string>
+
+    <string name="ac_search_phone_number">手机号</string>
+    <string name="layout_dialog_loading">正在加载</string>
+    <string name="seal_mine_fragment_user_portrait">用户头像</string>
+    <string name="item_filter_group_list_include">包含：</string>
+    <string name="rs_ada_user_ship_add">已添加</string>
+    <string name="seal_set_push_language">设置 Push 中文</string>
+    <string name="seal_set_push_detail">显示 Push 内容</string>
+    <string name="seal_set_push_receive">接收 Push 消息</string>
+</resources>

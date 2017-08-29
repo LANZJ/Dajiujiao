@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zjyeshi.dajiujiao"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- =================================================START 百度地图 START============================================ -->
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!--允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- ================================================END 百度地图 END================================================ -->
+    <!--&lt;!&ndash; 华为角标 &ndash;&gt;-->
+    <!--<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>-->
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <!-- =================================================START 百度推送 START============================================ -->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <!--<uses-permission android:name="android.permission.VIBRATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />-->
+    <!--<uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />-->
+    <!--<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />-->
+    <!-- ================================================END 百度推送 END================================================ -->
+
+    <!-- =================================================START Crow START============================================ -->
+    <!-- 网络访问权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 外部存储权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 判断网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- ================================================END Crow END================================================ -->
+
+、
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--for Samsung badge-->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+
+    <application
+        tools:replace = "icon,theme,label"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        android:name=".buyer.App">
+        <!--正式卖家,地图定位-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="oL1zEB6k9X6CGvA7Pj1h3nUG" />
+
+        <!--<meta-data-->
+            <!--android:name="RONG_CLOUD_APP_KEY"-->
+            <!--android:value="25wehl3u284rw" />-->
+        <!-- ================================================START ALIPAY START================================================ -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- ================================================END ALIPAY END================================================ -->
+
+        <!-- ================================================START WEIXIN START================================================ -->
+        <!--SHARESDK微信分享回调-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!--微信支付-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <!-- ================================================START WEIXIN END================================================ -->
+
+        <activity
+            android:name=".buyer.activity.frame.fragment.MianFramActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".buyer.activity.WelcomeActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".buyer.activity.store.CourseWebActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.login.LoginActivity" android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".buyer.activity.login.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.login.ForgetPwdActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.PersonalInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".buyer.activity.my.MyMaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.BalanceAccountsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.BuyCarActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.circle.CircleAddActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.setting.AboutUsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.map.SellerDistanceMapActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.order.OrderCommentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.GoodsDetailCommentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.ScanMaActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <!--seller-->
+        <activity android:name=".buyer.activity.seller.ProductListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".buyer.activity.seller.MyIncomeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".buyer.activity.seller.ProductBuyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".buyer.circle.CommentActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <activity android:name=".buyer.activity.seller.ShopManageActivity" android:screenOrientation="portrait" />
+        <activity android:name=".buyer.activity.my.personal.ChangeNameActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.personal.MyAddressActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.personal.EditAddressActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.personal.SelectProvinceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.personal.SelectCityActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.personal.SelectDistrictActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.seller.ChangeShopNameActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.ShopSalesActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name=".buyer.activity.store.ShopWebActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.order.OrderProductListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.CanBuyManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.CanBuyProductListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.CanBuyProductInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.AllCanBuyProductActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.SalesManCircleActivity" android:screenOrientation="portrait"/>
+
+        <!--商品界面多图大图-->
+        <activity android:name=".buyer.activity.store.ShowGoodsMultiActivity"/>
+        <!--================================ START CROW START =================================-->
+        <!-- 相册界面 -->
+        <activity android:name="com.xuan.bigappleui.lib.album.activity.BucketActivity" android:screenOrientation="portrait"/>
+        <!-- 相册图片界面 -->
+        <activity android:name="com.xuan.bigappleui.lib.album.activity.BucketImageActivity" android:screenOrientation="portrait"/>
+        <!-- 聊天界面 -->
+        <activity android:name="com.jopool.crow.imkit.activity.CWConversationActivity"
+            android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <!-- 显示大图界面 -->
+        <activity android:name="com.jopool.crow.imkit.activity.CWShowImageActivity"/>
+        <!--================================ END CROW END =================================-->
+
+        <!-- 显示大图界面 -->
+        <activity android:name=".buyer.activity.my.personal.ShowImageActivity" />
+        <activity android:name=".buyer.circle.ShowMultiImageActivity" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <!--工作台-->
+        <activity android:name=".buyer.activity.my.work.WorkActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.CheckActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.CardActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.AttendanceRecordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.CardDetailActivity" android:screenOrientation="portrait"  android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ChooseEmployeeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.LeaveActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.AskForLeaveActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.LeaveDetailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.KhManagerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".buyer.activity.my.work.HmcActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.AddKhActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.KhInfoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".buyer.activity.order.OrderManagerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.StockActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.CompanyStockActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.StockScreenActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.CustomerStockActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ApproveActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.BxMoneyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.BxFormActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name=".buyer.activity.my.work.AskForMoneyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.AskMoneyFormActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.MyApproveActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.DateReportActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.WriteDateReportActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" android:launchMode="singleInstance"/>
+        <activity android:name=".buyer.activity.my.work.ContactActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.SendKhInfoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.AddRemarkActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ApproverListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.LeaveApproveActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ChosePayWayActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ChoseCreditRatingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ChoseProductStatusActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.AskForMoneyDetailActivity" />
+        <activity android:name=".buyer.activity.my.work.CategoryFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.ModifyInventoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.MyMessageActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name=".buyer.activity.store.ShopDetailActivity" android:screenOrientation="portrait"  android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".buyer.activity.my.work.ApproveDetailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".buyer.activity.account.ApplyAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.account.AccountSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.account.AddAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.account.ApplyCashRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.account.ApplyDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.setting.ChangePassActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.UserInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.circle.CanSeeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.circle.UserCircleActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name=".buyer.circle.CircleCollectActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.order.OrderDetailEditActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".buyer.activity.my.FriendActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.chat.MyChatWebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.MyContactActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.ReturnGoodsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.MemberFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.SubMemberActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.MemberListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.circle.PhoneActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.circle.UpLoadPhoneActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.order.HistoryOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.order.MyOrderNewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.order.OrderDetailNewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.GoodsDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.GoodsCommentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.CouponActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.MaxLevelManActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.seller.CouponSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.ShopMaActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.SalesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.SalesDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.GiftListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.SelectSalesProductActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.SelectSalesShopActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.AddNewSalesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.GiveProductListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.RebackManagerListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.ApplyRebackActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.RefuseReasonListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.RebackSureActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.sales.RebackDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.Baiduy" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.rong.ui.DiscussionDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.rong.ui.CWGroupDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.rong.ui.CWGroupModifyNameActivity" android:screenOrientation="portrait"/>
+        <!-- =================================================START 百度推送 START============================================ -->
+        <!--&lt;!&ndash; push必须的receviver和service声明 &ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.baidu.android.pushservice.PushServiceReceiver"-->
+            <!--android:process=":bdservice_v1" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.notification.SHOW" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.media.CLICK" />-->
+                <!--&lt;!&ndash; 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 &ndash;&gt;-->
+                <!--<action android:name="android.intent.action.MEDIA_MOUNTED" />-->
+                <!--<action android:name="android.intent.action.USER_PRESENT" />-->
+                <!--<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />-->
+                <!--<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<receiver-->
+            <!--android:name="com.baidu.android.pushservice.RegistrationReceiver"-->
+            <!--android:process=":bdservice_v1" >-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.baidu.android.pushservice.action.METHOD" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+
+                <!--<data android:scheme="package" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<service-->
+            <!--android:name="com.baidu.android.pushservice.PushService"-->
+            <!--android:exported="true"-->
+            <!--android:process=":bdservice_v1">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+        <!--<service-->
+            <!--android:name="com.baidu.android.pushservice.CommandService"-->
+            <!--android:exported="true"/>-->
+        <!-- push结束 -->
+
+        <!-- START 百度定位 START -->
+
+
+
+
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission="android.permission.BAIDU_LOCATION_SERVICE"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.4" />
+            </intent-filter>
+        </service>
+
+        <!-- END 百度定位 END -->
+        <!-- 小米 配置开始 < -->
+        <permission
+            android:name="com.zjyeshi.dajiujiao.permission.MIPUSH_RECEIVE"
+            android:protectionLevel="signature" />
+        <uses-permission android:name="com.zjyeshi.dajiujiao.permission.MIPUSH_RECEIVE" />
+        <!-- 小米 配置结束 < -->
+        <!--&lt;!&ndash; 自定义推送消息接收器 &ndash;&gt;-->
+        <!--<receiver android:name=".buyer.chat.MyPushReceiver">-->
+            <!--<intent-filter>-->
+                <!--&lt;!&ndash; 接收push消息 &ndash;&gt;-->
+                <!--<action android:name="com.baidu.android.pushservice.action.MESSAGE" />-->
+                <!--&lt;!&ndash; 接收bind、setTags等method的返回结果&ndash;&gt;-->
+                <!--<action android:name="com.baidu.android.pushservice.action.RECEIVE" />-->
+                <!--&lt;!&ndash; 接收通知点击事件，和通知自定义内容 &ndash;&gt;-->
+                <!--<action android:name="com.baidu.android.pushservice.action.notification.CLICK" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <service android:name=".buyer.chat.MyGTIntentService"/>
+        <!-- =================================================END 百度推送 END============================================ -->
+        <!--会话页面-->
+        <activity android:name="com.zjyeshi.dajiujiao.buyer.activity.rong.ui.DoubleChatRoomActivity" />
+        <!--<activity-->
+            <!--android:name="com.zjyeshi.dajiujiao.buyer.activity.rong.ui.ConversationActivity"-->
+            <!--android:launchMode="singleTop"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:windowSoftInputMode="stateHidden|adjustResize">-->
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+
+                <!--<data-->
+                    <!--android:host="com.zjyeshi.dajiujiao"-->
+                    <!--android:pathPrefix="/conversation/"-->
+                    <!--android:scheme="rong" />-->
+            <!--</intent-filter>-->
+
+        <!--</activity>-->
+        <!--聚合会话列表-->
+        <activity
+            android:name="com.zjyeshi.dajiujiao.buyer.activity.rong.SubConversationListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.zjyeshi.dajiujiao"
+                    android:path="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!--会话界面-->
+        <activity android:name="com.zjyeshi.dajiujiao.buyer.activity.rong.ui.ConversationActivity"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+
+                    android:host="com.zjyeshi.dajiujiao"
+
+                    android:pathPrefix="/conversation"
+                    android:scheme="rong" />
+
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.zjyeshi.dajiujiao.buyer.activity.rong.ConversationListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.zjyeshi.dajiujiao"
+                    android:pathPrefix="/push_message"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
+        <receiver
+            android:name="com.zjyeshi.dajiujiao.buyer.activity.rong.SealNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <!--第三方的推送 权限 广播 和服务-->
+
+        <!-- 小米 配置开始 < -->
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+        <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.rong.push.platform.MiMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <!-- 小米 配置结束 < -->
+
+        <!-- HMS 配置开始-->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="100044355" />
+
+
+        <!-- 第三方相关 :接收Push消息（注册、Push消息、Push连接状态）广播 -->
+        <receiver android:name="io.rong.push.platform.HMSReceiver" >
+            <intent-filter>
+
+                <!-- 必须,用于接收token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须，用于接收消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <!-- 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 -->
+                <action android:name="com.huawei.android.push.intent.CLICK" />
+                <!-- 可选，查看push通道是否连接，不查看则不需要 -->
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver" >
+            <intent-filter>
+
+                <!-- 接收通道发来的通知栏消息，兼容老版本Push -->
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver>
+        <!-- HMS 配置结束-->
+
+        <!--&lt;!&ndash; GCM 配置 < &ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
+            <!--android:exported="true"-->
+            <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+                <!--<category android:name="cn.rongcloud.im" />-->
+                <!--&lt;!&ndash; 替换为自己的packagename < &ndash;&gt;-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<service-->
+            <!--android:name="io.rong.push.platform.RongGcmListenerService"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+        <!--<service-->
+            <!--android:name="io.rong.push.platform.RongGCMInstanceIDListenerService"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.gms.iid.InstanceID" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+        <!-- GCM 配置结束 < -->
+
+        <!--第三方推送的权限 广播 服务 配置结束-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zjyeshi.dajiujiao.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
+
+    </application>
+
+</manifest>

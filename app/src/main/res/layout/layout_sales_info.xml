@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.zjyeshi.dajiujiao.buyer.widgets.TwoTabClickWidget
+        android:id="@+id/twoTabClickWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_divider" />
+            <!--活动类型-->
+            <RelativeLayout
+                android:id="@+id/salesTypeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/item_selector"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="选择活动类型" />
+
+                <ImageView
+                    android:id="@+id/salesTypeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+
+                <TextView
+                    android:id="@+id/salesTypeTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/salesTypeIv"
+                    android:text="满额送礼品" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_divider"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_divider" />
+            </RelativeLayout>
+
+            <!--满金额送礼品-->
+            <LinearLayout
+                android:id="@+id/giveGiftLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--满金额-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/item_selector"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:id="@+id/giveGiftConditionTv"
+                        style="@style/FontBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="满足金额" />
+
+                    <TextView
+                        android:id="@+id/conditionTv"
+                        style="@style/FontBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/giveGiftPriceEt"
+                        android:text="满" />
+
+                    <EditText
+                        android:id="@+id/giveGiftPriceEt"
+                        style="@style/FontBlack14"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/no_corner_shape" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_divider"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_divider" />
+                </RelativeLayout>
+                <!--礼品-->
+                <RelativeLayout
+                    android:id="@+id/selectGiftLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/item_selector"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        style="@style/FontBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="赠送礼品" />
+
+                    <ImageView
+                        android:id="@+id/giveGiftIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/icon_right_arrow" />
+
+                    <TextView
+                        android:id="@+id/giveGiftTv"
+                        style="@style/FontBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/giveGiftIv"
+                        android:text="请选择礼品" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_divider"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_divider" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--满返满减-->
+            <RelativeLayout
+                android:id="@+id/cutMoneyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/item_selector"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/fillDesTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="满减金额" />
+
+                <TextView
+                    android:id="@+id/fillTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/fillEt"
+                    android:text="满" />
+
+                <EditText
+                    android:id="@+id/fillEt"
+                    style="@style/FontBlack14"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/cutTv"
+                    android:background="@drawable/no_corner_shape" />
+
+                <TextView
+                    android:id="@+id/cutTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/cutEt"
+                    android:text="减" />
+
+                <EditText
+                    android:id="@+id/cutEt"
+                    style="@style/FontBlack14"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/no_corner_shape" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_divider"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_divider" />
+            </RelativeLayout>
+
+
+            <!--活动网址-->
+            <RelativeLayout
+                android:id="@+id/urlLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/item_selector"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="活动网址" />
+
+                <ImageView
+                    android:id="@+id/urlIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+
+                <TextView
+                    android:id="@+id/urlTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/urlIv"
+                    android:background="@null"
+                    android:text="活动网址" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_divider"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_divider" />
+            </RelativeLayout>
+
+            <!--起始日期-->
+            <RelativeLayout
+                android:id="@+id/startTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/item_selector"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="起始日期" />
+
+                <ImageView
+                    android:id="@+id/startTimeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+
+                <TextView
+                    android:id="@+id/startTimeTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/startTimeIv"
+                    tools:text="2016-10-30" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_divider"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_divider" />
+            </RelativeLayout>
+
+            <!--截止日期-->
+            <RelativeLayout
+                android:id="@+id/endTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/item_selector"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="截止日期" />
+
+                <ImageView
+                    android:id="@+id/endTimeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+
+                <TextView
+                    android:id="@+id/endTimeTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/endTimeIv"
+                    tools:text="2016-10-31" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_divider" />
+
+            <RelativeLayout
+                android:id="@+id/joinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/item_selector"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:id="@+id/joinTv"
+                    style="@style/FontBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="参与店铺" />
+
+                <ImageView
+                    android:id="@+id/joinShopIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider" />
+
+            <include layout="@layout/dg_include_listview" />
+        </LinearLayout>
+
+        <com.zjyeshi.dajiujiao.buyer.widgets.timePicker.DatePickerWidget
+            android:id="@+id/datePickerWidget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

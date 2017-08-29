@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+    <RelativeLayout
+        android:padding="@dimen/dimen_48"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_237"
+        android:background="@drawable/item_selector">
+        <ImageView
+            android:id="@+id/goIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+        <LinearLayout
+            android:layout_toLeftOf="@id/goIv"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/other_position"/>
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dimen_33"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/addressTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack16"
+                    android:text="文一路新昌路交叉口"/>
+                <TextView
+                    android:id="@+id/timeTv"
+                    android:gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/FontGray14"
+                    android:text="2016-03-28 10:36"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

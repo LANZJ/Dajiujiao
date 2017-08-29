@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_276"
+    android:background="@drawable/product_listitem"
+    android:minHeight="@dimen/dimen_276">
+
+    <ImageView
+        android:id="@+id/productIv"
+        android:layout_width="@dimen/dimen_204"
+        android:layout_height="@dimen/dimen_204"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_48"
+        android:layout_marginRight="@dimen/dimen_48"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/default_img"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_204"
+        android:layout_toLeftOf="@+id/arrowIv"
+        android:layout_marginRight="@dimen/dimen_30"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/productIv"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/ProductTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="拉菲庄园进口"
+            android:gravity="center_vertical"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/detailTv"
+                style="@style/ProductDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                tools:text="库存:54"
+                android:maxLines="1"/>
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:id="@+id/priceTv"
+                style="@style/ProductPriceTv"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:text="¥12"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_seperator"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen_48"
+        android:layout_marginRight="@dimen/dimen_48"
+        android:background="@color/color_product_seperator"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/arrowIv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/icon_right_arrow"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="@dimen/dimen_48"/>-->
+</RelativeLayout>

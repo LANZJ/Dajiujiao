@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_dialog_shape">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/imgIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src = "@drawable/ok"/>
+            <TextView
+                android:id="@+id/desTv"
+                android:layout_marginTop="@dimen/dimen_60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontCarBlack16"
+                tools:text = "打卡成功"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_marginTop="@dimen/dimen_60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                tools:text = "8:29"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/sureLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/sureTv"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontTime16"
+            tools:text = "确定"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/lateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/leftTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                style="@style/FontTime16"
+                android:textColor="#f5a623"
+                android:gravity="center"
+                tools:text = "确定"/>
+            <View
+                android:layout_width="@dimen/dimen_divider"
+                android:layout_height="@dimen/dimen_120"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_divider" />
+            <TextView
+                android:id="@+id/rightTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                style="@style/FontTime16"
+                android:gravity="center"
+                tools:text = "报告原因"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

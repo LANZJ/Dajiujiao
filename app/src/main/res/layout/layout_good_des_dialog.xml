@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/good_detail_dialog_shape">
+        <LinearLayout
+            android:id="@+id/activityLayout"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:background="@color/color_white"
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_42"
+                android:paddingBottom="20dp">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/photoIv"
+                    android:layout_width="@dimen/dimen_435"
+                    android:layout_height="@dimen/dimen_435"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_default" />
+            </RelativeLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shop_act_bottom_shape">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:id="@+id/desTv"
+                    android:layout_marginTop="@dimen/dimen_42"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    style="@style/FontBlack16"
+                    android:text="曼萨纳雷斯城堡原装干红葡萄酒"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/lookCommentTv"
+                        android:paddingLeft="@dimen/dimen_48"
+                        android:paddingRight="@dimen/dimen_48"
+                        android:paddingBottom="@dimen/dimen_48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        style="@style/FontRed16"
+                        android:text="查看评价" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>>
+    </LinearLayout>
+
+</LinearLayout>

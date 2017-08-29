@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用颜色部分 -->
+    <color name="cw_color_btnbg_pressed">#10000000</color>
+    <color name="cw_color_white">#ffffff</color>
+    <color name="cw_color_black">#000000</color>
+    <color name="cw_color_translucent">#60000000</color><!-- 半透明 -->
+    <color name="cw_color_transparent">#00000000</color><!-- 全透明 -->
+    
+    <color name="cw_color_theme">#7FD450</color><!-- 主题色 -->
+    <color name="cw_color_theme_pressed">#75BD4F</color><!-- 主题色的，按下效果 -->
+    <color name="cw_color_theme_bg">#E1E1E1</color><!-- 主题背景 -->
+    
+    <!-- tabframe.mcall框架部分参数 -->
+    <color name="cw_tabframe_mcall_tabbtn_text_checked">#7FD450</color><!-- tab文字选中 -->
+    <color name="cw_tabframe_mcall_tabbtn_text_normal">#696969</color><!-- tab文字未选中 -->
+    <color name="cw_tabframe_mcall_tab_bg">#f8f8f8</color><!-- tab背景颜色 -->
+    <color name="cw_tabframe_mcall_tab_top_sepreator">#dfdfdd</color><!-- tab上面的分割线颜色 -->
+    
+    <!-- dialog -->
+    <color name="cw_dialog_title_bg">#7cd646</color><!-- 弹出框标题背景色 -->
+    <color name="cw_dialog_theme">#7cd646</color><!-- 弹出框标题背景色 -->
+    
+    <!-- widgets.title -->
+    <color name="cw_widgets_title_bg">#7cd646</color><!-- 标题背景 -->
+    <color name="cw_widgets_title_middletv_textcolor">#ffffff</color><!-- 中间标题字体颜色 -->
+    <color name="cw_widgets_title_righttv_textcolor">#ffffff</color><!-- 中间标题字体颜色 -->
+    <color name="cw_widgets_title_lefttv_textcolor">#ffffff</color><!-- 左边字体颜色 -->
+
+    <!-- conversationlist -->
+    <color name="cw_color_unreadnum">#F13838</color><!-- 标题背景 -->
+
+    <!-- chat -->
+    <color name="cw_color_chat_conversation_bottom_bar_select_bg">#eaeaea</color>
+    <color name="cw_color_chat_conversation_listitem_time_bg">#CECECE</color><!-- 会话里面时间的背景色 -->
+    <color name="cw_color_chat_conversation_bg">#EBEBEB</color><!-- 会话背景色 -->
+    <color name="cw_color_chat_volume_message_bg">#FC0D1B</color><!-- 录音话筒背景 -->
+    <color name="cw_color_chat_conversation_name">#444444</color><!-- 聊天框里面的姓名字体颜色 -->
+
+    <!-- album -->
+    <color name="cw_album_multi_bg">#60000000</color>
+
+    <!--webview-->
+    <color name="cw_color_chat_webview_op_bg">#E9E9E9</color>
+
+    <!--divider-->
+    <color name="cw_color_divider">#d9d9d9</color>
+
+    <color name="cw_color_font_gray">#9b9b9b</color>
+
+</resources>

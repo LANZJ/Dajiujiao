@@ -1,0 +1,21 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <!-- titleLeftTv -->
+    <style name="CwWidgetsTitleLeftTv">
+        <item name="android:textColor" >@color/cw_widgets_title_lefttv_textcolor</item>
+        <item name="android:textSize" >@dimen/cw_widgets_title_lefttv_textsize</item>
+    </style>
+
+    <!-- titleMiddleTv -->
+    <style name="CwWidgetsTitleMiddleTv">
+        <item name="android:textColor" >@color/cw_widgets_title_middletv_textcolor</item>
+        <item name="android:textSize" >@dimen/cw_widgets_title_middletv_textsize</item>
+    </style>
+    
+    <!-- titleRightTv -->
+    <style name="CwWidgetsTitleRightTv">
+        <item name="android:textColor" >@color/cw_widgets_title_righttv_textcolor</item>
+        <item name="android:textSize" >@dimen/cw_widgets_title_righttv_textsize</item>
+    </style>
+</resources>

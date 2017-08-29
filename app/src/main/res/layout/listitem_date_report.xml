@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/item_selector">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center_vertical"
+                tools:text = "2017-01-19 14:59"
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                style="@style/FontGray14"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@+id/goIv"/>
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_marginLeft="@dimen/dimen_48"
+                    android:layout_centerVertical="true"
+                    tools:text = "kfsdkfjs"
+                    android:id="@+id/nameTv"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack16" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@id/nameTv"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/unReadTv"
+                        tools:text = "[未读]"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        style="@style/FontRed12" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:id="@+id/unReadCommentTv"
+                        tools:text = "[未读评论]"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        style="@style/FontRed12" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/goIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/goin" />
+        <!--<LinearLayout-->
+            <!--android:layout_marginRight="@dimen/dimen_48"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<TextView-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--tools:text = "当老师发来看电视"-->
+                <!--android:id="@+id/timeTv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--style="@style/FontGray14"-->
+                <!--android:layout_toLeftOf="@+id/goIv"/>-->
+            <!--<ImageView-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:id="@+id/goIv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/goin"-->
+                <!--android:layout_alignParentRight="true" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+</LinearLayout>

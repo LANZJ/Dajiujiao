@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cw_color_theme_bg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#EBEBEB"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/discu_member_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="5dp"
+                    android:text="讨论组成员()"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cw_color_white">
+                <com.jopool.crow.imkit.view.CWGroupUserGridView
+                    android:id="@+id/groupUserGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="15dp"
+                    android:numColumns="5"
+                    android:cacheColorHint="#00000000"
+                    android:listSelector="#00000000"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/groupNameLayout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/cw_conversationlist_item_selector"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+                <TextView
+                    android:id="@+id/nameDesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cw_color_black"
+                    android:textSize="14sp"
+                    android:text="群聊名称"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:id="@+id/groupNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/cw_color_font_gray"
+                    tools:text = "群聊"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/nameDesTv"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/exitBtn"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/cw_color_white"
+                android:text="删除并退出"
+                android:background="@drawable/cw_group_exit_selector"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

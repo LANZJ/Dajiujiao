@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:layout_marginTop="@dimen/dimen_60"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_3"
+            android:background="@color/color_divider" />
+
+        <TextView
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:text="一般" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_divider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:layout_marginTop="@dimen/dimen_42"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider" />
+
+        <TextView
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:text="核心" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_divider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:layout_marginTop="@dimen/dimen_42"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider" />
+
+        <TextView
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:text="重点" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_divider" />
+    </RelativeLayout>
+
+</LinearLayout>

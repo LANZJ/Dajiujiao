@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/shareLayout"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_144">
+            <ImageView
+                android:id="@+id/shareIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                android:layout_marginRight="@dimen/dimen_48"/>
+        </LinearLayout>
+    </com.xuan.bigdog.lib.widgets.title.DGTitleLayout>
+    <LinearLayout
+        android:background="@color/color_bg"
+        android:id="@+id/shootLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="@dimen/dimen_162"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/FontBlack14"
+            android:text="@string/share_ma_des1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="@style/FontBlack14"
+            android:text="@string/share_ma_des2"/>
+        <ImageView
+            android:id="@+id/erCodeIv"
+            android:layout_marginTop="@dimen/dimen_48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_marginTop="@dimen/dimen_90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack16"
+            android:text="@string/share_ma"
+            android:layout_gravity="center_horizontal"/>
+
+        <!--<TextView-->
+            <!--android:layout_marginTop="@dimen/dimen_153"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/FontGray14"-->
+            <!--android:text="@string/you_ma"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
+        <TextView
+            android:id="@+id/myMaTv"
+            android:layout_marginTop="@dimen/dimen_48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontRed28"
+            android:text="aa"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+</LinearLayout>

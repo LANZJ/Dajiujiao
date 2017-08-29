@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">AndroidDemoTabFragment</string>
+    <string name="test">This is test text!</string>
+    
+    <!-- 四个主界面下面tab的文字 -->
+    <string name="dg_tabframe_mcall_btn_text1">tab1</string>
+    <string name="dg_tabframe_mcall_btn_text2">tab2</string>
+    <string name="dg_tabframe_mcall_btn_text3">tab3</string>
+    <string name="dg_tabframe_mcall_btn_text4">tab4</string>
+    
+    <string name="just_sub_face">这个只是个子界面的demo</string>
+    
+    <string name="sub_face1">第一个界面</string>
+    <string name="sub_face2">第二个界面</string>
+    <string name="sub_face3">第三个界面</string>
+    <string name="sub_face4">第四个界面</string>
+    
+    <string name="back_btn_text">点击可以回调主界面的方法</string>
+    <string name="gotoother_btn_text">点击调转到子界面</string>
+    
+    <!-- chat -->
+    <string name="dg_fa_song">发送</string>
+    <string name="dg_an_zhu_sh">按住说话</string>
+    
+    <!-- widgets.login -->
+    <string name="dg_widgets_login_username">用户名</string>
+    <string name="dg_widgets_login_password">密码</string>
+    <string name="dg_widgets_login_loginbtn_text">登录</string>
+    
+    <!-- widgets.adaoter -->
+    <string name="dg_widgets_adapter_nodata_message">没有数据哦</string>
+
+</resources>

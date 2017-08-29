@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/dimen_39">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/photoIv"
+                android:layout_width="@dimen/dimen_90"
+                android:layout_height="@dimen/dimen_90" />
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack14"
+                android:text="111"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimen_48"/>
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                tools:text = "时间"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack16"
+            android:text="1254544瞌睡的疯狂的双方会计师的恢复快速的机会呢客户方尽快收到回复"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/levelTv"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontGray14"
+            android:text="快点恢复快几点睡"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+</LinearLayout>

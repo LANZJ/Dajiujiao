@@ -1,0 +1,28 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    
+    <!-- tabframe.mcall框架部分参数 -->
+    <dimen name="dg_tabframe_mcall_tab_height">52dp</dimen><!-- tab高度 -->
+    <dimen name="dg_tabframe_mcall_tabbtn_text_size">12sp</dimen><!-- tabbtn字体大小 -->
+    <dimen name="dg_tabframe_mcall_tabbtn_text_paddingtop">3dp</dimen><!-- 字体和图标之间的padding -->
+    <dimen name="dg_tabframe_mcall_tabbtn_margin_top">0dp</dimen><!-- tabbtn距离上边缘距离 -->
+    
+    <!-- widgets.title -->
+	<dimen name="dg_widgets_title_bg_height">48dp</dimen>
+    <!--
+	<dimen name="dg_widgets_title_leftiv_width_height">25dp</dimen>
+	-->
+	<dimen name="dg_widgets_title_middletv_textsize">20sp</dimen>
+    <!--
+	<dimen name="dg_widgets_title_righttv_width">80dp</dimen>
+	-->
+	<dimen name="dg_widgets_title_righttv_textsize">16sp</dimen>
+    <dimen name="dg_widgets_title_lefttv_textsize">16sp</dimen>
+	
+	<!-- widgets.popupwindow.toplist -->
+	<dimen name="dg_widgets_popupwindow_toplist_item_width">150dp</dimen>
+	<dimen name="dg_widgets_popupwindow_toplist_item_height">40dp</dimen>
+</resources>

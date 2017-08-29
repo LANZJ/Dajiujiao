@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="@dimen/dimen_33"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_204"
+        android:background="@color/color_white_trans">
+        <ImageView
+            android:id="@+id/positionIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/other_position"
+            />
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dimen_33"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/addressTv"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack16"
+                android:text="杜鹃花打快速"/>
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                android:text="的萨反对司法"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

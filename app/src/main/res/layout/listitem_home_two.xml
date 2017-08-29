@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_123"
+        android:paddingRight="@dimen/dimen_48"
+        android:paddingLeft="@dimen/dimen_48"
+        android:background="@color/color_bg">
+    <ImageView
+        android:id="@+id/busIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bus"
+     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontBlack14"
+        android:layout_centerVertical="true"
+        android:text="@string/f1_des"
+        android:layout_toRightOf="@id/busIv"
+        android:layout_marginLeft="@dimen/dimen_48"/>
+    <TextView
+        android:id="@+id/numTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontBlack14"
+        android:text = "共8家"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

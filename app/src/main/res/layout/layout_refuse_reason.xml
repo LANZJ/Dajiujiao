@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/color_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontGray14"
+            android:text="拒绝理由(至少选1项)"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"/>
+    </LinearLayout>
+    <com.xuan.bigappleui.lib.view.scrollview.BUVerticalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.xuan.bigappleui.lib.view.listview.BUHighHeightListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:scrollbars="none"
+                android:listSelector="#00000000"
+                android:fadingEdgeLength="@dimen/dimen_0"/>
+
+            <EditText
+                android:id="@+id/remarkEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                style="@style/FontBlack14"
+                android:background="@null"
+                android:hint="请输入备注内容" />
+
+        </LinearLayout>
+
+    </com.xuan.bigappleui.lib.view.scrollview.BUVerticalScrollView>
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/no_corner_btn_click"
+        style="@style/FontWhite16"
+        android:text="提交"/>
+</LinearLayout>

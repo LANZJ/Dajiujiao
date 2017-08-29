@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dajiujiao.iml" filepath="$PROJECT_DIR$/Dajiujiao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMLib/IMLib.iml" filepath="$PROJECT_DIR$/IMLib/IMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RedPacket/RedPacket.iml" filepath="$PROJECT_DIR$/RedPacket/RedPacket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sticker/Sticker.iml" filepath="$PROJECT_DIR$/Sticker/Sticker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigappleuilib/bigappleuilib.iml" filepath="$PROJECT_DIR$/bigappleuilib/bigappleuilib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigdoglib/bigdoglib.iml" filepath="$PROJECT_DIR$/bigdoglib/bigdoglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcrowlib/jcrowlib.iml" filepath="$PROJECT_DIR$/jcrowlib/jcrowlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsharelib/jsharelib.iml" filepath="$PROJECT_DIR$/jsharelib/jsharelib.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/customerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:layout_marginTop="@dimen/dimen_60"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_3"
+            android:background="@color/color_divider" />
+
+        <TextView
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:text="终端客户" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_divider" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/employeeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_150"
+        android:layout_marginTop="@dimen/dimen_42"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider" />
+
+        <TextView
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:text="内部员工" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_divider" />
+    </RelativeLayout>
+</LinearLayout>

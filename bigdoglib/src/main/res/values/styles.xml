@@ -1,0 +1,58 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <!-- tabfame.mcall中tabbtn的样式 -->
+    <style name="DgTabframeMcallTabbtnTheme">
+        <item name="android:button" >@null</item>
+        <item name="android:textSize" >@dimen/dg_tabframe_mcall_tabbtn_text_size</item>
+        <item name="android:textColor" >@color/dg_tabframe_mcall_btn_text_color</item>
+        <item name="android:layout_gravity" >bottom</item>
+        <item name="android:gravity" >center_horizontal</item>
+        <item name="android:background" >@drawable/dg_tab_btn_bg</item>
+        <item name="android:paddingTop" >@dimen/dg_tabframe_mcall_tabbtn_text_paddingtop</item>
+    </style>
+    
+    <!-- titleMiddleTv -->
+    <style name="DgWidgetsTitleMiddleTv">
+        <item name="android:textColor" >@color/dg_widgets_title_middletv_textcolor</item>
+        <item name="android:textSize" >@dimen/dg_widgets_title_middletv_textsize</item>
+    </style>
+    
+    <!-- titleRightTv -->
+    <style name="DgWidgetsTitleRightTv">
+        <item name="android:textColor" >@color/dg_widgets_title_righttv_textcolor</item>
+        <item name="android:textSize" >@dimen/dg_widgets_title_righttv_textsize</item>
+    </style>
+
+    <!-- titleLeftTv -->
+    <style name="DgWidgetsTitleLeftTv">
+        <item name="android:textColor" >@color/dg_widgets_title_lefttv_textcolor</item>
+        <item name="android:textSize" >@dimen/dg_widgets_title_lefttv_textsize</item>
+    </style>
+    
+    <!-- dg.dialog -->
+    <!-- progressBar -->
+    <style name="DgProgressBarStyle" parent="android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/dg_dialog_progress_layerlist</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:maxWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+    <!-- progressBar -->
+    <style name="DgProgressBarStyleSmall" parent="android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/dg_dialog_progress_layerlist</item>
+        <item name="android:minWidth">24dp</item>    
+        <item name="android:maxWidth">24dp</item>    
+        <item name="android:minHeight">24dp</item>    
+        <item name="android:maxHeight">24dp</item>   
+    </style>
+    <!-- progressDialog -->
+    <style name="DgDialogForProgressStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->  
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->  
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->  
+        <item name="android:windowBackground">@color/dg_color_transparent</item><!--背景透明-->  
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+</resources>

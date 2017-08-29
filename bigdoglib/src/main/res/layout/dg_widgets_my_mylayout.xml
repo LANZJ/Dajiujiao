@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dg_widgets_my_mylayout_bg">
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout 
+	        android:id="@+id/dgTitleLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"/>
+	    <com.xuan.bigappleui.lib.view.listview.BUHighHeightListView
+		    android:id="@+id/listView"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:divider="@null"
+		    android:cacheColorHint="#00000000"
+		    android:scrollbars="none"
+		    android:listSelector="#00000000"/>
+	    <Button 
+	        android:id="@+id/logoutBtn"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:text="@string/test"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:textColor="@color/dg_color_white"
+       	    android:textSize="20sp"
+	        android:background="@drawable/dg_theme_btn"/>
+	</LinearLayout>
+</ScrollView>

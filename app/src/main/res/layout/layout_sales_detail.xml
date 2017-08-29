@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.xuan.bigappleui.lib.view.scrollview.BUVerticalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/salesTypeTv"
+                        style="@style/FontGray16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="店铺活动" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/fillDesTv"
+                            style="@style/FontBlack24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="满" />
+
+                        <TextView
+                            android:id="@+id/fillTv"
+                            style="@style/FontRed24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="100" />
+
+                        <TextView
+                            android:id="@+id/cutDesTv"
+                            style="@style/FontBlack24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="减" />
+
+                        <TextView
+                            android:id="@+id/cutTv"
+                            style="@style/FontRed24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="20" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/startTimeTv"
+                        style="@style/FontGray12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="起始日期" />
+
+                    <TextView
+                        android:id="@+id/stopTimeTv"
+                        style="@style/FontGray12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="截止日期" />
+
+                    <TextView
+                        android:id="@+id/creationTimeTv"
+                        style="@style/FontGray12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="创建日期" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.zjyeshi.dajiujiao.buyer.views.other.IVButtonBox
+                            android:id="@+id/buttonIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/close" />
+
+                        <TextView
+                            style="@style/FontGray12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="3dp"
+                            android:text="活动开关" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/priorityTv"
+                            android:layout_gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/FontGray14"
+                            tools:text = "优先级：1"
+                            android:layout_marginRight="5dp"/>
+                        <ImageView
+                            android:id="@+id/priorityIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/icon_fold_down" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+            <RelativeLayout
+                android:id="@+id/joinShopLayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/color_white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+                <TextView
+                    android:id="@+id/joinShopTv"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack14"
+                    android:text="参与店铺"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/modifyShopTv"
+                    android:visibility="gone"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack12"
+                    android:text="修改"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+            <ListView
+                android:id="@+id/joinShopListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdgeLength="0dp"
+                android:scrollbars="none"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+
+            <!--活动商品-->
+            <RelativeLayout
+                android:id="@+id/joinProductLayout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/color_white"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+                <TextView
+                    android:id="@+id/joinProductTv"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack14"
+                    android:text="活动商品"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/modifyProductTv"
+                    android:visibility="gone"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/FontBlack12"
+                    android:text="修改"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_divider"
+                android:background="@color/color_divider"/>
+            <ListView
+                android:id="@+id/joinProductListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadingEdgeLength="0dp"
+                android:scrollbars="none"/>
+        </LinearLayout>
+
+    </com.xuan.bigappleui.lib.view.scrollview.BUVerticalScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:minHeight="70dp"
+    android:background="@drawable/dg_widgets_my_listitem_bg">
+    <ImageView
+        android:id="@+id/headIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:src="@drawable/dg_default_image"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black"
+        android:text="@string/test"
+        android:layout_toRightOf="@+id/headIv"
+        android:layout_margin="10dp"
+        android:textSize="18sp" />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dg_widgets_my_seperator"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

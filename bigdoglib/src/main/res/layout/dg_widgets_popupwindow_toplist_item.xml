@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dg_widgets_popupwindow_toplist_item_width"
+    android:layout_height="@dimen/dg_widgets_popupwindow_toplist_item_height"
+    android:background="@drawable/dg_btn_pressed">
+    <ImageView 
+        android:id="@+id/imageIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/dg_default_image"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"/>
+    <TextView 
+        android:id="@+id/textTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageIv"
+        android:text="Test"
+        android:textSize="13sp"
+        android:textColor="#ababab"
+        android:layout_centerVertical="true"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dg_widgets_popupwindow_toplist_seperator"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

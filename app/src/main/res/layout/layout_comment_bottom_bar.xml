@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+        <RelativeLayout
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:id="@+id/bottomBarRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_bg"
+            android:orientation="vertical" >
+            <!-- 喇叭图标 -->
+            <Button
+                android:id="@+id/selectVoiceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cw_chat_btn_conversation_bottom_bar_selectvoice"
+                android:visibility="invisible" />
+            <!-- 文本图标 -->
+            <Button
+                android:id="@+id/selectTextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cw_chat_btn_conversation_bottom_bar_selecttext" />
+            <!-- 按住说话按钮 -->
+            <Button
+                android:layout_alignTop="@+id/selectToolsBtn"
+                android:layout_alignBottom="@+id/selectToolsBtn"
+                android:id="@+id/voiceBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/selectToolsBtn"
+                android:layout_toRightOf="@+id/selectVoiceBtn"
+                android:background="@drawable/voice_selector"
+                android:text="@string/cw_an_zhu_sh"
+                android:textColor="@color/cw_color_black"
+                android:textSize="15sp" />
+            <!-- 文本输入框 -->
+            <EditText
+                android:layout_alignTop="@+id/selectToolsBtn"
+                android:layout_alignBottom="@+id/selectToolsBtn"
+                android:paddingLeft="5dp"
+                android:id="@+id/inputEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/sendBtn"
+                android:layout_toRightOf="@+id/selectVoiceBtn"
+                android:background="@drawable/border_shape"
+                android:inputType="text"
+                android:maxLines="5"
+                android:textColor="@color/cw_color_black"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+            <!-- 发送文本按钮 -->
+            <Button
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignTop="@+id/selectToolsBtn"
+                android:layout_alignBottom="@+id/selectToolsBtn"
+                android:id="@+id/sendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/selectToolsBtn"
+                android:background="@drawable/send_selector"
+                android:text="@string/cw_fa_song"
+                android:textColor="@color/cw_color_white"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+            <!-- 添加图片的加号图标 -->
+            <Button
+                android:layout_marginRight="5dp"
+                android:id="@+id/selectToolsBtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/cw_chat_conversation_bottom_bar_tool_camera" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

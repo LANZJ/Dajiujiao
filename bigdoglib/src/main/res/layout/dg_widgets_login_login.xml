@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout 
+        android:id="@+id/dgTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+    <ImageView
+        android:id="@+id/logoIv"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/dg_widgets_login_logo"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"/>
+    <!-- 用户名 -->
+    <EditText 
+        android:id="@+id/usernameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/dg_widgets_login_username"
+        android:background="@android:color/white"/>
+    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+	    android:background="@color/dg_widgets_login_input_seperator"/>
+    <!-- 密码 -->
+    <EditText 
+        android:id="@+id/passwordEdit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/dg_widgets_login_password"
+        android:inputType="textPassword"
+        android:background="@android:color/white"/>
+    <View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.5dp"
+	    android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+	    android:background="@color/dg_widgets_login_input_seperator"/>
+    <!-- 登录按钮 -->
+    <Button 
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/dg_widgets_login_loginbtn_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/dg_theme_btn"
+        android:textColor="@color/dg_color_white"
+        android:textSize="20sp" />
+</LinearLayout>

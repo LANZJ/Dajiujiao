@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用颜色部分 -->
+    <color name="dg_color_btnbg_pressed">#10000000</color>
+    <color name="dg_color_white">#ffffff</color>
+    <color name="dg_color_black">#000000</color>
+    <color name="dg_color_translucent">#60000000</color><!-- 半透明 -->
+    <color name="dg_color_transparent">#00000000</color><!-- 全透明 -->
+    
+    <color name="dg_color_theme">#7FD450</color><!-- 主题色 -->
+    <color name="dg_color_theme_pressed">#75BD4F</color><!-- 主题色的，按下效果 -->
+    <color name="dg_color_theme_bg">#E1E1E1</color><!-- 主题背景 -->
+    
+    <!-- tabframe.mcall框架部分参数 -->
+    <color name="dg_tabframe_mcall_tabbtn_text_checked">#7FD450</color><!-- tab文字选中 -->
+    <color name="dg_tabframe_mcall_tabbtn_text_normal">#696969</color><!-- tab文字未选中 -->
+    <color name="dg_tabframe_mcall_tab_bg">#f8f8f8</color><!-- tab背景颜色 -->
+    <color name="dg_tabframe_mcall_tab_top_sepreator">#dfdfdd</color><!-- tab上面的分割线颜色 -->
+    
+    <!-- dialog -->
+    <color name="dg_dialog_title_bg">#7cd646</color><!-- 弹出框标题背景色 -->
+    
+    <!-- widgets.title -->
+    <color name="dg_widgets_title_bg">#7cd646</color><!-- 标题背景 -->
+    <color name="dg_widgets_title_middletv_textcolor">#ffffff</color><!-- 中间标题字体颜色 -->
+    <color name="dg_widgets_title_righttv_textcolor">#ffffff</color><!-- 右边字体颜色 -->
+    <color name="dg_widgets_title_lefttv_textcolor">#ffffff</color><!-- 左边字体颜色 -->
+    
+    <!-- widgets.my -->
+    <color name="dg_widgets_my_mylayout_bg">#fbfcff</color><!-- 我的界面背景 -->
+    <color name="dg_widgets_my_seperator">#b8b8b8</color><!-- 分割线 -->
+    
+    <!-- widgets.login -->
+    <color name="dg_widgets_login_input_seperator">#b8b8b8</color><!-- 输入分割线 -->
+    
+    <!-- widgets.popupwindow.toplist -->
+    <color name="dg_widgets_popupwindow_toplist_seperator">#b8b8b8</color><!-- 输入分割线 -->
+    
+    <!-- album -->
+    <color name="dg_album_multi_bg">#60000000</color>
+
+    <!-- widgets.carouse -->
+    <color name="dg_widgets_carouse_activated">#49b232</color><!--轮播指示器选中和不选中颜色-->
+    <color name="dg_widgets_carouse_unactivated">#9A9496</color>
+
+    <color name="dg_color_444444">#444444</color>
+</resources>

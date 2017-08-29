@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/hmcLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_150"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_3"
+            android:background="@color/color_divider"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/FontBlack16"
+            android:text="@string/work_hmc"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/orderManageLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_150"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/FontBlack16"
+            android:text="@string/work_order_manager"/>
+        <ImageView
+            android:id="@+id/orderGoIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin"/>
+
+        <com.zjyeshi.dajiujiao.buyer.views.UnReadNumView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/orderGoIv"
+            android:layout_centerVertical="true"
+            android:id="@+id/orderCountUnRead"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/kcManagerLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_150"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/FontBlack16"
+            android:text="@string/work_kc_manager"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/canBuyLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_150"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/FontBlack16"
+            android:text="品项管理"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/helpOrderLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_height="@dimen/dimen_150"
+        android:background="@drawable/item_selector">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dimen_72"
+            android:layout_toRightOf="@id/manageIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/FontBlack16"
+            android:text="代客户下单"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_48"
+            android:src="@drawable/goin"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingRight="40dp"
+    android:paddingLeft="40dp">
+    <TextView
+        android:id="@+id/tipTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/cw_chat_shape_bg_msg_listitem_time"
+        android:gravity="center"
+        android:textColor="@color/cw_color_white"
+        android:textSize="12sp"
+        android:padding="5dp"
+        android:text="我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示我是提示"/>
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@drawable/item_selector">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/avatarIv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:src="@drawable/ic_default"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack16"
+                tools:text="姓名"
+                android:layout_marginLeft="@dimen/dimen_45"/>
+
+            <TextView
+                android:id="@+id/companyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:visibility="visible"
+                tools:text = "公司名称"/>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/areaTv"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                tools:text = "地区:上海市"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+
+</LinearLayout>

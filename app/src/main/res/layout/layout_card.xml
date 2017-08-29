@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/color_bg">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_60"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:orientation="vertical"
+        android:layout_below="@id/titleLayout"
+        android:background="@drawable/border_shape">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_240">
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontBlack36"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_60"
+                tools:text = "时间"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_3"
+            android:background="@color/color_divider" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:layout_height="@dimen/dimen_75">
+            <ImageView
+                android:id="@+id/mapIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/store_add"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/locationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray16"
+                android:layout_toRightOf="@id/mapIv"
+                android:text="正在定位"
+                android:singleLine="true"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_30"
+            android:paddingBottom="@dimen/dimen_30">
+            <com.zjyeshi.dajiujiao.buyer.views.other.MyGridView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@null"
+                android:numColumns="5"
+                android:verticalSpacing="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/cardBt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_132"
+        android:background="@drawable/no_corner_btn_click"
+        android:layout_alignParentBottom="true"
+        android:text="上班打卡"
+        style="@style/FontWhite16"
+        android:gravity="center"/>
+</RelativeLayout>

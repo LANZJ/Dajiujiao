@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp">
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/cw_webview_opitem_bg_shape">
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cw_webview_opitem_ic_sendtouser"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送给朋友发送给朋友"
+        android:gravity="center"
+        android:textColor="#444"
+        android:textSize="12sp"
+        android:lines="2"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>

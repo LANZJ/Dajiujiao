@@ -1,0 +1,1 @@
+include ':app', ':bigdoglib', ':jsharelib', ':bigappleuilib', ':jcrowlib', ':IMKit', ':IMLib', ':Sticker', ':RedPacket'

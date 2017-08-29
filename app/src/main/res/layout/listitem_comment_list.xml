@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:paddingBottom="@dimen/dimen_60">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"
+        />
+    <RelativeLayout
+        android:paddingRight="@dimen/dimen_60"
+        android:paddingLeft="@dimen/dimen_60"
+        android:paddingBottom="@dimen/dimen_30"
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/fromTv"
+            style="@style/FontGray14"
+            android:text="来自："
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            style="@style/FontGray14"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "放到手机回复"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginRight="@dimen/dimen_60"
+        android:layout_marginLeft="@dimen/dimen_60"
+        android:layout_below="@id/timeLayout"
+        android:id="@+id/contentTv"
+        style="@style/FontBlack16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text = "附近的还是飞机开始的恢复健康的书法家开始的恢复健康的还是飞机快"/>
+        
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imageIv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="@dimen/dimen_60"/>
+    
+    <RelativeLayout
+        android:id="@+id/voiceLayout"
+        android:layout_marginLeft="@dimen/dimen_60"
+        android:layout_width="@dimen/dimen_210"
+        android:layout_height="@dimen/dimen_90"
+        android:background="@drawable/border_shape">
+        <ImageView
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_centerVertical="true"
+            android:id="@+id/voiceIv"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cw_chat_voice_playing_left4" />
+        <TextView
+            android:id="@+id/voiceLengthTv"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            android:text = "0''"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

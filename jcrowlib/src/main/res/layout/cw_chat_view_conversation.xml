@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jopool.crow.imkit.view.CWConversationRelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cw_color_chat_conversation_bg">
+    <com.jopool.crow.imkit.view.CWTitleLayout 
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+	<com.jopool.crow.imkit.view.CWConversationNoticeView
+		android:id="@+id/noticeView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/titleLayout"
+		android:visibility="gone"/>
+
+	<ListView
+		android:id="@+id/listView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/noticeView"
+		android:layout_above="@+id/bottomBarView"
+		android:cacheColorHint="#00000000"
+		android:divider="@null"
+		android:listSelector="@android:color/transparent"
+		android:scrollbars="none"
+		android:scrollingCache="false"
+		android:stackFromBottom="false"
+		android:transcriptMode="normal"
+		android:paddingBottom="10dp"
+		android:fadingEdgeLength="0dp"/>
+
+    <com.jopool.crow.imkit.view.CWConversationBottomBarView
+        android:id="@+id/bottomBarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+    <com.jopool.crow.imkit.view.CWConversationVolumeView 
+        android:id="@+id/volumeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+</com.jopool.crow.imkit.view.CWConversationRelativeLayout >

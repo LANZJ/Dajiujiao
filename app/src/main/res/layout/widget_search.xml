@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_120"
+       android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/color_theme">
+        <!--android:focusable="true"-->
+        <!--   android:focusableInTouchMode="true"-->
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_90"
+            android:layout_centerInParent="true"
+            style="@style/FontWhite16"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dimen_120"
+            android:background="@drawable/bg_search"/>
+
+        <RelativeLayout
+            android:id="@+id/hintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/searchFlagIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search"/>
+
+            <TextView
+                android:id="@+id/desTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontWhite16"
+                android:text="输入商品名称搜索"
+                android:layout_toRightOf="@id/searchFlagIv"
+                android:layout_marginLeft="@dimen/dimen_15"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/searchLayout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp">
+            <ImageView
+                android:id="@+id/searchIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_search"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

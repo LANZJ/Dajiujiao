@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="@dimen/dimen_48"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_48">
+            <com.zjyeshi.dajiujiao.buyer.views.roundedimageview.CircleImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="@dimen/dimen_90"
+                android:layout_height="@dimen/dimen_90"
+                android:src="@drawable/default_tx"/>
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_marginLeft="@dimen/dimen_48"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/avatarIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray14"
+                tools:text = "名字"/>
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontGray13"
+                tools:text = "时间"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack14"
+            tools:text = "这里是内容"/>
+        <com.zjyeshi.dajiujiao.buyer.circle.CircleImageView
+            android:id="@+id/singleImageIv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dg_default_image"
+            android:visibility="visible" />
+        <!-- 链接地址 -->
+        <RelativeLayout
+            android:id="@+id/pageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/circle_bg"
+            android:layout_marginRight="@dimen/dimen_42">
+            <ImageView
+                android:id="@+id/pageImageIv"
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="@dimen/dimen_150"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dimen_18"/>
+            <TextView
+                android:id="@+id/pageTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_444444"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/pageImageIv"
+                android:layout_centerVertical="true"
+                android:maxLines="2"
+                android:text="这个酒不错可以来试试，万家超市有的买的，快来快来，很多好便宜的"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30"
+        android:background="@color/circle_bg"/>
+</LinearLayout>

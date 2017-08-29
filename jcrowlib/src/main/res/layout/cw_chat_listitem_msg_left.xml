@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tipTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/cw_chat_shape_bg_msg_listitem_time"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="2015-10-10 02:09:09"
+        android:textColor="@color/cw_color_white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 头像 -->
+    <com.jopool.crow.imkit.view.CWCircleImageView
+        android:id="@+id/headIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tipTv"
+        android:src="@drawable/cw_default_user"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipTv"
+        android:layout_toRightOf="@+id/headIv"
+        android:orientation="vertical">
+        <!--姓名-->
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cw_color_chat_conversation_name"
+            android:textSize="11sp"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"/>
+
+        <!--消息主体-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            >
+
+            <!-- 消息显示内容区域 -->
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cw_chat_bg_msg_listitem_left"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/contentTextIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Test"
+                    android:textColor="#0e0e0e"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/contentVoiceIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/cw_chat_voice_playing_left4"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/contentImageIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="200dp"
+                    android:maxWidth="100dp"
+                    android:minHeight="150dp"
+                    android:minWidth="100dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible" />
+                <!-- 网页布局 -->
+                <LinearLayout
+                    android:id="@+id/contentUrlLayout"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/contentUrlLayoutTitleTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="网页链接"
+                        android:textColor="@color/cw_color_black"
+                        android:textSize="16sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:id="@+id/contentUrlLayoutDetailTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/iconIv"
+                            android:text=""
+                            android:textColor="#999999"
+                            android:textSize="12sp" />
+                        <ImageView
+                            android:id="@+id/contentUrlLayoutIconIv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/cw_chat_url_default_ic" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 语音长度提示 -->
+            <TextView
+                android:id="@+id/vioceLengthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/contentLayout"
+                android:text="30''"
+                android:textColor="#36648B"
+                android:textSize="15sp"
+                android:visibility="visible" />
+            <!-- 未度消息红点 -->
+            <ImageView
+                android:id="@+id/newTipIv"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/vioceLengthTv"
+                android:background="@drawable/cw_chat_icon_red"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/newTipIv"
+                android:indeterminateDrawable="@drawable/cw_chat_progress_layerlist" />
+
+            <ImageView
+                android:id="@+id/resendIv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/progressBar"
+                android:background="@drawable/cw_chat_msg_resend" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

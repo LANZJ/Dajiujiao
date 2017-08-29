@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="11dp"
+        android:background="#d0d0d0"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_white">
+        <TextView
+            android:id="@+id/sortTv"
+            android:layout_marginLeft="@dimen/dimen_48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack16"
+            tools:text = "2015-09"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_marginRight="@dimen/dimen_48"
+            android:layout_alignParentRight="true"
+            android:id="@+id/amountTv"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack14"
+            tools:text = "总金额: ¥300"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rightLayout"
+    android:background="@color/color_translucent">
+    <LinearLayout
+        android:id="@+id/rightRemainLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/listView"/>
+    <ListView
+        android:layout_alignParentRight="true"
+        android:background="@color/color_bg"
+        android:id="@+id/listView"
+        android:layout_width="@dimen/dimen_438"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="#00000000"
+        android:fadingEdgeLength="@dimen/dimen_0">
+    </ListView>
+</RelativeLayout>

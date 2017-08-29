@@ -1,0 +1,64 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+    <com.xuan.bigdog.lib.widgets.title.DGTitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:layout_marginRight="@dimen/dimen_30"
+            android:layout_alignParentRight="true"
+            android:id="@+id/showView"
+            android:layout_width="170dp"
+            android:layout_height="48dp" />
+        <RelativeLayout
+            android:id="@+id/fabuLayout"
+            android:layout_alignParentRight="true"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/dimen_144">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/circleMoreIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_more"
+                android:layout_centerVertical="true" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/newApplyIv"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/circleMoreIv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/dg_icon_red"/>
+        </RelativeLayout>
+    </com.xuan.bigdog.lib.widgets.title.DGTitleLayout>
+    <com.xuan.bigappleui.lib.view.listview.BUPullToRefreshListView
+        android:layout_below="@id/titleLayout"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="#00000000"
+        android:fadingEdgeLength="@dimen/dimen_0"
+        />
+    <RelativeLayout
+        android:id="@+id/addCircleLayout"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/dimen_144" android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+        android:layout_marginRight="58dp" android:layout_marginEnd="58dp">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

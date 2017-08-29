@@ -1,0 +1,156 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="color_bottom_translucent">#b2000000</color><!-- 半透明 -->
+    <color name="color_translucent">#60000000</color><!-- 半透明 -->
+    <color name="color_transparent">#00000000</color><!-- 全透明 -->
+
+    <!--主题红色-->
+    <!--
+    <color name="color_theme">#D50C15</color>
+    -->
+    <color name="color_theme">#5d0110</color>
+    <color name="color_red_btn_click">#54010E</color>
+    <color name="color_sign_normal">#992e40</color>
+    <color name="color_sign_back_normal">#c1394f</color>
+    <!-- tabframe.mcall框架部分参数 -->
+    <color name="dg_tabframe_mcall_tabbtn_text_checked">#e4ccb0</color><!-- tab文字选中 -->
+    <color name="dg_tabframe_mcall_tabbtn_text_normal">#8b6e4c</color><!-- tab文字未选中 -->
+    <color name="dg_tabframe_mcall_tab_bg">@color/color_theme</color><!-- tab背景颜色 -->
+    <color name="dg_tabframe_mcall_tab_top_sepreator">#dddddd</color><!-- tab上面的分割线颜色 -->
+
+    <!-- widgets.title -->
+    <color name="dg_widgets_title_bg">@color/color_theme</color><!-- 标题背景 -->
+    <color name="dg_widgets_title_middletv_textcolor">#ffffff</color><!-- 中间标题字体颜色 -->
+    <color name="dg_widgets_title_righttv_textcolor">#ffffff</color><!-- 右边字体颜色 -->
+
+    <color name="cw_dialog_theme">@color/color_theme</color><!-- 弹出框标题背景色 -->
+
+    <color name="dg_widgets_carouse_activated">@color/color_theme</color>
+
+    <color name="color_bg">#f8f8f8</color>
+    <color name="color_bg_1">#f7f7f7</color>
+    <color name="color_divider">#d9d9d9</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_e9e9e9">#e9e9e9</color>
+
+    <color name="color_daohang">#56ac3f</color>
+
+    <color name="color_9b9b9b">#9b9b9b</color>
+    <!--
+    <color name="color_light_red">#ea3a36</color>
+    -->
+    <color name="color_light_red">@color/color_theme</color>
+    <color name="color_jifen_red">#670c0c</color>
+    <color name="color_btn_selected">#d00703</color>
+    <color name="color_btn_selectedss">#5d00</color>
+
+
+    <!--
+    <color name="color_red_theme">#d00703</color>
+    -->
+    <color name="color_red_theme">@color/color_theme</color>
+    <color name="color_sign_dark">#3e010b</color>
+
+
+    <color name="color_my_bg">#eeeeee</color>
+    <color name="color_not_select">#d2d2d2</color>
+    <color name="color_item_click">#e9e9e9</color>
+    <color name="color_priority_item_click">#f6f6f6</color>
+    <color name="color_orange">#ff8400</color>
+    <color name="color_change_btn">#ffa800</color>
+    <color name="color_pay_bg">#fffaf3</color>
+    <color name="color_more_black">#444444</color>
+    <color name="color_bak">#EAF2F8</color>
+    <color name="color_change_click">#c1c1c1</color>
+    <color name="color_cancel_oeder_bg">#39393a</color>
+    <color name="color_white_trans">#ccffffff</color>
+    <color name="province_line_border">#D0D0D0</color>
+
+    <color name="color_time">#4a90e2</color>
+    <color name="color_yellow">#f5a622</color>
+
+    <color name="color_4a90e2">#4a90e2</color>
+    <color name="color_444444">#444444</color>
+    <color name="color_999999">#999999</color>
+
+    <!--朋友圈的颜色-->
+    <color name="circle_seperator">#e7e7e6</color>
+    <color name="circle_bg">#f3f3f5</color>
+
+    <color name="circle_comment">#e6e6e6</color>
+
+
+    <!--seller-->
+    <color name="color_theme_pressed">#990d16</color><!-- 主题色的，按下效果 -->
+
+    <color name="color_product_seperator">#f3f3f3</color>
+    <color name="color_withe_pressed">#e6e6e6</color>
+
+    <color name="color_f8f8f8">#f8f8f8</color><!-- 首页背景 -->
+    <color name="color_f7f7f7">#f7f7f7</color><!--侧滑背景-->
+    <color name="color_e5e5e5">#e5e5e5</color><!--侧滑分割线-->
+    <color name="color_353535">#353535</color>
+    <color name="color_d70030">#d70030</color>
+    <color name="color_d9d9d9">#d9d9d9</color>
+    <color name="color_eaeaea">#eaeaea</color>
+    <color name="color_b2b2b2">#b2b2b2</color>
+    <color name="color_d5b1b2">#d5b1b2</color>
+    <color name="color_9c9893">#9c9893</color>
+
+    <color name="color_frame_left_top">#40bdb4</color>
+    <color name="color_frame_left_bottom">#4eb6e6</color>
+    <color name="color_frame_right_top">#a995dd</color>
+    <color name="color_frame_right_middle">#e85c49</color>
+    <color name="color_frame_right_bottom">#f59038</color>
+    <color name="color_eb6100">#eb6100</color>
+
+    <color name="color_income_divider">#ededed</color>
+
+    <color name="transparent_background">#50000000</color>
+    <color name="color_323333">#323333</color>
+
+    <color name="black_textview">#575757</color>
+    <color name="group_list_black_textview">#353535</color>
+    <color name="group_list_gray">#999999</color>
+    <color name="group_list_liner">#e4e4e4</color>
+    <color name="main_title_backgroud">#F2F2F2</color>
+    <color name="main_regist">#ffffff</color>
+    <color name="button_backgroud">#0195ff</color>
+    <color name="de_title_bg">#0195ff</color>
+    <color name="seal_bg">#f0f0f6</color>
+
+    <color name="rc_text_color_secondary_inverse">@android:color/white</color>
+
+    <!--actionbar-->
+    <color name="de_actionbar_bg">#0195ff</color>
+    <!---->
+    <color name="de_action_color">#3498DB</color>
+    <color name="de_action_white">@android:color/white</color>
+    <color name="de_transparent">#00000000</color>
+
+    <color name="de_draft_color">#cb120f</color>
+    <color name="main_theme_color">#0195ff</color>
+
+    <color name="press">#e8e8e8</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_line_color">#dfdfdd</color>
+    <color name="text_black_color">#333333</color>
+    <color name="text_tips_color">#666666</color>
+    <color name="mine_head_color">#cccccc</color>
+    <color name="text_color">#353535</color>
+
+    <!--SWITCH-->
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_solid_shadow">#33000000</color>
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+
+    <color name="ac_filter_string_color">#0099ff</color>
+    <color name="lala">#1a1a1a</color>
+
+</resources>

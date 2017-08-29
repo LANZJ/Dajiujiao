@@ -1,0 +1,64 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dg_tabframe_mcall_tab_top_sepreator" />
+    <RadioGroup
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dg_tabframe_mcall_tab_height"
+        android:background="@color/dg_tabframe_mcall_tab_bg"
+        android:orientation="horizontal" >
+        <com.xuan.bigappleui.lib.view.BUNumRadioButton
+            android:id="@+id/tabbtn0"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="match_parent"
+            style="@style/DgTabframeMcallTabbtnTheme"
+            android:text="@string/dg_tabframe_mcall_btn_text1"
+            android:drawableTop="@drawable/dg_tab_btn_top1"
+            android:layout_marginTop="@dimen/dg_tabframe_mcall_tabbtn_margin_top"/>
+        <com.xuan.bigappleui.lib.view.BUNumRadioButton
+            android:id="@+id/tabbtn1"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="match_parent"
+            style="@style/DgTabframeMcallTabbtnTheme"
+            android:text="@string/dg_tabframe_mcall_btn_text2"
+            android:drawableTop="@drawable/dg_tab_btn_top2"
+            android:layout_marginTop="@dimen/dg_tabframe_mcall_tabbtn_margin_top"/>
+        <com.xuan.bigappleui.lib.view.BUNumRadioButton
+            android:id="@+id/tabbtn2"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="match_parent"
+            style="@style/DgTabframeMcallTabbtnTheme"
+            android:text="@string/dg_tabframe_mcall_btn_text3"
+            android:drawableTop="@drawable/dg_tab_btn_top3"
+            android:layout_marginTop="@dimen/dg_tabframe_mcall_tabbtn_margin_top"/>
+        <com.xuan.bigappleui.lib.view.BUNumRadioButton
+            android:id="@+id/tabbtn3"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="match_parent"
+            style="@style/DgTabframeMcallTabbtnTheme"
+            android:text="@string/dg_tabframe_mcall_btn_text4"
+            android:drawableTop="@drawable/dg_tab_btn_top4"
+            android:layout_marginTop="@dimen/dg_tabframe_mcall_tabbtn_margin_top"/>
+    </RadioGroup>
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

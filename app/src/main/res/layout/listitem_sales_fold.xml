@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/backLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#841528"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/flagIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:src="@drawable/icon_cut"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/fillDesTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            android:textColor="@color/white"
+            tools:text="满"/>
+
+        <TextView
+            android:id="@+id/fillTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontRed12"
+            android:textColor="@color/white"
+            tools:text="1000"/>
+        <TextView
+            android:id="@+id/cutDesTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            android:textColor="@color/white"
+            tools:text="减"/>
+
+        <TextView
+            android:id="@+id/cutTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontRed12"
+            android:textColor="@color/white"
+            tools:text="50"/>
+    </LinearLayout>
+</LinearLayout>

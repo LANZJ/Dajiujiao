@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/pathDesTv"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        style="@style/FontBlack14"
+        android:text="订单流程"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/color_white"/>
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+        <com.zjyeshi.dajiujiao.buyer.views.other.MyGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="10dp"
+            android:listSelector="@null"
+            android:numColumns="4" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_divider"
+        android:background="@color/color_divider"/>
+</LinearLayout>

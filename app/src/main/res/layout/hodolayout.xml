@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:id="@+id/backLayout">
+<RelativeLayout
+android:layout_weight="0.9"
+    android:id="@+id/ddd"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_white"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:background="#ffff"/>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/flagIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src = "@drawable/icon_cut"/>
+        <TextView
+            android:id="@+id/fillDesTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            tools:text="满"/>
+        <TextView
+            android:id="@+id/fillTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            tools:text="1000"/>
+
+        <TextView
+            android:id="@+id/cutDesTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            tools:text="减"/>
+        <TextView
+            android:id="@+id/cutTv"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack12"
+            tools:text="50"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/imgeop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/share"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginRight="9dp"
+    android:visibility="gone"/>
+</RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chengky"
+        android:id="@+id/checkBox"
+        android:button="@null"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants" />
+    <!--android:layout_alignParentRight="false"-->
+    <!--android:focusable="false"-->
+    <!--android:clickable="true"-->
+    <ImageButton
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageButton"
+        android:visibility="invisible"/>
+
+</LinearLayout>

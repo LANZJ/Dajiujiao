@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Android-Crow</string>
+    <string name="test">This is test text!</string>
+    
+    <string name="cw_an_zhu_sh">按住说话</string>
+    <string name="cw_fa_song">发送</string>
+
+    <!--聊天界面底部工具选择-->
+    <string name="cw_conversation_tool_camera">拍照</string>
+    <string name="cw_conversation_tool_expression">表情</string>
+    <string name="cw_conversation_tool_photo">照片</string>
+</resources>

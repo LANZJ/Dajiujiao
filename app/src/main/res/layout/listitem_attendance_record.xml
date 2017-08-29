@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_180">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontTime16"
+            tools:text="1日"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_30"/>
+
+        <RelativeLayout
+            android:id="@+id/upLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_90"
+            android:layout_toRightOf="@+id/timeTv"
+            android:layout_marginLeft="@dimen/dimen_30">
+
+            <TextView
+                android:id="@+id/upTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上班"
+                style="@style/FontBlack14"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_30"/>
+
+            <TextView
+                android:id="@+id/upTimeTv"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="8:20"
+                style="@style/FontBlack14"
+                android:layout_toRightOf="@id/upTv"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_90"/>
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_toRightOf="@id/upTimeTv"
+                android:id="@+id/upAreaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="杭州市西湖区xx街道xx号"
+                style="@style/FontBlack14"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/downLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_90"
+            android:layout_toRightOf="@+id/timeTv"
+            android:layout_below="@id/upLayout"
+            android:layout_marginLeft="@dimen/dimen_30">
+
+            <TextView
+                android:id="@+id/downTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下班"
+                style="@style/FontBlack14"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_30"/>
+
+            <TextView
+                android:id="@+id/downTimeTv"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                tools:text="18:20"
+                style="@style/FontBlack14"
+                android:layout_toRightOf="@id/downTv"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_90"/>
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:layout_toRightOf="@id/downTimeTv"
+                android:id="@+id/downAreaTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="杭州市西湖区xx街道xx号"
+                style="@style/FontBlack14"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dimen_120"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:src="@drawable/car_back"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_285"
+        android:background="@drawable/item_selector">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_divider" />
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_45"
+            android:src="@drawable/ic_default"
+            android:scaleType="centerCrop"/>
+        <com.zjyeshi.dajiujiao.buyer.views.UnReadNumView
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/unReadNumView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/nameTv"
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            tools:text="旺财烟酒店" />
+        <TextView
+            android:id="@+id/telTv"
+            style="@style/FontGray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/avatarIv"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            tools:text="联系电话:13567164024" />
+        <TextView
+            android:id="@+id/personNameTv"
+            style="@style/FontGray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="李科"
+            android:layout_above="@+id/telTv"
+            android:layout_alignLeft="@+id/telTv"
+            android:layout_alignStart="@+id/telTv" />
+        <TextView
+            android:id="@+id/priceTv"
+            style="@style/FontTime18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="￥4700"
+            android:layout_alignBottom="@+id/personNameTv"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

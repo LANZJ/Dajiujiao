@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.jopool.crow.imkit.view.CWSquareImageView
+        android:id="@+id/avatarIv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        tools:src = "@drawable/cw_default_user"/>
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cw_color_black"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text = "姓名"/>
+</LinearLayout>

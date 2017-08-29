@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_translucent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/allLayout"
+    >
+    <LinearLayout
+        android:layout_marginRight="@dimen/dimen_96"
+        android:layout_marginLeft="@dimen/dimen_96"
+        android:id="@+id/activityLayout"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shop_activity_shape"
+        >
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_42"
+            android:paddingBottom="@dimen/dimen_42">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/photoIv"
+                android:layout_width="@dimen/dimen_435"
+                android:layout_height="@dimen/dimen_435"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_default" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/shopNameTv"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack16"
+            android:text="西湖"/>
+        <View
+            android:layout_marginTop="@dimen/dimen_42"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:background="@color/color_divider"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/linkLayout"
+        android:layout_marginRight="@dimen/dimen_96"
+        android:layout_marginLeft="@dimen/dimen_96"
+        android:layout_below="@id/activityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shop_act_bottom_shape"
+        android:paddingBottom="@dimen/dimen_30">
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/activityTv"
+            android:layout_marginTop="@dimen/dimen_42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack16"
+            android:text="曼萨纳雷斯城堡原装干红葡萄酒"/>
+    </RelativeLayout>
+
+</RelativeLayout>

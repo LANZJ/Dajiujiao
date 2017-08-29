@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:paddingLeft="@dimen/dimen_48"
+    android:paddingRight="@dimen/dimen_48"
+    android:paddingTop="@dimen/dimen_33">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_48"
+        android:background="@color/color_white">
+        <TextView
+            android:id="@+id/changeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontBlack16"
+            android:text="商购物品完成奖励"/>
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:layout_below="@id/changeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontGray14"
+            android:text="2015-10-14 22:42:00"/>
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontRed24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="+10"/>
+    </RelativeLayout>
+</LinearLayout>

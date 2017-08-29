@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xuan.bigappleui.lib.widget.swipeview.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_168"
+    android:id="@+id/swipe"
+    android:background="@color/color_bg">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_168"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/dimen_48"
+        android:paddingRight="@dimen/dimen_48">
+        <ImageView
+            android:id="@+id/selectIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/no_selected"/>
+        <ImageView
+            android:id="@+id/dianIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/goodcar_dian"
+            android:layout_toRightOf="@id/selectIv"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_72"/>
+        <TextView
+            android:id="@+id/dianNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontCarBlack14"
+            android:text="封疆物语食品店"
+            android:layout_toRightOf="@id/dianIv"
+            android:layout_marginLeft="@dimen/dimen_33"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_back"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/dianNameTv"
+            android:layout_marginLeft="@dimen/dimen_36"/>
+    </RelativeLayout>
+
+</com.xuan.bigappleui.lib.widget.swipeview.SwipeLayout>

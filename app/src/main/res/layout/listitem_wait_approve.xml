@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30"
+        android:background="@color/circle_bg"
+        />
+
+    <RelativeLayout
+        android:paddingBottom="@dimen/dimen_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector">
+
+        <TextView
+            android:id="@+id/typeTv"
+            android:text="费用报销"
+            style="@style/FontYellow12"
+            android:padding="3dp"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_border_shape"/>
+        <TextView
+            android:id="@+id/approveNameTv"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_below="@id/typeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontGray14"
+            tools:text = "当前审批人:123"/>
+
+        <TextView
+            android:layout_toRightOf="@id/typeTv"
+            android:id="@+id/titleTv"
+            android:text="XXX报销主题"
+            style="@style/FontBlack16"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            style="@style/FontGray14"
+            android:layout_below="@id/approveNameTv"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:text="2016.06.16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/spPersonTv"
+            android:text="申请人：王小明"
+            style="@style/FontGray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/noticeTv"
+            android:layout_alignRight="@+id/noticeTv"
+            android:layout_alignEnd="@+id/noticeTv" />
+
+        <TextView
+            android:id="@+id/noticeTv"
+            style="@style/FontTime14"
+            android:text="去处理"
+            android:background="@drawable/blue_border_shape"
+            android:padding="@dimen/dimen_6"
+            android:gravity="center"
+            android:layout_below="@id/approveNameTv"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/dimen_195"
+            android:layout_height="@dimen/dimen_75" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/stateTv"
+            style="@style/FontRed14"
+            android:text="未通过"
+            android:gravity="right"
+            android:layout_below="@id/approveNameTv"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

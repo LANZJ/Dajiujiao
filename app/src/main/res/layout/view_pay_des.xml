@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/priceDesLayout"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="16dp"
+        android:background="@color/color_white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/totalPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "总价:¥123"/>
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/walletPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "钱包:¥123"/>
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/couponPriceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "优惠券:¥123"/>
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/marketCostTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "市场支持费用:¥123"/>
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/salesBackMoneyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "活动立返费用:¥123"/>
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/salesCutMoneyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "活动立减费用:¥123"/>
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/salesProductNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "活动赠送商品:¥123"/>
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/salesGiftNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            style="@style/FontGray12"
+            tools:text = "活动赠送礼品:¥123"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

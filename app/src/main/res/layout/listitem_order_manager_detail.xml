@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_225"
+        android:background="@color/color_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_divider"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_divider" />
+
+        <ImageView
+            android:id="@+id/avatarIv"
+            android:layout_width="@dimen/dimen_180"
+            android:layout_height="@dimen/dimen_180"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_45"
+            android:src="@drawable/ic_default" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            style="@style/FontBlack16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            android:text="王朝大酒窖" />
+
+        <TextView
+            android:id="@+id/numTv"
+            style="@style/FontGray14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/avatarIv"
+            android:layout_marginLeft="@dimen/dimen_60"
+            android:layout_toRightOf="@id/avatarIv"
+            android:text="数量：34箱  76瓶" />
+
+
+        <TextView
+            android:id="@+id/priceTv"
+            style="@style/FontTime18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/avatarIv"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:text="￥4700" />
+
+
+    </RelativeLayout>
+</LinearLayout>
