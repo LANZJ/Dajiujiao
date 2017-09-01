@@ -201,6 +201,9 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
         //接收前一个页面传入的参数
         shopId = getIntent().getStringExtra(PARAM_SHOPID);
         memberId = getIntent().getStringExtra(PARAM_MEMBERID);
+        if(memberId==null){
+            memberId="";
+        }
         returnTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -303,7 +306,7 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
      * 获取店铺详情
      */
     private void loadDetail() {
-        ShopDetailTask.getShopDetail(ShopDetailActivity.this, shopId, new AsyncTaskSuccessCallback<ShopDetailData>() {
+        ShopDetailTask.getShopDetail(ShopDetailActivity.this, shopId,new AsyncTaskSuccessCallback<ShopDetailData>(){
             @Override
             public void successCallback(Result<ShopDetailData> result) {
                 //显示店铺详情信息
@@ -325,7 +328,7 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
                 //获取店铺详情之后再获取商品列表
                 loadProductList();
             }
-        });
+        },memberId);
     }
 
     /**

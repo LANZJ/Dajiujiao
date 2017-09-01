@@ -11,7 +11,7 @@ android {
         config {
             keyAlias 'jopool.keystore'
            keyPassword 'jopool123456'
-            storeFile file('C:/Program Files/Java/jdk1.8.0_91/bin/jopool.keystore')
+            storeFile file('/Users/zhangjian/Desktop/Dajiujiao/app/keystore/jopool.keystore')
            storePassword 'jopool123456'
         }
 //        config{
@@ -44,7 +44,7 @@ android {
         versionCode 31
         versionName "3.0"
         multiDexEnabled true
-        signingConfig signingConfigs.config
+       signingConfig signingConfigs.config
         ndk {
             abiFilters "armeabi", "armeabi-v7a", "x86_64" , "arm64-v8a" , "mips" , "mips64、x86" , "x86"
         }
@@ -61,7 +61,7 @@ android {
             signingConfig signingConfigs.config
         }
         debug {
-          signingConfig signingConfigs.config
+         signingConfig signingConfigs.config
         }
 //       applicationVariants.all { variant ->
 //           variant.outputs.each { output ->
@@ -110,7 +110,7 @@ android {
                     GETUI_APP_SECRET : "kCVBHQj2Fg9uNXRCy19KX1"
             ]
         }
-    }
+   }
     dexOptions {
         incremental true
         javaMaxHeapSize "4g"

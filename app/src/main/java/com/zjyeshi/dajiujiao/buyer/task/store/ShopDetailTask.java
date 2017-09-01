@@ -34,7 +34,7 @@ public class ShopDetailTask extends BaseTask<ShopDetailData> {
         paramMap.put("shopId", (String) params[0]);
         paramMap.put("latE5", (String) params[1]);
         paramMap.put("lngE5", (String) params[2]);
-
+        paramMap.put("memberId",(String) params[3]);
         Result<ShopDetailData> result = postCommon(UrlConstants.SHOPDETAILS, paramMap);
 
         if (result.isSuccess()) {
@@ -53,11 +53,11 @@ public class ShopDetailTask extends BaseTask<ShopDetailData> {
     /**
      * 获取店铺详情
      *
-     * @param context
+     * @param context//18818801133
      * @param shopId
      * @param successCallback
      */
-    public static void getShopDetail(final Context context, final String shopId, final AsyncTaskSuccessCallback<ShopDetailData> successCallback) {
+    public static void getShopDetail(final Context context, final String shopId, final AsyncTaskSuccessCallback<ShopDetailData> successCallback , final String memberId) {
         //首次进来的时候，先请求完店铺详情，然后再去请求商品列表
         DGLocationUtils.init(context, new BDLocationListener() {
             @Override
@@ -75,8 +75,7 @@ public class ShopDetailTask extends BaseTask<ShopDetailData> {
                 });
 
                 shopDetailTask.setAsyncTaskSuccessCallback(successCallback);
-
-                shopDetailTask.execute(shopId, lat, lng);
+                shopDetailTask.execute(shopId,lat, lng,memberId);
                 DGLocationUtils.stop();
             }
         });
