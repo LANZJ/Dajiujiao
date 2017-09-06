@@ -779,17 +779,17 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
             }
 
 
-          private   Runnable mRunnable = new Runnable() {
-                public void run() {
-                    while (true) {
-                        try {
-                            Thread.sleep(1000);
-                            mHandler.sendMessage(mHandler.obtainMessage());
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+              private   Runnable mRunnable = new Runnable() {
+                  public void run() {
+                      while (true) {
+                          try {
+                              Thread.sleep(1000);
+                              mHandler.sendMessage(mHandler.obtainMessage());
+                          } catch (InterruptedException e) {
+                              e.printStackTrace();
+                          }
+                      }
+                  }
             };
 
 

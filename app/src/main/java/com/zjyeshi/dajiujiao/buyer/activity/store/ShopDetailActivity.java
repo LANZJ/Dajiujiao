@@ -2,8 +2,10 @@ package com.zjyeshi.dajiujiao.buyer.activity.store;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,6 +43,7 @@ import com.zjyeshi.dajiujiao.buyer.utils.AuthUtil;
 import com.zjyeshi.dajiujiao.buyer.utils.ExtraUtil;
 import com.zjyeshi.dajiujiao.buyer.utils.ToastUtil;
 import com.zjyeshi.dajiujiao.buyer.views.MyScrollView;
+import com.zjyeshi.dajiujiao.buyer.views.XListView;
 import com.zjyeshi.dajiujiao.buyer.widgets.TwoTabClickWidget;
 import com.zjyeshi.dajiujiao.buyer.widgets.addLessFormat.FormatWidget;
 import com.zjyeshi.dajiujiao.buyer.widgets.addLessFormat.listener.FormatOpListener;
@@ -49,15 +52,19 @@ import com.zjyeshi.dajiujiao.buyer.widgets.search.callback.SearchCallback;
 import com.zjyeshi.dajiujiao.buyer.widgets.store.BuyBottomWidget;
 import com.zjyeshi.dajiujiao.buyer.widgets.store.StoreRightLayout;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.logging.Handler;
 
 /**
  * 新的店铺详情
  * Created by wuhk on 2016/6/29.
  */
-public class ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollView.OnScrollListener {
+public class ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollView.OnScrollListener , com.zjyeshi.dajiujiao.buyer.views.XListView.IXListViewListener{
 //    @InjectView(R.id.titleLayout)
 //    private DGTitleLayout titleLayout;
     @InjectView(R.id.searchWidget)
@@ -73,7 +80,7 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
     @InjectView(R.id.topTabLayout)
     private TwoTabClickWidget topTabLayout;
     @InjectView(R.id.listView)
-    private BUHighHeightListView listView;
+    private XListView listView;
     @InjectView(R.id.changeUnitIv)
     private ImageView changeUnitIv;
     @InjectView(R.id.buyBottomWidget)
@@ -91,12 +98,11 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
     private List<GoodData> dataList = new ArrayList<GoodData>();//请求的商品列表
     private List<GoodData> tempShowList = new ArrayList<GoodData>();//搜索的商品列表
     private List<AllGoodInfo> goodInfoList = new ArrayList<AllGoodInfo>();//显示商品列表信息
-
     private ShopGoodAdapter shopGoodAdapter;
 
     private GoodsSortChangeReceiver goodsSortChangeReceiver;//分类选择广播接收器
     private CarNumChangeReceiver carNumChangeReceiver;//购物车数量改变广播接收器
-
+  private boolean omu=true;
     private FormatWidget formatWidget;//加减控件
     private HashMap<String, GoodData> productHashMap = new HashMap<String, GoodData>();
 
@@ -112,6 +118,7 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
     private Shop shop;//店铺信息
     private String memberId = "";//代下单的时候用户Id
     private String typo="";
+    private int page=1;
     //tab页
     public static final String TAB1 = "常规购买";
     public static final String TAB2 = "市场支持";
@@ -119,9 +126,19 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
 
     private String accountMarketPrice = "0";// 市场支持费用,这个价格是*100的
     private String myKc = " "; //我的库存;
-
+    private boolean scrollFlag = false;// 标记是否滑动
+    private int lastVisibleItemPosition;// 标记上次滑动位置
     //标志位，resume时是否重新组合计算数据
     public static boolean reUnitData = false;
+
+    android.os.Handler mHandler = new android.os.Handler() {
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            page++;
+            loadProductList();
+            shopGoodAdapter.notifyDataSetChanged();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -297,9 +314,52 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
             }
         });
 
+        listView.setPullRefreshEnable(true);
+        listView.setPullLoadEnable(true);
+        listView.setAutoLoadEnable(true);
+        listView.setXListViewListener((XListView.IXListViewListener) this);
+        listView.setRefreshTime(getTime());
+
         //listView初始化
         shopGoodAdapter = new ShopGoodAdapter(ShopDetailActivity.this, goodInfoList, isMarketGoods , memberId);
         listView.setAdapter(shopGoodAdapter);
+       // new Thread(mRunnable).start();
+
+//        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+//            @Override
+//            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+//                if (firstVisibleItem == 0) {
+//                    View firstVisibleItemView = listView.getChildAt(0);
+//                    if (firstVisibleItemView != null && firstVisibleItemView.getTop() == 0) {
+//                       // ToastUtil.toast("ListView##### 滚动到顶部 #####");
+//                    }
+//                } else if ((firstVisibleItem + visibleItemCount) == totalItemCount) {
+//                    View lastVisibleItemView = listView.getChildAt(listView.getChildCount() - 1);
+//                    if (lastVisibleItemView != null && lastVisibleItemView.getBottom() == listView.getHeight()) {
+//                       // ToastUtil.toast("ListView##### 滚动到底部 ######");
+//                    }
+//                }
+//                if (scrollFlag) {
+//                    if (firstVisibleItem > lastVisibleItemPosition) {//上滑
+//                        ToastUtil.toast("ListView#####  上滑 #####");
+//                    }
+//                    if (firstVisibleItem < lastVisibleItemPosition) {//下滑
+//                        ToastUtil.toast("ListView##### 下滑   #####");
+//                    }
+//                    if (firstVisibleItem == lastVisibleItemPosition) {
+//                        return;
+//                    }
+//                    lastVisibleItemPosition = firstVisibleItem;
+//                }
+//            }
+//
+//            @Override
+//            public void onScrollStateChanged(AbsListView view, int scrollState) {
+//                //do nothing
+//            }
+//
+//        });
+
     }
 
     /**
@@ -367,7 +427,18 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
         goodListTask.setAsyncTaskSuccessCallback(new AsyncTaskSuccessCallback<GoodList>() {
             @Override
             public void successCallback(Result<GoodList> result) {
-                dataList.clear();
+                if(result.getValue().getList().size()==0){
+                   // ToastUtil.toast("sjkwekong");
+                    omu=false;
+                    try {
+                        new Thread(mRunnable).join();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    return;
+                }
+               // dataList.clear();
+                ToastUtil.toast(result.getValue().getList().size()+"");
                 dataList.addAll(result.getValue().getList());
                 tempShowList.clear();
                 tempShowList.addAll(result.getValue().getList());
@@ -376,7 +447,7 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
             }
         });
         String orderId = "";
-        goodListTask.execute(shopId, categoryId, orderId, memberId);
+        goodListTask.execute(shopId, categoryId, orderId, memberId,page+"");
     }
 
     /**
@@ -665,4 +736,48 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
 
     }
 
+//    @Override
+//    public void onRefresh() {
+//
+//
+//    }
+//
+//    @Override
+//    public void onLoadMore() {
+//        ToastUtil.toast("dsadaskndah");
+//      //  loadProductList();
+//       // shopGoodAdapter.notifyDataSetChanged();
+//        onLoad();
+//    }
+    private void onLoad() {
+        listView.stopRefresh();
+        listView.stopLoadMore();
+        listView.setRefreshTime("刚刚");
+    }
+    private String getTime() {
+        return new SimpleDateFormat("MM-dd HH:mm", Locale.CHINA).format(new Date());
+    }
+    private   Runnable mRunnable = new Runnable() {
+        public void run() {
+            while (omu) {
+                try {
+                    Thread.sleep(1000);
+                //    mHandler.sendMessage(mHandler.obtainMessage());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    };
+
+    @Override
+    public void onRefresh() {
+
+    }
+
+    @Override
+    public void onLoadMore() {
+        ToastUtil.toast("123W123123");
+
+    }
 }

@@ -27,6 +27,7 @@ public class GoodListTask extends BaseTask<GoodList> {
         paramMap.put("categoryId" ,(String)params[1]);
         paramMap.put("orderId" , (String) params[2]);
         String memberId = (String) params[3];
+        paramMap.put("page", (String) params[4]);
         if (Validators.isEmpty(memberId)){
             paramMap.put("userId" , LoginedUser.getLoginedUser().getId());
         }else{
