@@ -323,7 +323,13 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
         //listView初始化
         shopGoodAdapter = new ShopGoodAdapter(ShopDetailActivity.this, goodInfoList, isMarketGoods , memberId);
         listView.setAdapter(shopGoodAdapter);
-       // new Thread(mRunnable).start();
+//        listView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+//            @Override
+//            public void onLayoutChange(View view, int i, int i1, int i2, int i3, int i4, int i5, int i6, int i7) {
+//                ToastUtil.toast("回调完成");
+//            }
+//        });
+      //  new Thread(mRunnable).start();
 
 //        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
 //            @Override
@@ -437,8 +443,7 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
                     }
                     return;
                 }
-               // dataList.clear();
-                ToastUtil.toast(result.getValue().getList().size()+"");
+                dataList.clear();
                 dataList.addAll(result.getValue().getList());
                 tempShowList.clear();
                 tempShowList.addAll(result.getValue().getList());
@@ -761,8 +766,9 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
         public void run() {
             while (omu) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 //    mHandler.sendMessage(mHandler.obtainMessage());
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -777,7 +783,36 @@ public class ShopDetailActivity extends BaseActivity implements FormatOpListener
 
     @Override
     public void onLoadMore() {
-        ToastUtil.toast("123W123123");
+        ToastUtil.toast("已经加载全部!");
+        listView.stopRefresh();
+        listView.stopLoadMore();
+        listView.setRefreshTime(getTime());
+     //   mListView.setRefreshTime("刚刚");
 
     }
+
+//    protected boolean isLastItemVisible() {
+//        shopGoodAdapter = listView.getAdapter();
+//
+//        if (null == shopGoodAdapter || shopGoodAdapter.isEmpty()) {
+//            return true;
+//        }
+//
+//        final int lastItemPosition = shopGoodAdapter.getCount() - 1;
+//        final int lastVisiblePosition = listView.getLastVisiblePosition();
+//
+//
+//        if (lastVisiblePosition >= lastItemPosition - 1) {
+//            final int childIndex = lastVisiblePosition - listView.getFirstVisiblePosition();
+//            final int childCount = listView.getChildCount();
+//            final int index = Math.min(childIndex, childCount - 1);
+//            final View lastVisibleChild = listView.getChildAt(index);
+//            if (lastVisibleChild != null) {
+//                return lastVisibleChild.getBottom() <= listView.getBottom();
+//            }
+//        }
+//
+//        return false;
+//    }
+
 }

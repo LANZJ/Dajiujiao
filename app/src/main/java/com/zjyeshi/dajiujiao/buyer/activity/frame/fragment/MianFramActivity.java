@@ -493,6 +493,7 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
     @Override
     protected void onDestroy() {
         RongIM.getInstance().removeUnReadMessageCountChangedObserver(this);
+        toLoginReceiver.unRegister();
         if (mHomeKeyReceiver != null)
             this.unregisterReceiver(mHomeKeyReceiver);
         super.onDestroy();
@@ -696,7 +697,7 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
 
                 //跳转登录,操作前判断是已登录用的
                 toLoginReceiver = new ToLoginReceiver(this);
-                toLoginReceiver.register();
+
                 //非业务员在注册退出登录广播，业务员去工作台注册
                 if (!LoginedUser.getLoginedUser().getUserEnum().equals(UserEnum.SALESMAN)) {
                     //收到退出登录广播

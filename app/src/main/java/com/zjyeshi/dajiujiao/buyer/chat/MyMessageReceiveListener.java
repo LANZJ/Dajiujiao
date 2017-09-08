@@ -9,6 +9,7 @@ import com.jopool.jppush.common.message.CommonMessage;
 import com.xuan.bigapple.lib.utils.log.LogUtils;
 import com.zjyeshi.dajiujiao.buyer.App;
 import com.zjyeshi.dajiujiao.buyer.activity.frame.FrameActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.frame.fragment.MianFramActivity;
 import com.zjyeshi.dajiujiao.buyer.chat.consumer.BasePush;
 import com.zjyeshi.dajiujiao.buyer.entity.LoginedUser;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.LoginEnum;
@@ -52,7 +53,7 @@ public class MyMessageReceiveListener implements OnMessageReceiveListener {
 					//自己定义一个通知
 					Intent intent = new Intent();
 					intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					intent.setClass(App.instance, FrameActivity.class);
+					intent.setClass(App.instance, MianFramActivity.class);
 					NotificationUtil.showNotification(remindMessage.getTitle() ,remindMessage.getContent() , intent);
 				}else if (remindMessage.getType().equals(BasePush.PUSH_CONTACTS_CHANGE_PUSH)){
 					//刷新通讯录

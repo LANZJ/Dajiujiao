@@ -73,12 +73,12 @@
                     <TextView
                         android:id="@+id/nameTv"
                         style="@style/FontBlack12"
-                        android:textSize="13sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ellipsize="end"
                         android:singleLine="true"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         tools:text="王朝大酒窖" />
 
@@ -122,17 +122,6 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!--<View-->
-            <!--android:id="@+id/dividerView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dimen_divider"-->
-            <!--android:background="@color/color_divider"-->
-            <!--android:layout_marginTop="5dp"/>-->
-            <!--<com.zjyeshi.dajiujiao.buyer.views.SalesView-->
-            <!--android:visibility="gone"-->
-            <!--android:id="@+id/salesView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"/>-->
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

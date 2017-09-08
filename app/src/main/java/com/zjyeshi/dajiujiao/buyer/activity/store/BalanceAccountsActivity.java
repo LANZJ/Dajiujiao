@@ -451,7 +451,7 @@ public class BalanceAccountsActivity extends BaseActivity {
                             intent.setClass(BalanceAccountsActivity.this, MyOrderNewActivity.class);
                             startActivity(intent);
                             BDActivityManager.removeAndFinishIncludes(BalanceAccountsActivity.class.getSimpleName(), BuyCarActivity.class.getSimpleName(), ShopDetailActivity.class.getSimpleName(), ProductBuyActivity.class.getSimpleName());
-                            FrameActivity.tab3Checked = true;
+                           // FrameActivity.tab3Checked = true;
                         } else {
                             finish();
                             ChangeOrderStatusReceiver.notifyReceiver();
@@ -503,7 +503,7 @@ public class BalanceAccountsActivity extends BaseActivity {
                         intent.setClass(BalanceAccountsActivity.this, MyOrderNewActivity.class);
                         startActivity(intent);
                         BDActivityManager.removeAndFinishIncludes(BalanceAccountsActivity.class.getSimpleName(), BuyCarActivity.class.getSimpleName(), ShopDetailActivity.class.getSimpleName(), ProductBuyActivity.class.getSimpleName());
-                        FrameActivity.tab3Checked = true;
+                       // FrameActivity.tab3Checked = true;
                     }
                 } else {
                     finish();
@@ -671,7 +671,7 @@ public class BalanceAccountsActivity extends BaseActivity {
                         intent.setClass(BalanceAccountsActivity.this, MyOrderNewActivity.class);
                         startActivity(intent);
                         BDActivityManager.removeAndFinishIncludes(BalanceAccountsActivity.class.getSimpleName(), BuyCarActivity.class.getSimpleName(), ShopDetailActivity.class.getSimpleName(), ProductBuyActivity.class.getSimpleName());
-                        FrameActivity.tab3Checked = true;
+                     //   FrameActivity.tab3Checked = true;
                     } else {
                         finish();
                         ChangeOrderStatusReceiver.notifyReceiver();

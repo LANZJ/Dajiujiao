@@ -357,10 +357,10 @@ public class WorkActivity extends BaseActivity implements DragPointView.OnDragLi
                 startActivity(intent);
             } else if (type.equals(BasePush.PUSH_NEW_CHAT_MESSAGE)) {
                 //新消息，先打开主界面，跳转聊天列表
-                Intent intent = new Intent();
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.setClass(WorkActivity.this, MyMessageActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent();
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.setClass(WorkActivity.this, MyMessageActivity.class);
+//                startActivity(intent);
             }
         }
     }

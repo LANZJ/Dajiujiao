@@ -7,6 +7,7 @@ import android.content.Intent;
 import com.zjyeshi.dajiujiao.buyer.App;
 import com.zjyeshi.dajiujiao.buyer.activity.BaseActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.frame.BaseFrameActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.frame.fragment.MianFramActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.work.WorkActivity;
 import com.zjyeshi.dajiujiao.buyer.common.Constants;
 import com.zjyeshi.dajiujiao.buyer.activity.frame.FrameActivity;
@@ -67,7 +68,7 @@ public class PushNewChatMessage extends BasePush {
             if (LoginedUser.getLoginedUser().getUserEnum().equals(UserEnum.SALESMAN)) {
                 intent.setClass(context.getApplicationContext(), WorkActivity.class);
             } else {
-                intent.setClass(context.getApplicationContext(), FrameActivity.class);
+                intent.setClass(context.getApplicationContext(), MianFramActivity.class);
             }
             LogUtil.e("关掉应用之后打开");
             NotificationUtil.showNotification(title , description , intent);
@@ -81,8 +82,8 @@ public class PushNewChatMessage extends BasePush {
             } else {
                 //调到消息tab页面
                 BaseFrameActivity.fromBackground = true;
-                FrameActivity.tab1Checked = true;
-                intent.setClass(context.getApplicationContext(), FrameActivity.class);
+               // FrameActivity.tab1Checked = true;
+                intent.setClass(context.getApplicationContext(), MianFramActivity.class);
             }
             LogUtil.e("没有关掉应用之后打开");
             NotificationUtil.showNotification(title , description , intent);

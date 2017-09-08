@@ -130,7 +130,7 @@ public class FrameActivity extends BaseFrameActivity {
             } else if (type.equals(BasePush.PUSH_NEW_CHAT_MESSAGE)) {
                 //新消息，进入聊天界面
                 //先打开主界面，进入聊天tab页
-                tabBtn1.setChecked(true);
+               // tabBtn1.setChecked(true);
             }
         }
     }

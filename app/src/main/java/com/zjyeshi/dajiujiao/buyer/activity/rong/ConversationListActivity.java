@@ -64,7 +64,7 @@ public class ConversationListActivity extends Activity {
     private void enterActivity() {
         String token = sp.getString("rongToken", "");
         if (token.equals("default")) {
-            startActivity(new Intent(ConversationListActivity.this, LoginActivity.class));
+           // startActivity(new Intent(ConversationListActivity.this, LoginActivity.class));
             finish();
         } else {
             if (mDialog != null && !mDialog.isShowing()) {

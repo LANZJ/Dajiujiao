@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.zjyeshi.dajiujiao.buyer.App;
+import com.zjyeshi.dajiujiao.buyer.activity.frame.fragment.MianFramActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.work.WorkActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.order.MyOrderNewActivity;
 import com.zjyeshi.dajiujiao.buyer.common.Constants;
@@ -30,8 +31,8 @@ public class PushNewNoticeMessage extends BasePush {
             if (LoginedUser.getLoginedUser().getUserEnum().equals(UserEnum.SALESMAN)){
                 intent.setClass(context.getApplicationContext() , WorkActivity.class);
             }else{
-                FrameActivity.tab3Checked = true;
-                intent.setClass(context.getApplicationContext(), FrameActivity.class);
+                //FrameActivity.tab3Checked = true;
+                intent.setClass(context.getApplicationContext(), MianFramActivity.class);
             }
             NotificationUtil.showNotification(title , description , intent);
         }else{

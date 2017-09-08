@@ -65,13 +65,13 @@ public class ShopGoodAdapter extends MBaseAdapter {
         }else {
             childViewHolder = (ShopViewHolder) view.getTag();
         }
-        ImageView photoIv = (ImageView) view.findViewById(R.id.photoIv);
+       // ImageView photoIv = (ImageView) view.findViewById(R.id.photoIv);
 
         //View dividerView = (View)view.findViewById(R.id.dividerView);
        // SalesView salesView = (SalesView)view.findViewById(R.id.salesView);
 
         final AllGoodInfo data = dataList.get(position);
-        GlideImageUtil.glidImage( photoIv, ExtraUtil.getResizePic(data.getGoodIcon() , 200 , 200), R.drawable.default_img);
+        GlideImageUtil.glidImage( childViewHolder.photoIv , ExtraUtil.getResizePic(data.getGoodIcon() , 200 , 200), R.drawable.default_img);
 //        photoIv.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {

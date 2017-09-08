@@ -85,7 +85,7 @@ public class BaseActivity extends BPActivity {
             //退出微信
             if (CWChat.getInstance().getImClient().isConnected()){
                 CWChat.getInstance().getImClient().disConnect();
-                LogUtil.e("BaseActivity的onStop:--------断开连接" + String.valueOf(CWChat.getInstance().getImClient().isConnected()));
+              //  LogUtil.e("BaseActivity的onStop:--------断开连接" + String.valueOf(CWChat.getInstance().getImClient().isConnected()));
             }
         }
     }

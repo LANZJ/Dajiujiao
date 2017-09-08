@@ -65,7 +65,7 @@ public class WXPayEntryActivity extends Activity implements IWXAPIEventHandler{
 
 			BDActivityManager.removeAndFinishIncludes(BalanceAccountsActivity.class.getSimpleName(),BuyCarActivity.class.getSimpleName(), ShopDetailActivity.class.getSimpleName(), ProductBuyActivity.class.getSimpleName());
 			finish();
-			FrameActivity.tab3Checked = true;
+			//FrameActivity.tab3Checked = true;
 		}
 	}
 }

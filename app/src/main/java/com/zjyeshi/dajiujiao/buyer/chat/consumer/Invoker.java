@@ -9,7 +9,9 @@ import com.xuan.bigapple.lib.utils.Validators;
 import com.xuan.bigapple.lib.utils.log.LogUtils;
 import com.zjyeshi.dajiujiao.buyer.App;
 import com.zjyeshi.dajiujiao.buyer.activity.frame.FrameActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.frame.fragment.MianFramActivity;
 import com.zjyeshi.dajiujiao.buyer.utils.NotificationUtil;
+import com.zjyeshi.dajiujiao.buyer.utils.ToastUtil;
 
 /**
  * Created by wuhk on 2015/12/4.
@@ -28,8 +30,9 @@ public class Invoker {
         if (Validators.isEmpty(customContentString)) {
             // 如果customContentString空，点击直接打开应用好了
             Intent intent = new Intent();
-            intent.setClass(context.getApplicationContext(), FrameActivity.class);
+            intent.setClass(context.getApplicationContext(), MianFramActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+          //  ToastUtil.toast("个推透传消息推送");
             NotificationUtil.showNotification(title , description , intent);
 
         } else {

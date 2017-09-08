@@ -26,7 +26,7 @@ public class PushNewRemindMessage extends BasePush {
         if (LoginedUser.getLoginedUser().getUserEnum().equals(UserEnum.SALESMAN)){
             intent.setClass(context.getApplicationContext() , WorkActivity.class);
         }else{
-            FrameActivity.tab3Checked = true;
+          //  FrameActivity.tab3Checked = true;
             intent.setClass(context.getApplicationContext(), MianFramActivity.class);
         }
         NotificationUtil.showNotification(title , description , intent);
