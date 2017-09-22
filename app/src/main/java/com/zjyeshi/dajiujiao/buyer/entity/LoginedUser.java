@@ -30,8 +30,6 @@ public class LoginedUser {
     private String pic;// 头像地址
     private String circleBackgroundPic;//朋友圈背景图
     private String jru;//是否为内勤
-
-
     private UserEnum userEnum;// 角色
     private int shopType;//业务员所属店铺类型
     private String shopName;//点名

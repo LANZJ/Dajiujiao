@@ -717,7 +717,7 @@ public class BalanceAccountsActivity extends BaseActivity {
         @Override
         public void onshio(String activityee) {
             activityidss=activityee;
-           // popsr();
+          //  popsr();
         }
     };
 
@@ -739,7 +739,7 @@ public class BalanceAccountsActivity extends BaseActivity {
 //        }
 //        return sop;
 //    }
-    public void popsr(){
+    public  void popsr(){
         CouponAndWalletTask couponAndWalletTask = new CouponAndWalletTask(BalanceAccountsActivity.this);
         couponAndWalletTask.setAsyncTaskSuccessCallback(new AsyncTaskSuccessCallback<Wallet>() {
             @Override

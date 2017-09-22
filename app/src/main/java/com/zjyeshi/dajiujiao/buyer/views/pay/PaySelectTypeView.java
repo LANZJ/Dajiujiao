@@ -53,14 +53,11 @@ public class PaySelectTypeView extends DGBaseLayout {
     private TextView marketCostTv;
     @InjectView(R.id.marketCheckIv)
     private IVWalletCheck marketCheckIv;
-
     @InjectView(R.id.listView)
     private ListView listView;
-
     public static final int SELECT_COUPON_REQUEST_CODE = 1;
     public static final String SELECT_COUPON = "selet_cpupon";
     public static final String ORDERIDS = "orderIds";
-
     private PayTypeAdapter payTypeAdapter;
     private PaySelCallback paySelCallback;
 

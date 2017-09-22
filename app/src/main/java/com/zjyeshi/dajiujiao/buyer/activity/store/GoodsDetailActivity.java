@@ -105,12 +105,12 @@ public class GoodsDetailActivity extends BaseActivity implements FormatOpListene
     }
 
     private void initWidgets() {
-        titleLayout.configTitle("商品详情").configReturn(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        titleLayout.configTitle("商品详情").configReturn(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
         String jsonStr = getIntent().getStringExtra(GOOD_INFO_LIST);
         List<AllGoodInfo> tempList = JSONArray.parseArray(jsonStr , AllGoodInfo.class);

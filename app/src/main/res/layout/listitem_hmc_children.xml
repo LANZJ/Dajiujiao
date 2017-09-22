@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp">
             <TextView
-                android:id="@+id/nameTv"
+                android:id="@+id/companyTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/FontBlack16"
@@ -30,7 +30,7 @@
                 android:layout_marginLeft="@dimen/dimen_45"/>
 
             <TextView
-                android:id="@+id/companyTv"
+                android:id="@+id/nameTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/FontGray14"

@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:src="@drawable/wallet_sel"
+                    android:src="@drawable/selected"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dimen_48" />
                 <View
@@ -208,7 +208,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/wallet_sel"
+                android:src="@drawable/selected"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/dimen_48" />
             <View

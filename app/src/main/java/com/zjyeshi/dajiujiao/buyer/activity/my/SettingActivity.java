@@ -13,9 +13,11 @@ import com.xuan.bigapple.lib.asynctask.callback.AsyncTaskSuccessCallback;
 import com.xuan.bigapple.lib.asynctask.helper.Result;
 import com.xuan.bigapple.lib.ioc.InjectView;
 import com.xuan.bigdog.lib.bservice.bversioncheck.BDVersionCheckModel;
+import com.xuan.bigdog.lib.utils.BDActivityManager;
 import com.xuan.bigdog.lib.widgets.title.DGTitleLayout;
 import com.zjyeshi.dajiujiao.buyer.activity.BaseActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.setting.AboutUsActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.store.BalanceAccountsActivity;
 import com.zjyeshi.dajiujiao.buyer.common.Constants;
 import com.zjyeshi.dajiujiao.buyer.utils.ExtraUtil;
 import com.zjyeshi.dajiujiao.R;
@@ -37,7 +39,7 @@ public class SettingActivity extends BaseActivity {
     private DGTitleLayout titleLayout;
 
     @InjectView(R.id.logoutBtn)
-    private Button logoutBtn;
+    private Button logoutBtn;//退出
 
     @InjectView(R.id.versionLayout)
     private RelativeLayout versionLayout;//版本
@@ -56,12 +58,13 @@ public class SettingActivity extends BaseActivity {
 
     @InjectView(R.id.cachTv)
     private TextView cachTv;
-
+    private static boolean AER=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_setting);
         initWidgets();
+
     }
 
     private void initWidgets() {
@@ -135,7 +138,11 @@ public class SettingActivity extends BaseActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (AER){
+                     AER=false;
+                  //  BDActivityManager.removeAndFinishIncludes(SettingActivity.class.getSimpleName());
                 ExtraUtil.logoutAndUnBindPush(SettingActivity.this);
+                   }
             }
         });
 

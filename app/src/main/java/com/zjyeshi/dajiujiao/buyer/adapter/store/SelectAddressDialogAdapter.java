@@ -37,13 +37,17 @@ public class SelectAddressDialogAdapter extends MBaseAdapter {
         }
         TextView nameTv = (TextView)view.findViewById(R.id.nameTv);
         TextView addressTv = (TextView)view.findViewById(R.id.addressTv);
+        TextView phone= (TextView) view.findViewById(R.id.phone);
 
         Address address = dataList.get(position);
         if (address.getAddressType() == 2){
-            initTextView(nameTv , address.getName()+ "(花名册地址)");
+            initTextView(nameTv ,address.getName()+ "(花名册地址)");
         }else{
-            initTextView(nameTv , address.getName());
+            initTextView(nameTv ,address.getName());
         }
+
+        initTextView(phone,"手机："+address.getPhone());
+
         String area = ExtraUtil.getAreaByCode(address.getArea());
         initTextView(addressTv , area + address.getAddress());
 

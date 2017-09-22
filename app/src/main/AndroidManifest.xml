@@ -150,7 +150,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".buyer.activity.store.CourseWebActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".buyer.activity.login.LoginActivity" android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" android:launchMode="singleTop"/>
+        <activity android:name=".buyer.activity.login.LoginActivity" android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" android:launchMode="singleTask"/>
         <activity android:name=".buyer.activity.login.RegisterActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.login.ForgetPwdActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.my.PersonalInfoActivity" android:screenOrientation="portrait" />
@@ -242,7 +242,6 @@
         <activity android:name=".buyer.activity.my.work.CategoryFilterActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.my.work.ModifyInventoryActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.my.work.MyMessageActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
-        <activity android:name=".buyer.activity.store.ShopDetailActivity" android:screenOrientation="portrait"  android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <activity android:name=".buyer.activity.my.work.ApproveDetailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".buyer.activity.account.ApplyAccountActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.account.AccountSelectActivity" android:screenOrientation="portrait"/>
@@ -289,6 +288,9 @@
         <activity android:name=".buyer.activity.rong.ui.DiscussionDetailActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.rong.ui.CWGroupDetailActivity" android:screenOrientation="portrait"/>
         <activity android:name=".buyer.activity.rong.ui.CWGroupModifyNameActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.Rceyzs" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.my.work.Pyoductactivity" android:screenOrientation="portrait"/>
+        <activity android:name=".buyer.activity.store.ShopDetailActivity" android:screenOrientation="portrait"  android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <!-- =================================================START 百度推送 START============================================ -->
         <!--&lt;!&ndash; push必须的receviver和service声明 &ndash;&gt;-->
         <!--<receiver-->

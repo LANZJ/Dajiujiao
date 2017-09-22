@@ -7,6 +7,7 @@ android {
 
     }
 
+
     signingConfigs {
         config {
             keyAlias 'jopool.keystore'
@@ -41,7 +42,7 @@ android {
         applicationId "com.zjyeshi.dajiujiao"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 31
+        versionCode 32
         versionName "3.0"
         multiDexEnabled true
        signingConfig signingConfigs.config
@@ -90,27 +91,30 @@ android {
             }
         }
 
-        productFlavors {
-        dajiujiao{}
+    productFlavors {
+        dajiujiao {}
 
         dajiujiao1 {
             applicationId 'com.zjyeshi.dajiujiao1'
             manifestPlaceholders = [
-                    GETUI_APP_ID : "NOoeaJauFl6KfmXBHXRmT8",
-                    GETUI_APP_KEY : "vUPt01mkKb76YzqWVGFfWA",
-                    GETUI_APP_SECRET : "aARkLpJNRg8F9Hzm3fRPp7"
+                    GETUI_APP_ID    : "NOoeaJauFl6KfmXBHXRmT8",
+                    GETUI_APP_KEY   : "vUPt01mkKb76YzqWVGFfWA",
+                    GETUI_APP_SECRET: "aARkLpJNRg8F9Hzm3fRPp7"
             ]
+            minSdkVersion 21
+            signingConfig signingConfigs.config
+            targetSdkVersion 21
         }
 
-        dajiujiao2{
+        dajiujiao2 {
             applicationId 'com.zjyeshi.dajiujiao2'
             manifestPlaceholders = [
-                    GETUI_APP_ID : "87lvY6btkW535HMWFu0LI7",
-                    GETUI_APP_KEY : "FBTPtzTJgU7WlyYCXUUPW2",
-                    GETUI_APP_SECRET : "kCVBHQj2Fg9uNXRCy19KX1"
+                    GETUI_APP_ID    : "87lvY6btkW535HMWFu0LI7",
+                    GETUI_APP_KEY   : "FBTPtzTJgU7WlyYCXUUPW2",
+                    GETUI_APP_SECRET: "kCVBHQj2Fg9uNXRCy19KX1"
             ]
         }
-   }
+    }
     dexOptions {
         incremental true
         javaMaxHeapSize "4g"
@@ -127,6 +131,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22+'
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:recyclerview-v7:23.1.0'
     compile project(':bigdoglib')
     compile project(':jsharelib')
     compile project(':jcrowlib')
@@ -137,7 +142,7 @@ dependencies {
     compile files('libs/greendao-1.3.7.jar')
     compile files('libs/happy-dns-0.2.3.2.jar')
     compile files('libs/HwPushSDK_v2.7-3.05.jar')
-   // compile files('libs/jsoup-1.8.3.jar')
+    // compile files('libs/jsoup-1.8.3.jar')
     compile files('libs/MiPush_SDK_Client_3_2_2.jar')
     compile files('libs/org.apache.http.legacy.jar')
     compile files('libs/qiniu-android-sdk-7.1.0.jar')
@@ -145,12 +150,14 @@ dependencies {
     compile(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
     compile project(':Sticker')
     compile 'com.android.support:multidex:1.0.1'
-//    compile 'com.github.markzhai:blockcanary-android:1.5.0'
-//    // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
+    //    compile 'com.github.markzhai:blockcanary-android:1.5.0'
+    //    // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
     debugCompile 'com.github.markzhai:blockcanary-android:1.5.0'
     releaseCompile 'com.github.markzhai:blockcanary-no-op:1.5.0'
+    // compile project(':RedPacket')
 
-   // compile project(':RedPacket')
+
+
 }
 
 repositories { flatDir { dirs 'aars' } }

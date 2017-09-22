@@ -1,6 +1,7 @@
 package com.zjyeshi.dajiujiao.buyer.utils;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -12,6 +13,8 @@ import com.xuan.bigapple.lib.asynctask.helper.Result;
 import com.xuan.bigapple.lib.utils.Validators;
 import com.xuan.bigapple.lib.utils.sharepreference.BPPreferences;
 import com.xuan.bigdog.lib.utils.BDActivityManager;
+import com.zjyeshi.dajiujiao.buyer.activity.frame.fragment.MianFramActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.store.BalanceAccountsActivity;
 import com.zjyeshi.dajiujiao.buyer.chat.MyMessageReceiveListener;
 import com.zjyeshi.dajiujiao.buyer.common.Constants;
 import com.zjyeshi.dajiujiao.buyer.common.PreferenceConstants;
@@ -21,6 +24,7 @@ import com.zjyeshi.dajiujiao.buyer.entity.my.DetailArea;
 import com.zjyeshi.dajiujiao.buyer.activity.login.LoginActivity;
 import com.zjyeshi.dajiujiao.buyer.chat.MyConnectListener;
 import com.zjyeshi.dajiujiao.buyer.entity.LoginedUser;
+import com.zjyeshi.dajiujiao.buyer.receiver.ToLoginReceiver;
 import com.zjyeshi.dajiujiao.buyer.task.data.NoResultData;
 import com.zjyeshi.dajiujiao.buyer.task.my.UnBindBPushTask;
 
@@ -36,6 +40,7 @@ import io.rong.imkit.RongIM;
  * Created by wuhk on 2016/6/27.
  */
 public abstract class ExtraUtil {
+    public static boolean AER=true;
 
     /**获取小图连接
      *
@@ -102,7 +107,8 @@ public abstract class ExtraUtil {
      * @param context
      */
     public static void logoutAndUnBindPush(final Context context){
-
+//        ToLoginReceiver toLoginReceiver = new ToLoginReceiver((Activity) context);
+//        toLoginReceiver.unRegister();
         //解绑百度推送
         UnBindBPushTask unBindBPushTask = new UnBindBPushTask(context);
         unBindBPushTask.setShowProgressDialog(false);
@@ -129,7 +135,9 @@ public abstract class ExtraUtil {
         CWChat.getInstance().getImClient().disConnect();
         Constants.isAlive = false;
         BDActivityManager.removeAndFinishAll();
-        context.startActivity(new Intent(context, LoginActivity.class));
+        if (AER){
+           // AER=false;
+        context.startActivity(new Intent(context, LoginActivity.class));}
         //退出融云
         RongIM.getInstance().disconnect();
 

@@ -8,7 +8,6 @@ import com.baidu.location.BDLocationListener;
 import com.xuan.bigapple.lib.asynctask.callback.AsyncTaskFailCallback;
 import com.xuan.bigapple.lib.asynctask.callback.AsyncTaskSuccessCallback;
 import com.xuan.bigdog.lib.location.DGLocationUtils;
-import com.zjyeshi.dajiujiao.buyer.activity.store.ShopDetailActivity;
 import com.zjyeshi.dajiujiao.buyer.common.UrlConstants;
 import com.zjyeshi.dajiujiao.buyer.task.BaseTask;
 import com.zjyeshi.dajiujiao.buyer.task.data.store.shopdetails.ShopDetailData;

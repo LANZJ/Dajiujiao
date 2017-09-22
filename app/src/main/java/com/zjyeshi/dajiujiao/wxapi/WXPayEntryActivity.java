@@ -13,7 +13,6 @@ import com.zjyeshi.dajiujiao.buyer.activity.store.BuyCarActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.store.ShopDetailActivity;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.LoginEnum;
 import com.zjyeshi.dajiujiao.R;
-import com.zjyeshi.dajiujiao.buyer.activity.frame.FrameActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.store.BalanceAccountsActivity;
 import com.zjyeshi.dajiujiao.buyer.pay.MyWxPayConfig;
 

@@ -13,9 +13,9 @@ import com.xuan.bigapple.lib.ioc.InjectView;
 import com.xuan.bigapple.lib.utils.Validators;
 import com.xuan.bigdog.lib.widgets.title.DGTitleLayout;
 import com.zjyeshi.dajiujiao.buyer.activity.BaseActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.store.ShopDetailActivity;
 import com.zjyeshi.dajiujiao.buyer.task.data.my.ShopData;
 import com.zjyeshi.dajiujiao.R;
-import com.zjyeshi.dajiujiao.buyer.activity.store.ShopDetailActivity;
 import com.zjyeshi.dajiujiao.buyer.task.my.GetShopByCodeTask;
 import com.zjyeshi.dajiujiao.buyer.utils.ToastUtil;
 

@@ -1,4 +1,4 @@
-package com.zjyeshi.dajiujiao.buyer.activity.seller;
+package com.zjyeshi.dajiujiao.buyer.activity.my.work;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +10,10 @@ import com.xuan.bigapple.lib.asynctask.helper.Result;
 import com.xuan.bigapple.lib.ioc.InjectView;
 import com.xuan.bigapple.lib.utils.Validators;
 import com.xuan.bigdog.lib.widgets.title.DGTitleLayout;
-import com.zjyeshi.dajiujiao.buyer.adapter.seller.BuyProductAdapter;
-import com.zjyeshi.dajiujiao.buyer.dao.DaoFactory;
 import com.zjyeshi.dajiujiao.R;
 import com.zjyeshi.dajiujiao.buyer.activity.BaseActivity;
+import com.zjyeshi.dajiujiao.buyer.adapter.my.BuyProductadapter;
+import com.zjyeshi.dajiujiao.buyer.dao.DaoFactory;
 import com.zjyeshi.dajiujiao.buyer.task.data.store.homepage.ALLStoreData;
 import com.zjyeshi.dajiujiao.buyer.task.data.store.homepage.GetNearbyShopList;
 import com.zjyeshi.dajiujiao.buyer.task.seller.GetProductBuyTask;
@@ -23,10 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 商品采购
- * Created by wuhk on 2015/11/5.
+ * Created by zhangjian on 2017/9/15.
  */
-public class ProductBuyActivity extends BaseActivity {
+
+public class Pyoductactivity extends BaseActivity {
     @InjectView(R.id.titleLayout)
     private DGTitleLayout titleLayout;
 
@@ -34,7 +34,7 @@ public class ProductBuyActivity extends BaseActivity {
     private ListView listView;
 
     private List<ALLStoreData> dataList = new ArrayList<ALLStoreData>();
-    private BuyProductAdapter buyProductAdapter;
+    private BuyProductadapter buyProductAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +44,13 @@ public class ProductBuyActivity extends BaseActivity {
     }
 
     private void initWidgets() {
-        titleLayout.configTitle("上级店铺").configReturn("返回", new View.OnClickListener() {
+        titleLayout.configTitle("招商").configReturn("返回", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        buyProductAdapter = new BuyProductAdapter(ProductBuyActivity.this, dataList);
+        buyProductAdapter = new BuyProductadapter(Pyoductactivity.this, dataList);
         listView.setAdapter(buyProductAdapter);
         loadData();
     }
@@ -77,7 +77,7 @@ public class ProductBuyActivity extends BaseActivity {
 
     //后台熟悉数据并更新界面上的数据
     private void doBackground(boolean show) {
-        GetProductBuyTask getProductBuyTask = new GetProductBuyTask(ProductBuyActivity.this);
+        GetProductBuyTask getProductBuyTask = new GetProductBuyTask(Pyoductactivity.this);
         getProductBuyTask.setShowProgressDialog(show);
         getProductBuyTask.setAsyncTaskFailCallback(new AsyncTaskFailCallback<GetNearbyShopList>() {
             @Override

@@ -123,8 +123,6 @@ public class ShopGoodAdapter extends MBaseAdapter {
         FormatWidget formatWidget;
         ImageView photoIvss;
         TextView bigPriceTvsb;
-
-
     }
     /**
      * 刷新数据

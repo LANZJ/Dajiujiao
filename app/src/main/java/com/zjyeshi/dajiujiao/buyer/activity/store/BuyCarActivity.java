@@ -167,21 +167,17 @@ public class BuyCarActivity extends BaseActivity {
                 }
             }
         });
-
     }
-
     /**
      * 判断并提交
      */
     private void judge(List<GoodsCar> selectedList , List<GoodsCar> marketSelectedList) {
-
         float marketCost = 0.00f;
         for (GoodsCar goodsCar : selectedList) {
             if (goodsCar.getStatus() == SelectEnum.SELECTED.getValue()) {
                 marketCost += Float.parseFloat(goodsCar.getGoodMarketPrice()) / 100 * Float.parseFloat(goodsCar.getGoodCount());
             }
         }
-
         float selectMarketPrice = 0.00f;
         for (GoodsCar goodsCar : marketSelectedList) {
             //选择的市场费用
@@ -189,8 +185,7 @@ public class BuyCarActivity extends BaseActivity {
                 selectMarketPrice += Float.parseFloat(goodsCar.getGoodPrice()) * Float.parseFloat(goodsCar.getGoodCount());
             }
         }
-
-        if (showDialog) {
+        if (showDialog&&memberId!=null) {
             float myMarketPrice = BPPreferences.instance().getFloat(PreferenceConstants.MY_ACCOUNT_MARKET, 0.00f);
             if(AuthUtil.recordMarketCostFee()){
                 myMarketPrice = myMarketPrice + marketCost;
@@ -214,7 +209,6 @@ public class BuyCarActivity extends BaseActivity {
             }
         }
     }
-
     private void post(){
         if (Validators.isEmpty(memberId)) {
             //正常下单, 先选中默认地址，没有赋空

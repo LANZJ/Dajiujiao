@@ -35,9 +35,9 @@ import com.xuan.bigdog.lib.location.activity.interfaces.DGLinkPointInterface;
 import com.xuan.bigdog.lib.location.activity.interfaces.DGMarkLocationInterface;
 import com.xuan.bigdog.lib.location.activity.interfaces.DGRoutePlanInterface;
 import com.xuan.bigdog.lib.location.activity.listener.DGOnGetRoutePlanResultListener;
+import com.zjyeshi.dajiujiao.buyer.activity.store.ShopDetailActivity;
 import com.zjyeshi.dajiujiao.buyer.task.data.store.homepage.Shop;
 import com.zjyeshi.dajiujiao.R;
-import com.zjyeshi.dajiujiao.buyer.activity.store.ShopDetailActivity;
 
 import java.util.ArrayList;
 import java.util.List;

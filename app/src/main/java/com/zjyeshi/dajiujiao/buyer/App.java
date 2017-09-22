@@ -95,11 +95,9 @@ public class App extends MultiDexApplication implements IUnReadMessageObserver {
     private SharedPreferences sp;
     final List<String>muer=new ArrayList<String>();
     private CWTotalUnreadNumReceiver totalUnreadNumReceiver;
-
     @Override
     public void onCreate() {
         super.onCreate();
-
         defaultBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.default_img);
         defaultBitmapGray = BitmapFactory.decodeResource(getResources(), R.drawable.default_image_gray);
         sp = getSharedPreferences("config", MODE_PRIVATE);
@@ -170,7 +168,7 @@ public class App extends MultiDexApplication implements IUnReadMessageObserver {
 
         }
         // 在主进程初始化调用哈
-        BlockCanary.install(this, new AppBlockCanaryContext()).start();
+       // BlockCanary.install(this, new AppBlockCanaryContext()).start();
 
     }
 

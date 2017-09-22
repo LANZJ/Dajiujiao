@@ -111,6 +111,7 @@ public class WorkActivity extends BaseActivity implements DragPointView.OnDragLi
     private CWTotalUnreadNumReceiver totalUnreadNumReceiver;
     private ToLogoutReceiver toLogoutReceiver;//退出登录广播，业务员登录时才注册;
     private ChangeRemindShowReceiver changeRemindShowReceiver;//改变显示广播
+    private static boolean AER=true;
 
     private boolean backPressed;
     private Handler handler = new Handler();
@@ -463,7 +464,9 @@ public class WorkActivity extends BaseActivity implements DragPointView.OnDragLi
             toLogoutReceiver = new ToLogoutReceiver() {
                 @Override
                 public void onLogout() {
-                    ExtraUtil.logoutAndUnBindPush(WorkActivity.this);
+                    if (AER){
+                         AER=false;
+                    ExtraUtil.logoutAndUnBindPush(WorkActivity.this);}
                 }
             };
             toLogoutReceiver.register();

@@ -306,7 +306,7 @@ public class MyExpandableListView extends BaseExpandableListAdapter {
               if (chengpo.get(che)){
                   muer.remove(activirid);
                   iDialogControl.onShowDialog(tm,muer);
-                  ToastUtil.toast(muer.size()+"");
+                  //ToastUtil.toast(muer.size()+"");
               }else {
                   iDialogControl.onshio("");
               }

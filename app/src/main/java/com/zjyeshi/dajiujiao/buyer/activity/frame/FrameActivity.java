@@ -55,7 +55,7 @@ public class FrameActivity extends BaseFrameActivity {
     private ContactsChangeReceiver contactsChangeReceiver;//酒友通讯录改变广播
 
 
-
+    private static boolean AER=true;
 
     Fragment conversationList;
     private BUNumRadioButton tabBtn1;//消息tab页
@@ -221,8 +221,10 @@ public class FrameActivity extends BaseFrameActivity {
             toLogoutReceiver = new ToLogoutReceiver() {
                 @Override
                 public void onLogout() {
-                    ExtraUtil.logoutAndUnBindPush(FrameActivity.this);
-
+                    if (AER) {
+                        AER = false;
+                        ExtraUtil.logoutAndUnBindPush(FrameActivity.this);
+                    }
                 }
             };
             toLogoutReceiver.register();

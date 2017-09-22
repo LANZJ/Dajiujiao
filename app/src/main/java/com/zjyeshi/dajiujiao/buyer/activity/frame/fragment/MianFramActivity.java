@@ -29,6 +29,7 @@ import com.xuan.bigapple.lib.asynctask.callback.AsyncTaskSuccessCallback;
 import com.xuan.bigapple.lib.asynctask.helper.Result;
 import com.xuan.bigapple.lib.utils.Validators;
 import com.xuan.bigdog.lib.bservice.bversioncheck.BDVersionCheckModel;
+import com.xuan.bigdog.lib.utils.BDActivityManager;
 import com.xuan.bigdog.lib.widgets.title.DGTitleLayout;
 import com.zjyeshi.dajiujiao.R;
 import com.zjyeshi.dajiujiao.buyer.activity.account.BasMianActivity;
@@ -83,7 +84,7 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
         DragPointView.OnDragListencer,
         IUnReadMessageObserver
         {
-
+            private static boolean AER=true;
             private CWTotalUnreadNumReceiver totalUnreadNumReceiver;
     private ToLoginReceiver toLoginReceiver;//登录广播,未登录的情况下点击需要登录的地方会触发
     private ToLogoutReceiver toLogoutReceiver;//多账号登录退出登录广播,非业务员登录的时候注册
@@ -94,7 +95,7 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
     private ImageView moreImage, mImageChats, mImageContact, mImageFind, mImageMe, mMineRed;
     private TextView mTextChats, mTextContact, mTextFind, mTextMe;
     private DragPointView mUnreadNumView,my_view;
-    private ImageView mSearchImageView;
+    //private ImageView mSearchImageView;
     private LinearLayout top;
             private DGTitleLayout titleLayout;
             private Handler handler=new Handler();
@@ -117,6 +118,7 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mains);
+      //  BDActivityManager.addActivity(MianFramActivity.this);
         mContext = this;
         isDebug = getSharedPreferences("config", MODE_PRIVATE).getBoolean("isDebug", false);
 
@@ -490,19 +492,28 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
         return super.onTouchEvent(event);
     }
 
-    @Override
+//            @Override
+//            protected void onStop() {
+//                super.onStop();
+//                toLoginReceiver.unRegister();
+//            }
+
+            @Override
     protected void onDestroy() {
+        super.onDestroy();
+        totalUnreadNumReceiver.unregister(this);
         RongIM.getInstance().removeUnReadMessageCountChangedObserver(this);
-        toLoginReceiver.unRegister();
         if (mHomeKeyReceiver != null)
             this.unregisterReceiver(mHomeKeyReceiver);
-        super.onDestroy();
         if (!LoginedUser.getLoginedUser().getUserEnum().equals(UserEnum.SALESMAN)) {
             toLogoutReceiver.unregister();
         }
         changeRemindShowReceiver.unregister();
         contactsChangeReceiver.unregister();
+        toLoginReceiver.unRegister();
+        BDActivityManager.removeActivity(this);
     }
+
 
     @Override
     public void onDragOut() {
@@ -620,8 +631,10 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
             @Override
             public void successCallback(Result<GetNearbyShopList> result) {
 
+
             }
         });
+        getProductBuyTask.execute();
     }
 
 
@@ -686,6 +699,9 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
                         }
                     }
                 });
+                if(LoginedUser.getLastLoginedUserInfo().getPic()==null){
+                    LoginedUser.getLastLoginedUserInfo().setPic("http://cnd.img.yeshiwine.com/image/20170329/pic_default.png");
+                }
                 gettokenTask.execute(LoginedUser.getLastLoginedUserInfo().getId(),LoginedUser.getLastLoginedUserInfo().getName(),LoginedUser.getLastLoginedUserInfo().getPic());
             }
 
@@ -697,14 +713,17 @@ public class MianFramActivity extends BasMianActivity implements ViewPager.OnPag
 
                 //跳转登录,操作前判断是已登录用的
                 toLoginReceiver = new ToLoginReceiver(this);
-
+                toLoginReceiver.register();
                 //非业务员在注册退出登录广播，业务员去工作台注册
                 if (!LoginedUser.getLoginedUser().getUserEnum().equals(UserEnum.SALESMAN)) {
                     //收到退出登录广播
                     toLogoutReceiver = new ToLogoutReceiver() {
                         @Override
                         public void onLogout() {
-                            ExtraUtil.logoutAndUnBindPush(MianFramActivity.this);
+                            if (AER) {
+                                AER = false;
+                                ExtraUtil.logoutAndUnBindPush(MianFramActivity.this);
+                            }
 
                         }
                     };

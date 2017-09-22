@@ -33,6 +33,7 @@ import com.zjyeshi.dajiujiao.buyer.entity.enums.LoginEnum;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.LoginStatusEnum;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.MarketCostEnum;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.UserEnum;
+import com.zjyeshi.dajiujiao.buyer.receiver.ToLoginReceiver;
 import com.zjyeshi.dajiujiao.buyer.receiver.buy.GetFollowShopReceiver;
 import com.zjyeshi.dajiujiao.buyer.receiver.info.ChangePersonalReceiver;
 import com.zjyeshi.dajiujiao.buyer.task.data.login.LoginData;
@@ -61,7 +62,6 @@ public class LoginActivity extends BaseActivity {
     private Button loginBtn;
     @InjectView(R.id.titleLayout)
     private DGTitleLayout titleLayout;
-
     //参数
     public static final String PARAM_PHONE = "param.phone";
 
@@ -77,6 +77,7 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_login);
         initWidgets();
+
     }
 
     @Override
@@ -165,7 +166,6 @@ public class LoginActivity extends BaseActivity {
 
                                     //保存登录信息
                                     saveLoginInfo(result.getValue());
-
                                     //将自己插入联系人表
                                     AddressUser au = new AddressUser();
                                     au.setOwnerUserId(LoginedUser.getLoginedUser().getId());
@@ -260,6 +260,7 @@ public class LoginActivity extends BaseActivity {
         loginedUser.setShopId(loginData.getShopId());
         loginedUser.setjur(loginData.getJur());
         loginedUser.setMarketCostEnum(MarketCostEnum.valueOf(loginData.getMarketCostType()));
+      //  LoginedUser.saveToFile();
 
 
         int type = loginData.getType();

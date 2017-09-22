@@ -10,10 +10,9 @@ public class UrlConstants {
      * 接口开发环境地址
      */
     //基本地址
-  public static final String WEB_SITE = "http://api.yeshiwine.com/api/";
+    // public static final String WEB_SITE = "http://api.yeshiwine.com/api/";
 
-   //  public static final String WEB_SITE = "http://nat.yeshiwine.com/api/";
-    //public static final String WEB_SITE ="http://192.168.1.114:8081/api/";
+  public static final String WEB_SITE = "http://nat.yeshiwine.com/api/";
 
     //JCROW基本地址
     public static final String JCROW_WEB_SITE = "http://jcrow.yeshiwine.com";

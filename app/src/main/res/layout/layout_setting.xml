@@ -131,10 +131,10 @@
 
     <Button
         android:id="@+id/logoutBtn"
+        style="@style/FontBlack16"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_166"
+        android:layout_marginTop="@dimen/dimen_48"
         android:background="@drawable/item_selector"
-        style="@style/FontBlack16"
-        android:text="@string/logout"
-        android:layout_marginTop="@dimen/dimen_48"/>
+        android:text="@string/logout" />
 </LinearLayout>

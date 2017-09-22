@@ -46,7 +46,7 @@ public class MyPay {
      */
     public void wxPay(String orderId , String addressId , String totalFee  , Context context){
 
-        ToastUtil.toast("获取订单中...");
+       // ToastUtil.toast("获取订单中...");
         WxPayPrepareTask wxPayPrepareTask = new WxPayPrepareTask(context);
         wxPayPrepareTask.setShowProgressDialog(true);
         wxPayPrepareTask.setAsyncTaskSuccessCallback(new AsyncTaskSuccessCallback<WxPayData>() {

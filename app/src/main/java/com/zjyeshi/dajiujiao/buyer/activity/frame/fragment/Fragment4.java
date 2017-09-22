@@ -22,6 +22,7 @@ import com.zjyeshi.dajiujiao.buyer.activity.my.CouponActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.PersonalInfoActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.SettingActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.ShopMaActivity;
+import com.zjyeshi.dajiujiao.buyer.activity.my.work.Pyoductactivity;
 import com.zjyeshi.dajiujiao.buyer.activity.my.work.WorkActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.order.MyOrderNewActivity;
 import com.zjyeshi.dajiujiao.buyer.activity.rong.broadcast.CWTotalUnreadNumReceiver;
@@ -216,8 +217,11 @@ public class Fragment4 extends BaseFragment {
         goodCarLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setClass(getActivity(), BuyCarActivity.class);
+//                startActivity(intent);
                 Intent intent = new Intent();
-                intent.setClass(getActivity(), BuyCarActivity.class);
+                intent.setClass(getActivity(), Pyoductactivity.class);
                 startActivity(intent);
             }
         });

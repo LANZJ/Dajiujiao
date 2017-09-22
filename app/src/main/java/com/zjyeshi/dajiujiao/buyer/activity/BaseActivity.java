@@ -44,6 +44,7 @@ public class BaseActivity extends BPActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //添加activity到数组
         BDActivityManager.addActivity(this);
         screenBroadcastReceiver = new ScreenBroadcastReceiver();
         screenBroadcastReceiver.register();
@@ -96,7 +97,7 @@ public class BaseActivity extends BPActivity {
         if (fromBackground){
             if (ContextUtil.isBackground()){
                 //退出微信
-               // CWChat.getInstance().getImClient().disConnect();
+                CWChat.getInstance().getImClient().disConnect();
                 RongIM.getInstance().disconnect();
                 LogUtil.e("BaseActivity的onResume:--------断开连接");
             }else{
