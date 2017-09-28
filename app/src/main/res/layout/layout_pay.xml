@@ -67,39 +67,41 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/dimen_45"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_45"
                 android:background="@drawable/item_selector">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_divider"
-                android:background="@color/color_divider"/>
-            <TextView
-                android:id="@+id/textView"
-                android:layout_marginLeft="@dimen/dimen_72"
-                android:layout_toRightOf="@id/manageIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/FontBlack16"
-                android:layout_marginTop="@dimen/dimen_45"
-                android:text="@string/work_bz"/>
 
-            <EditText
-                android:id="@+id/bzEt"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_150"
-                style="@style/FontGray16"
-                android:background="@color/cw_color_transparent"
-                android:layout_below="@id/textView"
-                android:singleLine="false"
-                android:layout_marginLeft="@dimen/dimen_72"
-                android:layout_marginTop="@dimen/dimen_30"
-                android:hint="添加订单备注描述"
-                android:gravity="top"
-                android:paddingTop="@dimen/dimen_15"
-                />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_divider"
+                    android:background="@color/color_divider" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/FontBlack16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_72"
+                    android:layout_marginTop="@dimen/dimen_45"
+                    android:layout_toRightOf="@id/manageIv"
+                    android:text="@string/work_bz" />
+
+                <EditText
+                    android:id="@+id/bzEt"
+                    style="@style/FontGray16"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_150"
+                    android:layout_below="@id/textView"
+                    android:layout_marginLeft="@dimen/dimen_72"
+                    android:layout_marginTop="@dimen/dimen_30"
+                    android:background="@color/cw_color_transparent"
+                    android:gravity="top"
+                    android:hint="添加订单备注描述"
+                    android:paddingTop="@dimen/dimen_15"
+                    android:singleLine="false" />
             </RelativeLayout>
             <!--支付方式-->
             <com.zjyeshi.dajiujiao.buyer.views.pay.PaySelectTypeView

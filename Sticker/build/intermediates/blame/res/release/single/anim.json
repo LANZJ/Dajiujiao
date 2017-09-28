@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\build\\intermediates\\res\\merged\\release\\anim\\bqmm_slide_out_to_left.xml",
-        "source": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\src\\main\\res\\anim\\bqmm_slide_out_to_left.xml"
+        "merged": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/build/intermediates/res/merged/release/anim/bqmm_slide_out_to_right.xml",
+        "source": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/src/main/res/anim/bqmm_slide_out_to_right.xml"
     },
     {
-        "merged": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\build\\intermediates\\res\\merged\\release\\anim\\bqmm_slide_in_from_left.xml",
-        "source": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\src\\main\\res\\anim\\bqmm_slide_in_from_left.xml"
+        "merged": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/build/intermediates/res/merged/release/anim/bqmm_slide_in_from_left.xml",
+        "source": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/src/main/res/anim/bqmm_slide_in_from_left.xml"
     },
     {
-        "merged": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\build\\intermediates\\res\\merged\\release\\anim\\bqmm_slide_in_from_right.xml",
-        "source": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\src\\main\\res\\anim\\bqmm_slide_in_from_right.xml"
+        "merged": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/build/intermediates/res/merged/release/anim/bqmm_slide_out_to_left.xml",
+        "source": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/src/main/res/anim/bqmm_slide_out_to_left.xml"
     },
     {
-        "merged": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\build\\intermediates\\res\\merged\\release\\anim\\bqmm_slide_out_to_right.xml",
-        "source": "D:\\li\\Android-dajiujiao-seller-as\\Android-dajiujiao-seller\\Dajiujiao\\Sticker\\src\\main\\res\\anim\\bqmm_slide_out_to_right.xml"
+        "merged": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/build/intermediates/res/merged/release/anim/bqmm_slide_in_from_right.xml",
+        "source": "/Users/zhangjian/Desktop/Dajiujiao/Sticker/src/main/res/anim/bqmm_slide_in_from_right.xml"
     }
 ]

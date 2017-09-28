@@ -258,10 +258,8 @@ public class MyOrderNewActivity extends BaseActivity {
                 tabLayout.gotoPosition(1);
             }
         });
-
         //待付款
         listView2 = (BUPullToRefreshListView) LayoutInflater.from(this).inflate(R.layout.listview_approve, null);
-
         listView2.setCanPullDown(true);
         listView2.setCanScrollUp(true);
 
@@ -276,9 +274,7 @@ public class MyOrderNewActivity extends BaseActivity {
                     ltGtEnum = LtGtEnum.LT;
                     loadData(false);
                 }
-
             }
-
             @Override
             public void onScrollUpRefresh() {
                 if (canScrollUp){

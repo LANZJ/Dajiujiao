@@ -25,6 +25,7 @@ public class PathResData extends BaseData<PathResData> {
         private String applicate;
         private long creationTime;
         private String pic;
+        private String status;
 
         public String getId() {
             return id;
@@ -57,5 +58,8 @@ public class PathResData extends BaseData<PathResData> {
         public void setPic(String pic) {
             this.pic = pic;
         }
+
+        public String getStatus(){return  status;}
+        public  void setStatus(String status){this.status=status;}
     }
 }

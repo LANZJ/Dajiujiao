@@ -42,10 +42,10 @@ public class PathData {
         this.showCheck = showCheck;
     }
 
-    public boolean isRefused() {
+    public boolean isRefused()
+    {
         return refused;
     }
-
     public void setRefused(boolean refused) {
         this.refused = refused;
     }

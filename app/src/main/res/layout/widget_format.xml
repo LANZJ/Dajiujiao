@@ -40,54 +40,56 @@
                 />
         </RelativeLayout>
     </LinearLayout>
+
     <RelativeLayout
         android:layout_width="0dp"
-        android:layout_weight="1.2"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
         <ImageView
-            android:layout_centerVertical="true"
             android:id="@+id/lessIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/less"
-            />
+            android:layout_centerVertical="true"
+            android:src="@drawable/less" />
+
         <EditText
-            android:visibility="gone"
-            android:layout_marginLeft="@dimen/dimen_30"
-            android:layout_marginRight="@dimen/dimen_30"
-            android:gravity="center"
             android:id="@+id/numEt"
-            android:layout_toLeftOf="@+id/addIv"
-            android:layout_toRightOf="@+id/lessIv"
+            style="@style/FontBlack16"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/FontBlack16"
-            android:text="0"
-            android:background="@drawable/border_shape"
             android:layout_centerInParent="true"
-            />
-        <TextView
             android:layout_marginLeft="@dimen/dimen_30"
             android:layout_marginRight="@dimen/dimen_30"
-            android:gravity="center"
-            android:id="@+id/numTv"
             android:layout_toLeftOf="@+id/addIv"
             android:layout_toRightOf="@+id/lessIv"
+            android:background="@drawable/border_shape"
+            android:gravity="center"
+            android:text="0"
+            android:digits="1234567890"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/numTv"
+            style="@style/FontBlack14"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/FontBlack14"
-            android:text="0"
             android:layout_centerInParent="true"
-            android:background="@drawable/no_corner_color_shape"/>
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:layout_toLeftOf="@+id/addIv"
+            android:layout_toRightOf="@+id/lessIv"
+            android:background="@drawable/no_corner_color_shape"
+            android:gravity="center"
+            android:text="0" />
 
         <ImageView
             android:id="@+id/addIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/add"
             android:layout_alignParentRight="true"
-            />
+            android:src="@drawable/add" />
     </RelativeLayout>
 
 </LinearLayout>

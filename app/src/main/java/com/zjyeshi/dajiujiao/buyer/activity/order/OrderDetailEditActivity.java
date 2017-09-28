@@ -328,7 +328,8 @@ public class OrderDetailEditActivity extends BaseActivity {
                         DialogUtil.confirmSure(OrderDetailEditActivity.this, "是否确认订单", "确定", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                String status = String.valueOf(OrderStatusEnum.SURED.getValue());
+                              //  String status = String.valueOf(OrderStatusEnum.SURED.getValue());
+                                String status="5";
                                 OrderUtil.modifyOrderStatus(OrderDetailEditActivity.this, orderId, status);
                                 ToastUtil.toast("确认完成");
                                 linearLayout.setVisibility(View.GONE);
@@ -560,7 +561,9 @@ public class OrderDetailEditActivity extends BaseActivity {
                     pathData.setName(orderPath.getApplicate());
                     pathData.setCreationiTime(orderPath.getCreationTime());
                     if (i == tempList.size() - 1) {
-                        if (orderDetailData.getStatus() == OrderStatusEnum.SURED.getValue()) {
+                        //SURED以前等于三是
+                       // if (orderDetailData.getStatus() == OrderStatusEnum.PAYED.getValue()) {
+                        if (orderPath.getStatus().equals(OrderStatusEnum.PAYED.getValue()+"")){
                             pathData.setShowCheck(true);
                         } else {
                             pathData.setShowCheck(false);

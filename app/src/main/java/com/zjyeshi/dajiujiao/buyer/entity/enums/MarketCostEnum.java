@@ -5,8 +5,8 @@ package com.zjyeshi.dajiujiao.buyer.entity.enums;
  */
 
 public enum MarketCostEnum {
-    // 1.无，2.立返，3.月返，季返，年返
-    NO_SUPPORT(1, "无市场费用"), REBACK_NOW(2,"立返")  , REBACK_OTHER(3 , "其他返");
+    // 1.无，2.立返，3.月返，季返，年返。4.次单返
+    NO_SUPPORT(1, "无市场费用"), REBACK_NOW(2,"立返")  , REBACK_OTHER(3 , "其他返"),REBACK_OTE(4,"次单返");
 
     private int value;
     private String name;

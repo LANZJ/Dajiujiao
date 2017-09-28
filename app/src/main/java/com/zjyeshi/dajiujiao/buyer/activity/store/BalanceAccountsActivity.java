@@ -33,6 +33,7 @@ import com.zjyeshi.dajiujiao.buyer.common.PassConstans;
 import com.zjyeshi.dajiujiao.buyer.common.PreferenceConstants;
 import com.zjyeshi.dajiujiao.buyer.dao.DaoFactory;
 import com.zjyeshi.dajiujiao.buyer.entity.GoodsCar;
+import com.zjyeshi.dajiujiao.buyer.entity.LoginedUser;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.GoodTypeEnum;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.LoginEnum;
 import com.zjyeshi.dajiujiao.buyer.entity.enums.PayTypeEnum;
@@ -104,7 +105,7 @@ public class BalanceAccountsActivity extends BaseActivity {
     // private RelativeLayout payyh;
     // @InjectView(R.id.imageView2)
     //private ImageView imageView2;
- public static SparseArray<Boolean> checkStates=new SparseArray<>();
+    public static SparseArray<Boolean> checkStates=new SparseArray<>();
     @InjectView(R.id.expandable_list)
     ExpandableListView expandable_list;
     private OrderGoodAdapter orderGoodAdapter;
@@ -173,6 +174,8 @@ public class BalanceAccountsActivity extends BaseActivity {
         });
         titleLayout.configTitle("结算");
         //获取传入的数据
+      //  float price = BPPreferences.instance().getFloat(PreferenceConstants.CAR_MARKET_COST, 0.00f);
+      //  ToastUtil.toast(price+"");
         orderId = getIntent().getStringExtra(PARAM_ORDER_ID);
         selectedList = (List<GoodsCar>) getIntent().getSerializableExtra(PARAM_GOOD_LIST);
         marketSelectedList = (List<GoodsCar>) getIntent().getSerializableExtra(PARAM_MARKET_GOOD_LIST);
@@ -183,6 +186,9 @@ public class BalanceAccountsActivity extends BaseActivity {
         //代下单的，之前已经选过地址了，隐藏地址显示
         if (helpAddOrder){
             payAddressView.setVisibility(View.GONE);
+         //   payAddressView.setVisibility(View.VISIBLE);
+         //   final Address address = DaoFactory.getAddressDao().findAddressById(LoginedUser.getLoginedUser().getId(),);
+          //  payAddressView.bindAddressData(address);
         }else{
             //初始化地址，默认显示前一次选中的地址
             payAddressView.setVisibility(View.VISIBLE);
@@ -248,11 +254,12 @@ public class BalanceAccountsActivity extends BaseActivity {
                     }
                 }
                 remark = bzTv.getText().toString();
+                modifyOrderRemark(orderId,remark);
             }
         });
 //        payyh.setOnClickListener(new View.OnClickListener() {
 //            @Override
-        modifyOrderRemark(orderId,remark);
+
 //            public void onClick(View v) {
 //               // imageView2.setImageDrawable(getResources().getDrawable(R.drawable.downarro));
 //                final PopWindowutils popupWindow = new PopWindowutils(BalanceAccountsActivity.this,iDialogControl,productSaleList);
@@ -720,6 +727,7 @@ public class BalanceAccountsActivity extends BaseActivity {
           //  popsr();
         }
     };
+
 
     public static <T> List<T> array_unique(List<T> list){
         List<T> temp = new LinkedList<T>();

@@ -64,7 +64,8 @@ import java.util.logging.Handler;
  * 新的店铺详情
  * Created by wuhk on 2016/6/29.
  */
-public class  ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollView.OnScrollListener {
+public class
+ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollView.OnScrollListener {
         //, com.zjyeshi.dajiujiao.buyer.views.XListView.IXListViewListener{
 //    @InjectView(R.id.titleLayout)
 //    private DGTitleLayout titleLayout;
@@ -119,6 +120,7 @@ public class  ShopDetailActivity extends BaseActivity implements FormatOpListene
     private String memberId = "";//代下单的时候用户Id
     private String typo="";
     private int page=1;
+    private String marketCostTyp;
     //tab页
     public static final String TAB1 = "常规购买";
     public static final String TAB2 = "市场支持";
@@ -378,6 +380,7 @@ public class  ShopDetailActivity extends BaseActivity implements FormatOpListene
                 shopInfoView.bindData(result.getValue());
                 //保存店铺信息
                 shop = result.getValue().getShop();
+                marketCostTyp=result.getValue().getMarketCostType();
 
                 List<SalesListData.Sales> activityList = result.getValue().getActivities();
                 StringBuilder activties = new StringBuilder();
@@ -685,7 +688,7 @@ public class  ShopDetailActivity extends BaseActivity implements FormatOpListene
      * 刷新底部购物车和市场价格
      */
     private void refreshMarketPrice(boolean isAddOrder) {
-        if (AuthUtil.recordMarketCostFee()){
+        if (AuthUtil.recordMarketCostFee()||marketCostTyp.equals(2+"")){
             List<GoodsCar> normalGoodList = DaoFactory.getGoodsCarDao().findAllGoods();
             float carMarketPrice = 0;
             for (GoodsCar goodsCar : normalGoodList) {
@@ -710,14 +713,17 @@ public class  ShopDetailActivity extends BaseActivity implements FormatOpListene
      */
     private void showMarketPrice() {
         //钱包市场支持费用
-        float walletMarketPrice = Float.parseFloat(accountMarketPrice);
+        float walletMarketPrice = Float.parseFloat(accountMarketPrice)/100;
         //保存钱包市场支持费用
         BPPreferences.instance().putFloat(PreferenceConstants.MY_ACCOUNT_MARKET, walletMarketPrice);
         //购物车商品市场支持费用
         float price = BPPreferences.instance().getFloat(PreferenceConstants.CAR_MARKET_COST, 0.00f);
         float goodMarketPrice = price / 100;
         //设置文字
-        topTabLayout.configPrice("¥" + ExtraUtil.format(walletMarketPrice + goodMarketPrice));
+        if (marketCostTyp!=null&&marketCostTyp.equals(2+"")){
+            topTabLayout.configPrice("¥" + ExtraUtil.format(walletMarketPrice )+"立返"+ goodMarketPrice);
+        }else {
+        topTabLayout.configPrice("¥" + ExtraUtil.format(walletMarketPrice + goodMarketPrice));}
     }
 
     @Override
@@ -728,7 +734,7 @@ public class  ShopDetailActivity extends BaseActivity implements FormatOpListene
     @Override
     public void changeShow() {
         //加减控件点击时，弹出覆盖View ，隐藏底部控件，和按钮切换
-        buyBottomWidget.setVisibility(View.GONE);
+        // buyBottomWidget.setVisibility(View.GONE);
         changeUnitIv.setVisibility(View.GONE);
         softView.setVisibility(View.VISIBLE);
     }
