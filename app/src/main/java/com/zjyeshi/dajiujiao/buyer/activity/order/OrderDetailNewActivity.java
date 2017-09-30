@@ -269,7 +269,7 @@ public class OrderDetailNewActivity extends BaseActivity {
                     public void onClick(View v) {
                         BalanceAccountsActivity.startBalanceActivity(OrderDetailNewActivity.this, getGoodList(orderDetailData.getProducts()), getGoodList(orderDetailData.getMarketCostProducts())
                                 , orderDetailData.getId(), BalanceAccountsActivity.FROM_ORDER
-                                , String.valueOf(Integer.parseInt(orderDetailData.getAmount()) + Integer.parseInt(orderDetailData.getMarketCostAmount()) ) , false , "");
+                                , String.valueOf(Integer.parseInt(orderDetailData.getAmount()) + Integer.parseInt(orderDetailData.getMarketCostAmount()) ) , false , "","");
                     }
                 });
                 //关闭订单
@@ -423,7 +423,8 @@ public class OrderDetailNewActivity extends BaseActivity {
                         pathData.setName(orderPath.getApplicate());
                         pathData.setCreationiTime(orderPath.getCreationTime());
                         if (i == tempList.size() - 1) {
-                            if (orderDetailData.getStatus() == OrderStatusEnum.SURED.getValue()) {
+                           // if (orderDetailData.getStatus() == OrderStatusEnum.SURED.getValue()) {
+                            if (orderPath.getStatus().equals(OrderStatusEnum.PAYED.getValue()+"")){
                                 pathData.setShowCheck(true);
                             } else {
                                 pathData.setShowCheck(false);
@@ -512,6 +513,7 @@ public class OrderDetailNewActivity extends BaseActivity {
                                 @Override
                                 public void onClick(View view, String inputText) {
                                     String status = String.valueOf(OrderStatusEnum.SENDED.getValue());
+                                    //String status="5";
                                     OrderUtil.modifyOrderStatusForDeliver(OrderDetailNewActivity.this, orderDetailData.getId(), status, inputText);
                                 }
                             });

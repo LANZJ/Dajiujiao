@@ -43,7 +43,6 @@ public class OrderGoodAdapter extends MBaseAdapter {
             view = LayoutInflater.from(context).inflate(R.layout.listitem_goods_order , null);
         }
         GoodsCar goodsCar = dataList.get(position);
-
         View divider = (View)view.findViewById(R.id.divider);
         ImageView photoIv = (ImageView)view.findViewById(R.id.photoIv);
         TextView nameTv = (TextView)view.findViewById(R.id.nameTv);
@@ -68,13 +67,14 @@ public class OrderGoodAdapter extends MBaseAdapter {
 
 
         if (position == 0){
-            if (AuthUtil.showMarketCostTab()){
+       // if (dataList.size()!=0){
+          //  if (AuthUtil.showMarketCostTab()){
                 goodTypeLayout.setVisibility(View.VISIBLE);
                 GoodTypeEnum goodTypeEnum = GoodTypeEnum.valueOf(type);
                 goodTypeTv.setText(goodTypeEnum.toString());
-            }else{
-                goodTypeLayout.setVisibility(View.GONE);
-            }
+//            }else{
+//                goodTypeLayout.setVisibility(View.GONE);
+//            }
         }else{
             goodTypeLayout.setVisibility(View.GONE);
         }

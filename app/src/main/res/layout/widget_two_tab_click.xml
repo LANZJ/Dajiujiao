@@ -4,6 +4,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
+        android:isScrollContainer="true"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/color_white">

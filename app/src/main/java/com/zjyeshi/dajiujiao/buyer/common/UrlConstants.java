@@ -12,7 +12,8 @@ public class UrlConstants {
     //基本地址
     // public static final String WEB_SITE = "http://api.yeshiwine.com/api/";
 
-  public static final String WEB_SITE = "http://nat.yeshiwine.com/api/";
+  //public static final String WEB_SITE = "http://nat.yeshiwine.com/api/";
+  public static final String WEB_SITE = "http://djj.yeshiwine.com/api/";
 
     //JCROW基本地址
     public static final String JCROW_WEB_SITE = "http://jcrow.yeshiwine.com";

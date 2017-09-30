@@ -135,6 +135,7 @@ public class BalanceAccountsActivity extends BaseActivity {
     private String from;//从哪里进入, 购物车||订单
     private boolean helpAddOrder = false;
     private String memberId = "";
+    private String addressId="";
     //参数Key
     public static final String PARAM_TOTAL_MONEY = "param.total.money";
     public static final String PARAM_GOOD_LIST = "param.good.list";
@@ -143,6 +144,7 @@ public class BalanceAccountsActivity extends BaseActivity {
     public static final String PARAM_PAY_FROM = "param.pay_from";
     public static final String PARAM_IS_HELP_ADD ="param.is.help.add";
     public static final String PARAM_CUSTOMER_MEMBER_ID ="param.customer_member_id";
+    public static final String WEWE="aessid";
     //类型
     public static final String FROM_CAR = "from.car";//从购物车进入
     public static final String FROM_ORDER = "from.order";//从订单进入
@@ -183,12 +185,17 @@ public class BalanceAccountsActivity extends BaseActivity {
         totalMoney = getIntent().getStringExtra(PARAM_TOTAL_MONEY);
         helpAddOrder = getIntent().getBooleanExtra(PARAM_IS_HELP_ADD , false);
         memberId = getIntent().getStringExtra(PARAM_CUSTOMER_MEMBER_ID);
+        addressId=getIntent().getStringExtra(WEWE);
         //代下单的，之前已经选过地址了，隐藏地址显示
         if (helpAddOrder){
-            payAddressView.setVisibility(View.GONE);
-         //   payAddressView.setVisibility(View.VISIBLE);
-         //   final Address address = DaoFactory.getAddressDao().findAddressById(LoginedUser.getLoginedUser().getId(),);
-          //  payAddressView.bindAddressData(address);
+            if (addressId!=null){
+
+            payAddressView.setVisibility(View.VISIBLE);
+            final Address address = DaoFactory.getAddressDao().findAddressById(LoginedUser.getLoginedUser().getId(),addressId);
+            payAddressView.bindAddressData(address);}else {
+                 payAddressView.setVisibility(View.GONE);
+            }
+
         }else{
             //初始化地址，默认显示前一次选中的地址
             payAddressView.setVisibility(View.VISIBLE);
@@ -228,34 +235,11 @@ public class BalanceAccountsActivity extends BaseActivity {
         balanceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Validators.isEmpty(payAddressView.getAddressId())) {
-                    //如果不是待下单的，地址Id不能为空
-                    if (!helpAddOrder){
-                        ToastUtil.toast("请选设置地址");
-                        return;
-                    }
-                }
-                if (null == payTypeEnum) {
-                    ToastUtil.toast("请选择支付方式");
-                } else if (payTypeEnum == PayTypeEnum.XIANXIA) {
-                    linePayment();
-                } else if (payTypeEnum == PayTypeEnum.WEIXIN) {
-                    if (isWallet || null != couponData || isMarket) {
-                        couponAndWallet(false);
-                    } else {
-                        new MyPay(BalanceAccountsActivity.this, new MyWxPayConfig())
-                                .wxPay(orderId, payAddressView.getAddressId(), moneyToPay, BalanceAccountsActivity.this);
-                    }
-                } else if (payTypeEnum == PayTypeEnum.ZHIFUBAO) {
-                    if (isWallet || null != couponData || isMarket) {
-                        couponAndWallet(true);
-                    } else {
-                        pay(payAddressView.getAddressId(), orderId, moneyToPay);
-                    }
-                }
                 remark = bzTv.getText().toString();
                 modifyOrderRemark(orderId,remark);
-            }
+
+
+        }
         });
 //        payyh.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -275,7 +259,36 @@ public class BalanceAccountsActivity extends BaseActivity {
 //        });
 
     }
+       private void payout(){
+//           if (Validators.isEmpty(payAddressView.getAddressId())){
+//
+//           }
+               if (null == payTypeEnum) {{
+                   //如果不是待下单的，地址Id不能为空
+                   if (!helpAddOrder){
+                       ToastUtil.toast("请选设置地址");
+                       return;
+                   }
+               }
+                   ToastUtil.toast("请选择支付方式");
+               } else if (payTypeEnum == PayTypeEnum.XIANXIA) {
+                   linePayment();
+               } else if (payTypeEnum == PayTypeEnum.WEIXIN) {
+                   if (isWallet || null != couponData || isMarket) {
+                       couponAndWallet(false);
+                   } else {
+                       new MyPay(BalanceAccountsActivity.this, new MyWxPayConfig())
+                               .wxPay(orderId, payAddressView.getAddressId(), moneyToPay, BalanceAccountsActivity.this);
+                   }
+               } else if (payTypeEnum == PayTypeEnum.ZHIFUBAO) {
+                   if (isWallet || null != couponData || isMarket) {
+                       couponAndWallet(true);
+                   } else {
+                       pay(payAddressView.getAddressId(), orderId, moneyToPay);
+                   }
+               }
 
+       }
     /**
      * 修改备注
      *
@@ -296,6 +309,7 @@ public class BalanceAccountsActivity extends BaseActivity {
             public void successCallback(Result<NoResultData> result) {
                 //ToastUtil.toast("修改成功");
                 ChangeOrderStatusReceiver.notifyReceiver();
+                payout();
             }
         });
 
@@ -533,12 +547,13 @@ public class BalanceAccountsActivity extends BaseActivity {
      * @param from           从哪里进入，购物车||订单详情
      * @param amount         订单总价，可能修改过，不传的话自行计算商品总价
      */
-    public static void startBalanceActivity(Context context, List<GoodsCar> goodList, List<GoodsCar> marketGoodList, String orderId, String from, String amount , boolean isHelpAdd , String customerMemberId) {
+    public static void startBalanceActivity(Context context, List<GoodsCar> goodList, List<GoodsCar> marketGoodList, String orderId, String from, String amount , boolean isHelpAdd , String customerMemberId,String addressId) {
         Intent intent = new Intent();
         intent.putExtra(PARAM_ORDER_ID, orderId);
         intent.putExtra(PARAM_GOOD_LIST, (Serializable) goodList);
         intent.putExtra(PARAM_MARKET_GOOD_LIST, (Serializable) marketGoodList);
         intent.putExtra(PARAM_PAY_FROM, from);
+        intent.putExtra(WEWE,addressId);
         if (!Validators.isEmpty(amount)){
             intent.putExtra(PARAM_TOTAL_MONEY, ExtraUtil.format(ExtraUtil.getShowPrice(amount)));
         }else{
@@ -719,12 +734,12 @@ public class BalanceAccountsActivity extends BaseActivity {
                     activityidss += ary.get(j) + ",";
                 }
             }
-           // popsr();
+            popsr();
         }
         @Override
         public void onshio(String activityee) {
             activityidss=activityee;
-          //  popsr();
+            popsr();
         }
     };
 

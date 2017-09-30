@@ -13,46 +13,60 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_divider"
         android:background="@color/color_divider"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_102"
         android:paddingLeft="@dimen/dimen_30"
         android:paddingRight="@dimen/dimen_48">
+
         <ImageView
             android:id="@+id/shopIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/goodcar_dian"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:src="@drawable/goodcar_dian" />
+
         <TextView
             android:id="@+id/shopNameTv"
+            style="@style/FontLightBlack16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/FontLightBlack16"
-            tools:text="城西银泰BLT"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/shopIv"
             android:layout_marginLeft="@dimen/dimen_36"
+            android:layout_toRightOf="@id/shopIv"
+            android:ellipsize="end"
             android:maxEms="13"
+            android:layout_alignRight="@+id/tie"
             android:singleLine="true"
-            android:ellipsize="end" />
+            tools:text="城西银泰BLT"
+            android:textSize="15dp"/>
+    <View
+    android:layout_width="0dp"
+        android:id="@+id/tie"
+    android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/deleteIv"
+        android:layout_toStartOf="@+id/deleteIv" />
         <ImageView
             android:id="@+id/deleteIv"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/delete"
             android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_30"
             android:layout_toLeftOf="@+id/stateTv"
-            android:layout_marginRight="@dimen/dimen_30"/>
+            android:src="@drawable/delete" />
+
         <TextView
             android:id="@+id/stateTv"
+            style="@style/FontRed16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/FontRed16"
-            tools:text="待付款"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
+            tools:text="待付款" />
     </RelativeLayout>
+
     <TextView
         android:id="@+id/payMethodTv"
         android:layout_marginLeft="10dp"

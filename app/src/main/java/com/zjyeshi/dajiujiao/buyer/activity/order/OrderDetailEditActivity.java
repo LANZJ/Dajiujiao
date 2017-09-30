@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -136,6 +137,8 @@ public class OrderDetailEditActivity extends BaseActivity {
     private Button confirm_orders;//确认订单
     @InjectView(R.id.linearLayout)
     private LinearLayout linearLayout;
+    @InjectView(R.id.lings)
+    private LinearLayout lings;
 
     //列表相关
     private List<OrderProduct> goodList = new ArrayList<OrderProduct>();
@@ -161,9 +164,10 @@ public class OrderDetailEditActivity extends BaseActivity {
     //广播
     private ChangePriceReceiver changePriceReceiver;//修改价格
     private ChangeOrderStatusReceiver changeOrderStatusReceiver;//地址修改后重新刷新数据
-
+    private int page=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_order_detail_edit);
         initWidgets();
@@ -178,10 +182,14 @@ public class OrderDetailEditActivity extends BaseActivity {
     }
 
     private void initWidgets() {
+        //订单Id
+        orderId = getIntent().getStringExtra(ORDERID);
+        canRevoke = getIntent().getBooleanExtra(CANRE, false);
+        dealWith = getIntent().getBooleanExtra(DEALW, false);
+        replaceOrder = getIntent().getBooleanExtra(REPLA, false);
         //获取订单状态
-
         //终端和终端业务员不显示市场支持模块
-        if (AuthUtil.showMarketCostTab()) {
+        if (AuthUtil.showMarketCostTab()||replaceOrder) {
             normalGoodLayout.setVisibility(View.VISIBLE);
             priceDesLayout.setVisibility(View.VISIBLE);
             marketGoodLayout.setVisibility(View.VISIBLE);
@@ -195,12 +203,6 @@ public class OrderDetailEditActivity extends BaseActivity {
             marketLayout.setVisibility(View.GONE);
         }
 
-        //订单Id
-        orderId = getIntent().getStringExtra(ORDERID);
-        canRevoke = getIntent().getBooleanExtra(CANRE, false);
-        dealWith = getIntent().getBooleanExtra(DEALW, false);
-        replaceOrder = getIntent().getBooleanExtra(REPLA, false);
-
         titleLayout.configRightText("保存", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -212,7 +214,6 @@ public class OrderDetailEditActivity extends BaseActivity {
                 finish();
             }
         });
-
         //请求订单详情
         getData();
         //添加常规商品按钮
@@ -229,8 +230,6 @@ public class OrderDetailEditActivity extends BaseActivity {
                 getAddWineInfo(shopId, true);
             }
         });
-
-
         //是否使用市场支持费用
         //默认选中
         marketCheckIv.setChecked(true);
@@ -248,10 +247,8 @@ public class OrderDetailEditActivity extends BaseActivity {
                 marketCheckIv.performClick();
             }
         });
-
         //详情下俩个按钮
         if (AuthUtil.isSalesEdit()) {
-
             //能不能操作
             if (dealWith) {
                 //是否为代下
@@ -306,7 +303,6 @@ public class OrderDetailEditActivity extends BaseActivity {
                     }
                 });
             }
-
         }
         else {//内勤 boss
             if (dealWith) {
@@ -328,8 +324,8 @@ public class OrderDetailEditActivity extends BaseActivity {
                         DialogUtil.confirmSure(OrderDetailEditActivity.this, "是否确认订单", "确定", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                              //  String status = String.valueOf(OrderStatusEnum.SURED.getValue());
-                                String status="5";
+                               String status = String.valueOf(OrderStatusEnum.SURED.getValue());
+                               // String status="5";
                                 OrderUtil.modifyOrderStatus(OrderDetailEditActivity.this, orderId, status);
                                 ToastUtil.toast("确认完成");
                                 linearLayout.setVisibility(View.GONE);
@@ -362,9 +358,6 @@ public class OrderDetailEditActivity extends BaseActivity {
 
 
     }
-
-
-
     /**
      * 获取订单详情数据
      */
@@ -377,7 +370,6 @@ public class OrderDetailEditActivity extends BaseActivity {
                 ToastUtil.toast(result.getMessage());
             }
         });
-
         getOrderDetailTask.setAsyncTaskSuccessCallback(new AsyncTaskSuccessCallback<OrderDetailData>() {
             @Override
             public void successCallback(Result<OrderDetailData> result) {
@@ -387,10 +379,8 @@ public class OrderDetailEditActivity extends BaseActivity {
                 bindData(orderData);
             }
         });
-
         getOrderDetailTask.execute(orderId);
     }
-
     //显示数据
     private void bindData(final OrderDetailData orderDetailData) {
         //卖家显示消费者名
@@ -402,7 +392,6 @@ public class OrderDetailEditActivity extends BaseActivity {
         //订单号、时间
         orderNumTv.setText("编号:" + orderDetailData.getNumber());
         timeTv.setText(FriendlyTimeUtil.friendlyTime(orderDetailData.getCreationTime()));
-
         //获取一下市场支持费用,终端和终端业务员不用去获取市场支持费用，
         //消费者下的单没有市场支持和市场支持费用减免
         if (AuthUtil.showMarketCostTab()) {
@@ -641,7 +630,8 @@ public class OrderDetailEditActivity extends BaseActivity {
             }
         });
         String categoryId = "";
-        goodListTask.execute(shopId, categoryId, orderId, "");
+
+        goodListTask.execute(shopId, categoryId, orderId,"", page+"");
     }
 
     /**
@@ -697,25 +687,19 @@ public class OrderDetailEditActivity extends BaseActivity {
             for (OrderProduct orderProduct : marketGoodList) {
                 markCostProductIds.append(orderProduct.getId());
                 markCostProductIds.append(",");
-
                 markCostPrices.append(orderProduct.getPrice());
                 markCostPrices.append(",");
-
                 markCostCounts.append(orderProduct.getCount());
                 markCostCounts.append(",");
-
                 //瓶为1 ， 箱为2
                 markCostBoxType.append(AddOrderRequest.BOX_TYPE_UNIT);
                 markCostBoxType.append(",");
             }
-
             markCostProductIds.deleteCharAt(markCostProductIds.length() - 1);
             markCostPrices.deleteCharAt(markCostPrices.length() - 1);
             markCostCounts.deleteCharAt(markCostCounts.length() - 1);
             markCostBoxType.deleteCharAt(markCostBoxType.length() - 1);
         }
-
-
         if (goodList.size() > marketGoodList.size() || goodList.size() == marketGoodList.size()) {
             for (int i = 0; i < goodList.size(); i++) {
                 sellerIds.append(shopId);
@@ -728,8 +712,6 @@ public class OrderDetailEditActivity extends BaseActivity {
             }
         }
         sellerIds.deleteCharAt(sellerIds.length() - 1);
-
-
         ModifyOrderTask modifyOrderTask = new ModifyOrderTask(OrderDetailEditActivity.this);
         modifyOrderTask.setAsyncTaskFailCallback(new AsyncTaskFailCallback<NoResultData>() {
             @Override
@@ -793,6 +775,9 @@ public class OrderDetailEditActivity extends BaseActivity {
                 float goodAllPrice = 0.00f;
                 float haveMarket = 0.00f;
                 for (OrderProduct product : goodList) {
+                    if (product.getMarketCost()==null){
+                        product.setMarketCost(0+"");
+                    }
                     goodAllPrice += Float.parseFloat(product.getPrice()) * Integer.parseInt(product.getCount());
                     haveMarket += Float.parseFloat(product.getMarketCost())* Integer.parseInt(product.getCount());
                 }

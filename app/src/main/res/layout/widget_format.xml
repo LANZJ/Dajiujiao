@@ -68,7 +68,9 @@
             android:gravity="center"
             android:text="0"
             android:digits="1234567890"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
 
         <TextView
             android:id="@+id/numTv"

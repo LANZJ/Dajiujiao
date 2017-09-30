@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="商品总价"/>
+                    android:text="商品总价:"/>
 
                 <TextView
                     android:id="@+id/totalPriceTv"
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="钱包"/>
+                    android:text="钱包:"/>
                 <TextView
                     android:id="@+id/walletPriceTv"
                     android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="优惠券"/>
+                    android:text="优惠券:"/>
                 <TextView
                     android:id="@+id/couponPriceTv"
                     android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="市场支持费用"/>
+                    android:text="市场支持费用:"/>
                 <TextView
                     android:id="@+id/marketPriceTv"
                     android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="活动立返"/>
+                    android:text="活动立返:"/>
                 <TextView
                     android:id="@+id/salesBackPriceTv"
                     android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="活动立减"/>
+                    android:text="活动立减:"/>
                 <TextView
                     android:id="@+id/salesCutPriceTv"
                     android:layout_width="wrap_content"
@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 style="@style/FontBlack14"
                 android:layout_centerVertical="true"
-                android:text="活动赠送商品"/>
+                android:text="活动赠送商品:"/>
             <TextView
                 android:id="@+id/salesProductTv"
                 android:layout_width="wrap_content"
@@ -175,7 +175,7 @@
                     android:layout_height="wrap_content"
                     style="@style/FontBlack14"
                     android:layout_centerVertical="true"
-                    android:text="活动赠送礼品"/>
+                    android:text="活动赠送礼品:"/>
                 <TextView
                     android:id="@+id/salesGiftTv"
                     android:layout_width="wrap_content"

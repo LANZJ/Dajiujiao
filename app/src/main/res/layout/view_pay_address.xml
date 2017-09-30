@@ -7,29 +7,35 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/color_bg">
+
         <LinearLayout
             android:id="@+id/selectAddLayout"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_309"
             android:background="@color/color_pay_bg"
+            android:orientation="vertical"
             android:paddingLeft="@dimen/dimen_48"
-            android:paddingTop="@dimen/dimen_48"
-            android:paddingRight="@dimen/dimen_48">
+            android:paddingRight="@dimen/dimen_48"
+            android:paddingTop="@dimen/dimen_48">
+
             <TextView
                 android:id="@+id/personInfoTv"
+                style="@style/FontBlack16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/FontBlack16"
-                android:text="收货人：阿童木   12345678900"/>
+                android:text="" />
+
             <TextView
-                android:layout_marginTop="@dimen/dimen_57"
                 android:id="@+id/addressTv"
+                style="@style/FontBlack16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/FontBlack16"
-                android:text="浙江省杭州市西湖区文三路益乐路蓝海时代大厦15B07"/>
+                android:layout_marginTop="@dimen/dimen_57"
+                android:text=""
+                android:maxLines="2"
+                android:ellipsize="end"/>
         </LinearLayout>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

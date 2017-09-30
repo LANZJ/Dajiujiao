@@ -16,6 +16,7 @@ import com.xuan.bigdog.lib.widgets.title.DGTitleLayout;
 import com.zjyeshi.dajiujiao.buyer.activity.BaseActivity;
 import com.zjyeshi.dajiujiao.buyer.circle.ShowMultiImageActivity;
 import com.zjyeshi.dajiujiao.buyer.entity.good.AllGoodInfo;
+import com.zjyeshi.dajiujiao.buyer.receiver.buy.BuyCarSelectChangeReceiver;
 import com.zjyeshi.dajiujiao.buyer.receiver.buy.CarNumChangeReceiver;
 import com.zjyeshi.dajiujiao.buyer.utils.AuthUtil;
 import com.zjyeshi.dajiujiao.buyer.utils.ExtraUtil;
@@ -67,6 +68,8 @@ public class GoodsDetailActivity extends BaseActivity implements FormatOpListene
 
     private CarNumChangeReceiver carNumChangeReceiver;//购物车数量改变广播
     private GoodsInfoReveiver goodsInfoReveiver;//改变详情
+//    //改变选择和价格广播
+//    private BuyCarSelectChangeReceiver buyCarSelectChangeReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,12 +108,12 @@ public class GoodsDetailActivity extends BaseActivity implements FormatOpListene
     }
 
     private void initWidgets() {
-//        titleLayout.configTitle("商品详情").configReturn(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        titleLayout.configTitle("商品详情").configReturn(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         String jsonStr = getIntent().getStringExtra(GOOD_INFO_LIST);
         List<AllGoodInfo> tempList = JSONArray.parseArray(jsonStr , AllGoodInfo.class);
@@ -167,7 +170,8 @@ public class GoodsDetailActivity extends BaseActivity implements FormatOpListene
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(GoodsDetailActivity.this, BuyCarActivity.class);
-                intent.putExtra("memberId", memberId);
+               // intent.putExtra("memberId", memberId);
+                intent.putExtra(BuyCarActivity.PARAM_MEMBERID, memberId);
                 startActivity(intent);
                 finish();
             }
@@ -191,7 +195,28 @@ public class GoodsDetailActivity extends BaseActivity implements FormatOpListene
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshData();
+    }
 
+/**
+     * 注册广播
+     */
+//    private void registerReceiver() {
+//        buyCarSelectChangeReceiver = new BuyCarSelectChangeReceiver() {
+//            @Override
+//            public void changeSelect(String type) {
+//                if (type.equals(SELECT_REFRESH)) {
+//                    refreshSelect();
+//                } else {
+//                    loadData(false);
+//                }
+//            }
+//        };
+//        buyCarSelectChangeReceiver.register();
+  //  }
     /**
      * 启动该Activity
      *

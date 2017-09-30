@@ -3,6 +3,7 @@ package com.zjyeshi.dajiujiao.buyer.widgets.addLessFormat;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -244,6 +245,18 @@ public abstract class FormatWidget extends LinearLayout {
                 formatOpListener.changeShow();
 
                 ContextUtils.showSoftInput(numEt);
+            }
+        });
+        //软键盘确认
+        numEt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if ((i == 0 || i == 3) && keyEvent != null) {
+                    sureNum();
+                    ContextUtils.showSoftInput(numEt , false);
+                    return true;
+                }
+                return false;
             }
         });
     }

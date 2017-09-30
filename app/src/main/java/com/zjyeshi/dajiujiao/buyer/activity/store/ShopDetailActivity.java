@@ -161,11 +161,14 @@ ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollVie
     protected void onResume() {
         super.onResume();
         //为了购物车提交回来之后显示最新购物车数据
+        reUnitData=true;
         if (reUnitData) {
             unionListAndRefresh(tempShowList, false);
             reUnitData = false;
         }
     }
+
+
 
     private void initWidgets() {
         formatWidget = null;
@@ -268,8 +271,6 @@ ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollVie
                 startActivity(intent);
             }
         });
-
-
         //初始化数据
         loadDetail();
         loadSortList();
@@ -492,7 +493,6 @@ ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollVie
             if (Integer.parseInt(product.getInventory()) < 0) {
                 product.setInventory("0");
             }
-
             //获取酒品的单位，没有的话默认为瓶
             String unit = product.getUnit();
             if (Validators.isEmpty(unit)) {
@@ -526,7 +526,6 @@ ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollVie
             allGoodInfo.setFormat(product.getSpecifications());
             //店家库存
             allGoodInfo.setSellerInventory(product.getSellerInventory());
-
             //查看购物车中有没有这种这种商品,不同tab页不同查询
             GoodsCar goodsCar = null;
             if (isMarketGoods) {
@@ -671,7 +670,7 @@ ShopDetailActivity extends BaseActivity implements FormatOpListener, MyScrollVie
             @Override
             public void changeCarnum(boolean isAddOrder) {
                 refreshMarketPrice(isAddOrder);
-                if (AuthUtil.showMarketCostTab()){
+                if (AuthUtil.showMarketCostTab()||typo!=null){
                     buyBottomWidget.refreshData(true);
                 }else{
                     buyBottomWidget.refreshData(false);

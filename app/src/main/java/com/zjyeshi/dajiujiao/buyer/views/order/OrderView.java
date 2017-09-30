@@ -145,7 +145,7 @@ public class OrderView extends BaseView {
                     @Override
                     public void onClick(View v) {
                         BalanceAccountsActivity.startBalanceActivity(getContext(), getGoodList(order.getProductResp()), getGoodList(order.getMarketCostProductResp())
-                                , order.getId(), BalanceAccountsActivity.FROM_ORDER, String.valueOf(Integer.parseInt(order.getAmount()) + Integer.parseInt(order.getMarketCostAmount())) , false , "");
+                                , order.getId(), BalanceAccountsActivity.FROM_ORDER, String.valueOf(Integer.parseInt(order.getAmount()) + Integer.parseInt(order.getMarketCostAmount())) , false , "","");
                     }
                 });
                 leftTv.setVisibility(View.VISIBLE);

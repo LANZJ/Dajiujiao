@@ -84,7 +84,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="收货人"/>
+                            android:text="收货人:"/>
                         <TextView
                             android:id="@+id/receiverTv"
                             android:layout_width="@dimen/dimen_0"
@@ -108,7 +108,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="收货地址"/>
+                            android:text="收货地址:"/>
                         <TextView
                             android:id="@+id/addressTv"
                             android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="下单时间"/>
+                            android:text="下单时间:"/>
                         <TextView
                             android:id="@+id/timeTv"
                             android:layout_width="wrap_content"
@@ -160,7 +160,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="订单状态"/>
+                            android:text="订单状态:"/>
                         <TextView
                             android:id="@+id/orderStatusDesTv"
                             android:gravity="right"
@@ -180,7 +180,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="备注信息"/>
+                            android:text="备注信息:"/>
                         <TextView
                             android:id="@+id/remarkTv"
                             android:gravity="right"

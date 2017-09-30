@@ -69,8 +69,10 @@
             <RelativeLayout
                 android:layout_marginTop="@dimen/dimen_30"
                 android:id="@+id/chooseNumLayout"
-                android:layout_width="@dimen/dimen_306"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+               android:layout_marginEnd="30dp">
                 <ImageView
                     android:layout_alignParentLeft="true"
                     android:id="@+id/lessIv"

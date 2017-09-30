@@ -119,13 +119,11 @@ public class BuyBottomWidget extends BaseView {
             }
         }
         catNumTv.setText("常规："+allNum);
-
         //市场支持商品费用
         String marketAllNum = " ";
         float marketAllPrice = 0.00f;
         List<GoodsCar> marketGoodList = DaoFactory.getMarketGoodsCarDao().findAllGoods();
         HashMap<String , String> marketNumMap = new HashMap<String, String>();
-
         for (GoodsCar goodsCar : marketGoodList) {
             if (marketNumMap.keySet().contains(goodsCar.getGoodType())){
                 String mapValue = marketNumMap.get(goodsCar.getGoodType());

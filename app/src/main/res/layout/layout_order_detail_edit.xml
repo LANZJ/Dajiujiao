@@ -13,9 +13,11 @@
         android:layout_height="wrap_content"/>
 
     <com.xuan.bigappleui.lib.view.scrollview.BUVerticalScrollView
-        android:layout_below="@+id/titleLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/titleLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_above="@+id/linearLayout">
         <LinearLayout
             android:orientation="vertical"
@@ -86,7 +88,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="收货人"/>
+                            android:text="收货人:"/>
                         <TextView
                             android:id="@+id/receiverTv"
                             android:layout_width="@dimen/dimen_0"
@@ -110,18 +112,19 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="收货地址"/>
+                            android:text="收货地址:"/>
                         <TextView
                             android:id="@+id/addressTv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            tools:text="北京北京市大兴区经济区"/>
+                            tools:text="北京北京市大兴区经济区"
+                            android:layout_weight="1"/>
                         <RelativeLayout
                             android:id="@+id/editAddressRl"
-                            android:paddingLeft="@dimen/dimen_30"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp">
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
@@ -139,7 +142,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="下单时间"/>
+                            android:text="下单时间:"/>
                         <TextView
                             android:id="@+id/timeTv"
                             android:layout_width="wrap_content"
@@ -160,7 +163,7 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="订单状态"/>
+                            android:text="订单状态:"/>
                         <TextView
                             android:id="@+id/orderStatusDesTv"
                             android:gravity="right"
@@ -180,29 +183,39 @@
                             android:layout_width="@dimen/dimen_255"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            android:text="备注信息"/>
+                            android:text="备注信息:"/>
                         <TextView
                             android:id="@+id/remarkTv"
-                            android:gravity="right"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             style="@style/FontLightBlack16"
-                            tools:text = "还记得上飞机还是得"/>
+                            tools:text = "还记得上飞机还是得"
+                            android:layout_weight="1"
+                            android:layout_alignRight="@+id/er"/>
+                        <View
+                            android:id="@+id/er"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
                         <RelativeLayout
                             android:id="@+id/editRemarkRl"
                             android:paddingLeft="@dimen/dimen_30"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp">
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/pro_edit"/>
+                                android:src="@drawable/pro_edit"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
                         </RelativeLayout>
 
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lings"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -247,10 +260,12 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:background="@drawable/add_wine_shape"
+                        android:backgroundTint="#5d0110"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/FontGray16"
                         android:text="添加酒品"
+                        android:textColor="#ffff"
                         android:gravity="center_horizontal"
                         android:paddingBottom="8dp"
                         android:paddingTop="8dp"/>
@@ -287,20 +302,23 @@
                         android:scrollbars="none"
                         android:listSelector="#00000000"
                         android:fadingEdgeLength="@dimen/dimen_0"/>
+
                     <TextView
                         android:id="@+id/marketAddWineTv"
-                        android:layout_marginTop="16dp"
+                        style="@style/FontGray16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
                         android:background="@drawable/add_wine_shape"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        style="@style/FontGray16"
-                        android:text="添加酒品"
+                        android:backgroundTint="#5d0110"
                         android:gravity="center_horizontal"
                         android:paddingBottom="8dp"
-                        android:paddingTop="8dp"/>
+                        android:paddingTop="8dp"
+                        android:textColor="#fff"
+                        android:text="添加酒品" />
                 </LinearLayout>
             </LinearLayout>
             <View
@@ -446,7 +464,7 @@
                         android:gravity="center"
                         android:layout_alignParentRight="true"
                         android:focusable="false"
-                        android:background="@drawable/no_corner_shape"/>
+                        android:background="@null"/>
 
                 </RelativeLayout>
             </LinearLayout>
@@ -466,7 +484,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:background="#f8f8f8">
         <View
             android:layout_width="2dp"
             android:layout_height="50dp"
@@ -478,11 +497,13 @@
             android:text="左"
             android:textColor="@color/color_white"
             android:background="@drawable/btn_click"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_margin="6dp"/>
         <View
             android:layout_width="5dp"
             android:layout_height="50dp"
-            android:background="@color/color_divider" />
+            android:background="@color/color_divider"
+            android:visibility="invisible"/>
         <Button
             android:id="@+id/confirm_orders"
             android:textColor="@color/color_white"
@@ -490,7 +511,8 @@
             android:layout_height="50dp"
             android:text="右"
             android:background="@drawable/btn_click"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:layout_margin="6dp"/>
         <View
             android:layout_width="3dp"
             android:layout_height="50dp"

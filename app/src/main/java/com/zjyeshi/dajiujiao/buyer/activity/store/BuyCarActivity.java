@@ -43,6 +43,7 @@ import com.zjyeshi.dajiujiao.buyer.views.other.IVCheckBox;
 import com.zjyeshi.dajiujiao.buyer.widgets.dialog.AddressDialog;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -64,6 +65,7 @@ public class BuyCarActivity extends BaseActivity {
     private TextView priceTv;
     @InjectView(R.id.bottomLayout)
     private RelativeLayout bottomLayout;
+    private List<Address> addressList = new ArrayList<Address>();
 
     private boolean showDialog = true;//是否显示市场费用超出提示
 
@@ -185,7 +187,7 @@ public class BuyCarActivity extends BaseActivity {
                 selectMarketPrice += Float.parseFloat(goodsCar.getGoodPrice()) * Float.parseFloat(goodsCar.getGoodCount());
             }
         }
-        if (showDialog&&memberId!=null) {
+        if (showDialog) {//&&memberId!=null
             float myMarketPrice = BPPreferences.instance().getFloat(PreferenceConstants.MY_ACCOUNT_MARKET, 0.00f);
             if(AuthUtil.recordMarketCostFee()){
                 myMarketPrice = myMarketPrice + marketCost;
@@ -494,11 +496,11 @@ public class BuyCarActivity extends BaseActivity {
                     if (!Validators.isEmpty(memberId)) {
                         BDActivityManager.removeAndFinishIncludes(BuyCarActivity.class.getSimpleName(), ShopDetailActivity.class.getSimpleName());
                         BalanceAccountsActivity.startBalanceActivity(BuyCarActivity.this, selectedList, marketSelectedList
-                                , orderId.toString(), BalanceAccountsActivity.FROM_CAR, "", true , memberId);
+                                , orderId.toString(), BalanceAccountsActivity.FROM_CAR, "", true , memberId,addressId);
                         finish();
                     } else {
                         BalanceAccountsActivity.startBalanceActivity(BuyCarActivity.this, selectedList, marketSelectedList
-                                , orderId.toString(), BalanceAccountsActivity.FROM_CAR, "", false , "");
+                                , orderId.toString(), BalanceAccountsActivity.FROM_CAR, "", false , "",addressId);
                         finish();
                     }
                 }
@@ -528,19 +530,31 @@ public class BuyCarActivity extends BaseActivity {
 
         getAddressListTask.setAsyncTaskSuccessCallback(new AsyncTaskSuccessCallback<GetAddressListData>() {
             @Override
-            public void successCallback(Result<GetAddressListData> result) {
+            public void successCallback(final Result<GetAddressListData> result) {
+ //              List<Address> newList = result.getValue().getList();
+  //             addressList.addAll(newList);
+//                for (Address address : addressList) {
+//                    address.setSelected(2);
+//                }
+//                DaoFactory.getAddressDao().insertBatch(addressList, LoginedUser.getLoginedUser().getId());
                 DialogUtil.selectAddressDialog(BuyCarActivity.this, result.getValue().getList(), new AddressDialog.ItemClickListener() {
                     @Override
                     public void itemClick(Address address) {
                         //取到地址Id
                         addressId = address.getId();
+                        addressList.addAll(result.getValue().getList());
+                        DaoFactory.getAddressDao().insertBatch(addressList, LoginedUser.getLoginedUser().getId());
                         //添加备注并下单
                        // alertRemarkAndAddOrder();
                         addOrder();
 
                     }
                 });
+
+
+
             }
+
         });
 
         getAddressListTask.execute(memberId);

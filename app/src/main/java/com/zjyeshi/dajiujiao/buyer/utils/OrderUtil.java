@@ -79,7 +79,7 @@ public abstract class OrderUtil {
     }
 
     public static void modifyOrderStatusForDeliver(Context context, String orderId, String status, String remark) {
-       // status=5+"";
+        //status=5+"";
         ModifyOrderStatusTask modifyOrderStatusTask = new ModifyOrderStatusTask(context);
         modifyOrderStatusTask.setAsyncTaskFailCallback(new AsyncTaskFailCallback<NoResultData>() {
             @Override

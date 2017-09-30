@@ -4,7 +4,9 @@ import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -15,6 +17,7 @@ import com.xuan.bigapple.lib.ioc.ViewUtils;
 import com.xuan.bigapple.lib.utils.ContextUtils;
 import com.zjyeshi.dajiujiao.R;
 import com.zjyeshi.dajiujiao.buyer.circle.itemview.BaseView;
+import com.zjyeshi.dajiujiao.buyer.utils.ToastUtil;
 import com.zjyeshi.dajiujiao.buyer.widgets.search.callback.SearchCallback;
 
 /**
@@ -30,7 +33,6 @@ public class SearchWidget extends BaseView {
     private TextView desTv;
     @InjectView(R.id.searchLayout)
     private RelativeLayout searchLayout;
-
     private SearchCallback searchCallback;
     public SearchWidget(Context context) {
         super(context);
@@ -61,12 +63,10 @@ public class SearchWidget extends BaseView {
         searchEt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
@@ -80,6 +80,17 @@ public class SearchWidget extends BaseView {
                     hintLayout.setVisibility(GONE);
                     searchLayout.setVisibility(VISIBLE);
                 }
+            }
+        });
+        searchEt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if ((i == 0 || i == 3) && keyEvent != null) {
+                    searchCallback.search(searchEt.getText().toString());
+                    ContextUtils.showSoftInput(searchEt , false);
+                        return true;
+                }
+                return false;
             }
         });
 

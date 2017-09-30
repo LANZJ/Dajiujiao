@@ -13,8 +13,13 @@ import java.util.List;
 public class ShopDetailData extends BaseData<ShopDetailData> {
     private Shop shop;
     private Member member;
+    private String marketCostType;
     private List<SalesListData.Sales> activities;
 
+    public String getMarketCostType(){
+        return marketCostType;
+    }
+   public void  setMarketCostType(String marketCostType){this.marketCostType=marketCostType;}
     public Shop getShop() {
         return shop;
     }
